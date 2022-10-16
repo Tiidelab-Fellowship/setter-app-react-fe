@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+} 
+
+body{
+  background: #E5E5E5;
+}
+
+.totalContainer{
+  margin: 3% 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formSide{
+  width: 80%;
+  margin: 0 3%;
+  color: #dddddd;
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  padding: 2% 5%;
+}
+
+.signUpMethodsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13%;
+}
+
+#facebookButton{
+  background-color: #5856D6;
+}
+
+#twitterButton{
+  background-color: #00BCD4 ;
+} 
+
+#googleButton{
+  background-color: #D84226;
+}
+
+.signUpMethods{
+  padding: 1% 0;
+  width: 30%;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.formHeader{
+  font-family: Open Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.hr{
+  height: 1px;
+  width: 25%;
+  border: none;
+  background-color: #dddddd;
+}
+
+.regMail{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.regMail > p{
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.bigInput{
+  background-color: #dddddd;
+  color: #424242;
+  width: 93%;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  margin-top: 5%;
+}
+
+.smallInput{
+  background-color: #dddddd;
+  color: #424242;
+  width: 44%;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 1% 2%;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  margin-top: 5%;
+
+}
+
+.bottomOfContainer{
+  display: flex;
+  justify-content: space-between;
+  font-family: Open Sans;
+  margin-top: 7%;
+
+}
+
+.bOCL{
+  display: flex;
+  font-size: 12px;
+}
+
+.coloredText{
+  color: #673AB7;
+}
+
+.inputButton{
+  height: 35px;
+  width: 130px;
+  border-radius: 39px;
+  background: #673AB7;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.pictureSide{
+  width: 80%;
+  margin: 0 3%;
+  color: #424242;
+  padding: 3% 0;
+}
+
+.pictureText > h1{
+font-family: Roboto;
+font-size: 30px;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0px;
+text-align: center;
+margin-bottom: 5%;
+}
+
+.pictureText > p{
+font-family: Roboto;
+font-size: 24px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0px;
+text-align: center;
+}
+
+.regImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 15%;
+  margin-top: 5%;
+}
