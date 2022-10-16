@@ -1,9 +1,6 @@
 import React from "react";
 import logo from "../../SetterApp-Assets/SetterApp-Logo.png";
-import facebook from "../../SetterApp-Assets/facebook-Logo.png";
-import LinkedIn from "../../SetterApp-Assets/linkedin-Logo.png";
-import Twitter from "../../SetterApp-Assets/twitter-Logo.png";
-import Youtube from "../../SetterApp-Assets/youtube-Logo.png";
+import { FaFacebook, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 import "../../Stylesheets/Footer.css"
 
 export const Footer = () => {
@@ -15,11 +12,15 @@ export const Footer = () => {
       <p>
         SetterApp is an Adtech solution web app that provides small and medium scale enterprise a seamless management of their social media handles on one platform.
       </p>
-      <div>
-        <img src= {facebook} alt="Facebook-Logo"/>
+      <div className="fontAwesome">
+        {/* <img src= {facebook} alt="Facebook-Logo"/>
         <img src= {LinkedIn}  alt="Linkedin-Logo"/>
         <img src= {Twitter} alt="twitter-Logo"/>
-        <img src= {Youtube} alt="Youtube-Logo"/>
+        <img src= {Youtube} alt="Youtube-Logo"/> */}
+        <FaFacebook size="40px" />
+        <FaLinkedinIn size="40px" />
+        <FaTwitter size="40px" />
+        <FaYoutube size="40px" />
       </div>
     </section>
     <section className="topRightFooter">
