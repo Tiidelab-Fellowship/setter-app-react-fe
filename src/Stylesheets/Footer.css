@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -14,6 +13,7 @@ body{
 
 footer{
   background: #090909;
+  color: #FFFFFF;
 }
 
 .topFooter{
@@ -84,9 +84,14 @@ footer{
   font-weight: 400;
   font-size : 1rem;
   line-height:41.92px;
+  color: #FFFFFF;
 }
 .footerLinks > a:hover{
   color: purple;
+}
+.fontAwesome{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 hr{

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+}
+
+body{
+  background-color: #E5E5E5;
+}
+
+Header{
+  color: #302F2F;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5% 5%;
+}
+
+.leftHeader{
+  display: flex;
+  align-items: center;
+}
+
+.leftHeader > span{
+  margin-left: 3%;
+  font-family: Inter;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.rightHeader{
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+  align-items: center;
+  font-family: Open Sans;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.register{
+  background: #673AB7;
+  color: #ffffff;
+  padding: 3% 10%;
+  border-radius: 2rem;
+  font-family: Open Sans;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  letter-spacing: 0px;
+  text-align: center;
+
+}
+
+.login{
+  font-family: Open Sans;
+  padding: 3% 10%;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #302F2F;
+}
+
+.logReg{
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+.vl{
+  font-size: 1.5rem;
+}
