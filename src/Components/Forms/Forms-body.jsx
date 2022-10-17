@@ -85,3 +85,18 @@ export const PictureText = ({ smallText, textarea }) => {
     </div>
   );
 };
+
+export const LoginFooter = () =>{
+  return(
+    <React.Fragment>
+    <div className="Login-footer">
+  <h1>
+    <input type="checkbox" name="check" id="checked" />
+    Remember Me
+  </h1>
+  <p className="coloredText forgot"><a href="www.google.com"> forgot Password?</a></p>
+</div>
+<button class="LogIn-Button">Login</button>
+</React.Fragment>
+  );
+};
