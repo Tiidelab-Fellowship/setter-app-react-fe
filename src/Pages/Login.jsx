@@ -2,7 +2,7 @@ import React from "react";
 import pics from "../SetterApp-Assets/Login-Img.png";
 import { Footer } from "../Components/Footer/Footer"
 import { FormHeaderWithHeader } from "../Components/Forms/formheader"
-import { FormTextHeader, InputFields,  PictureText, LoginFooter } from "../Components/Forms/Forms-body";
+import { FormTextHeader,  PictureText, LoginFooter, BigInput } from "../Components/Forms/Forms-body";
 
 
 export const LoginBody = () => {
@@ -14,7 +14,8 @@ export const LoginBody = () => {
     <section className="totalContainer">
       <div className="formSide">
         <FormTextHeader text1={text1} text2={text2} />
-        <InputFields />
+        <BigInput type={"email"} placeholder={"Enter your Email"}/>
+        <BigInput type={'password'} placeholder={'Enter password'}/>
         < LoginFooter />
        
       </div>
