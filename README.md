@@ -1,4 +1,34 @@
 # Getting Started with Create React App
+Getting started
+- Clone this project
+- Create a branch using the following convention [Yourname] e.g [Banwo]
+- Run 'npm install' to install the dependencies on your local machine
+- Make your changes and update
+- Please always pull before pushing to avoid conflicts
+- Make a pull request
+- Message or request review from Banwo to merge pull Request  ( DON'T MERGE YOURSELF!!! ) 
+- Happy Coding
+- PS: Images should be in the SetterApp-Assets folder
+
+This project was bootstrapped with Create React App.
+
+- Folder Structure
+
+- SetterApp-Assets (All images)
+
+- components (All component)
+----Header.jsx
+----Footer.jsx
+---- Formheader.jsx
+
+pages (All individual pages - landing page, etc)
+----LandingPage.jsx
+----AboutUs.jsx
+----Login.jsx
+
+Stylesheets (All stylesheets for each page and Component)
+----Footer.css 
+----Form-header.css
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
