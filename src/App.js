@@ -4,7 +4,7 @@
 // import SignUpPage from "./Pages/Signup";
 // import ForgotPasswordPage from "./Pages/ForgotPasswordPage";
 import CreateNewPasswordPage from "./Pages/CreateNewPasswordPage";
-
+import LandingPage, {Header} from "./Pages/landing-page"
 
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
   //  <LoginPage />
   //  <SignUpPage />
   //  <ForgotPasswordPage />
-   <CreateNewPasswordPage />
+  <LandingPage />
+  //  <CreateNewPasswordPage />
   );
 }
 export default App;
