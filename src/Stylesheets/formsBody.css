@@ -10,7 +10,8 @@
 } 
 
 body{
-  background: #E5E5E5;
+  background: #F2F8FF;
+  ;
 }
 
 .totalContainer{
@@ -130,6 +131,23 @@ body{
   color: #673AB7;
 }
 
+.LogIn-Button{
+  /* height: 47px; */
+  padding: 1% 0;
+  margin-top: 5%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  border-radius: 39px;
+  background: #673AB7;
+  color: #ffffff;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+}
+
 .inputButton{
   height: 35px;
   width: 130px;
@@ -172,4 +190,28 @@ text-align: center;
   width: 70%;
   margin: 0 15%;
   margin-top: 5%;
+  height: 200px;
+}
+
+.forgot{
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  
+}
+
+.Login-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7%;
+}
+.Login-footer > h1{
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+
 }

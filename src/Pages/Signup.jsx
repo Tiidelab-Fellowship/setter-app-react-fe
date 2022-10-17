@@ -1,9 +1,11 @@
 import React from "react";
 import pics from "../SetterApp-Assets/Register-Img.png";
+import { Footer } from "../Components/Footer/Footer"
+import { FormHeaderWithHeader } from "../Components/Forms/formheader"
 import { FormTextHeader, InputFields, FormFooter, PictureText } from "../Components/Forms/Forms-body";
 
 
-const LoginBody = () => {
+ export const SignUpBody = () => {
   const text1 = "Create Your Account"
   const text2 =" Or register with email"
   const text =  "Register"
@@ -18,12 +20,22 @@ const LoginBody = () => {
       </div>
       <div className="pictureSide">
         <PictureText smallText={smallText} textarea = {textarea}/>
-        <img className="regImage" src={pics} alt="regPhoto" />
+        <img className="regImage" src={pics} alt="regPhoto"/>
       </div>
     </section>
 
   
   );
 };
-export default LoginBody
+
+const SignUpPage = () =>{
+  return (
+    <>
+     <FormHeaderWithHeader />
+     <SignUpBody />
+     <Footer />
+    </>
+   );
+}
+export default SignUpPage
 
