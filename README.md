@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-Getting started
+**Getting started**
 - Clone this project
 - Create a branch using the following convention [Yourname] e.g [Banwo]
 - Run 'npm install' to install the dependencies on your local machine
@@ -12,23 +12,31 @@ Getting started
 
 This project was bootstrapped with Create React App.
 
-- Folder Structure
+**Folder Structure**
 
 - SetterApp-Assets (All images)
 
 - components (All component)
-----Header.jsx
-----Footer.jsx
----- Formheader.jsx
 
-pages (All individual pages - landing page, etc)
-----LandingPage.jsx
-----AboutUs.jsx
-----Login.jsx
+--------------Header.jsx
 
-Stylesheets (All stylesheets for each page and Component)
-----Footer.css 
-----Form-header.css
+--------------Footer.jsx
+
+--------------header.jsx
+
+- pages (All individual pages - landing page, etc)
+
+--------------LandingPage.jsx
+
+--------------AboutUs.jsx
+
+--------------Login.jsx
+
+- Stylesheets (All stylesheets for each page and Component)
+
+--------------Footer.css 
+
+--------------Form-header.css
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
