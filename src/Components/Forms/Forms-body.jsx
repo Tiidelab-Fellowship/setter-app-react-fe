@@ -59,11 +59,10 @@ export const FormFooter = ({ text }) => {
   );
 };
 
-export const BigInput = () => {
+export const BigInput = ({ type , placeholder}) => {
   return (
     <React.Fragment>
-      <input type="text" placeholder="Name" className="bigInput" />
-      <input type="text" placeholder="Email" className="bigInput" />
+      <input type={type} placeholder={placeholder} className="bigInput" />
     </React.Fragment>
   );
 };
@@ -71,7 +70,8 @@ export const BigInput = () => {
 export const InputFields = () => {
   return (
     <React.Fragment>
-      <BigInput />
+      <BigInput type={'text'} placeholder={'Name'}/>
+      <BigInput type={'email'} placeholder={'Email'}/>
       <SmallPasswordInput />
     </React.Fragment>
   );
