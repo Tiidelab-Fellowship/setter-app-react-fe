@@ -14,6 +14,7 @@ function App() {
       <Route path="/ForgotPassword" element={<ForgotPasswordPage />} />
       <Route path="/CreateNewPassword" element={<CreateNewPasswordPage />} />
     </Routes>
+
   );
 }
 export default App;
