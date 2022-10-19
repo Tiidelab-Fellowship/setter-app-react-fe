@@ -1,6 +1,7 @@
 import React from "react";
 import "../../Stylesheets/formsBody.css";
 import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const FormTextHeader = ({ text1, text2 }) => {
   return (
@@ -54,7 +55,7 @@ export const FormFooter = ({ text }) => {
           <span className="coloredText"> Services & Privacy Policy*</span>
         </p>
       </div>
-      <button className="inputButton">{text}</button>
+      <button className="inputButton"><Link to="/LoginPage" >{text}</Link></button>
     </div>
   );
 };
@@ -94,7 +95,7 @@ export const LoginFooter = () =>{
     <input type="checkbox" name="check" id="checked" />
     Remember Me
   </h1>
-  <p className="coloredText forgot"><a href="www.google.com"> forgot Password?</a></p>
+  <p className="coloredText forgot"><Link to="/ForgotPassword"> forgot Password?</Link></p>
 </div>
 <button class="LogIn-Button">Login</button>
 </React.Fragment>
