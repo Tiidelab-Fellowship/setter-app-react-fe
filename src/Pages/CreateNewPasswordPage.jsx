@@ -27,7 +27,7 @@ const CreateNewPasswordPage = () => {
         <InputText placeholder={"It must be less 8 characters"} />
         <Label label={"Confirm Password"} />
         <InputText placeholder={"It must be at least 8 characters"} />
-        <ForgotButton action={action} />
+        <ForgotButton action={action}  />
       </section>
       <Footer />
     </React.Fragment>

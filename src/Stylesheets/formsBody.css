@@ -13,6 +13,9 @@ body{
   background: #F2F8FF;
   ;
 }
+Link{
+  text-decoration: none;
+}
 
 .totalContainer{
   margin: 3% 10%;
@@ -214,4 +217,7 @@ text-align: center;
   line-height: 25px;
   letter-spacing: 0px;
 
+}
+button > Link {
+  text-decoration: none;
 }

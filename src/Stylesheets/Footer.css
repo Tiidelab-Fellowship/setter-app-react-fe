@@ -79,7 +79,9 @@ footer{
   line-height: 31px;
 }
 
-.footerLinks > a{
+.footerLinks > a,
+.footerLinks > Link
+{
   font-family: Inter;
   font-weight: 400;
   font-size : 1rem;
@@ -110,4 +112,7 @@ hr{
 }
 img{
   margin-right: 2%;
+}
+button > Link {
+  text-decoration: none;
 }
