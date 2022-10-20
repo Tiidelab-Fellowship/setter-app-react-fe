@@ -16,7 +16,7 @@ const ForgotPasswordPage = () => {
   const paragraph =
     "Enter your email for the verification proccess,we will send 4 digits code to your email.";
   const action = "continue";
-  const to = "/CreateNewPassword"
+  const to = "/Verification"
   return (
     <React.Fragment>
       <FormHeaderWithHeader />

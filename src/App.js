@@ -14,7 +14,7 @@ import AnalyticsPage from "./Pages/AnalyticsPage";
 import PostQueue from "./Pages/PostQueuePage";
 import Messages from "./Pages/MessagePage";
 import PostSchedule from "./Pages/PostSchedule";
-import Profile from "./Pages/ProfilePage";
+import ProfilePage from "./Pages/ProfilePage";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
       <Route path="/PostQueue" element= {<PostQueue />} />
       <Route path="/Messages" element= {<Messages />} />
       <Route path="/PostSchedule" element= {<PostSchedule />} />
-      <Route path="/Profile" element= {<Profile />} />
+      <Route path="/ProfilePage" element= {<ProfilePage />} />
       <Route path="/SignUp" element={<SignUpPage />} />
       <Route path="/LoginPage" element={<LoginPage />} />
       <Route path="/ForgotPassword" element={<ForgotPasswordPage />} />

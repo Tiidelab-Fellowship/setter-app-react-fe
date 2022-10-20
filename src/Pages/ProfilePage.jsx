@@ -1,14 +1,16 @@
 import { Footer } from "../Components/Footer/Footer"
-import { ProfileContent } from "../Components/DashboardContent/Profile";
+// import { ProfileContent } from "../Components/DashboardContent/Profile";
+import { SideBar } from "../Components/Sidebar/SideBar";
 
 
 
-const Profile = () =>{
+const ProfilePage = () =>{
   return (
     <>
-     <ProfileContent />
+     <SideBar />
+     {/* <ProfileContent /> */}
      <Footer />
     </>
    );
 }
-export default Profile
+export default ProfilePage

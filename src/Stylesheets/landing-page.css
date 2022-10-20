@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+Link{
+    text-decoration: none;
+  }
+
 body{
     background-color: #F2F8FF;
     color: #222;

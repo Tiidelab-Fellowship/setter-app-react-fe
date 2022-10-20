@@ -1,14 +1,18 @@
-body {
+/*body {
     background: rgba(237, 239, 241, 0.75);
     backdrop-filter: blur(10rem);
     margin: 0;
     padding: 0;
-    /* font-family */
+    
+  }
+
+  Link{
+    text-decoration: none;
   }
   
-  body > div {
+  /* body > div {
     margin: 0 2rem 0 7rem;
-  }
+  } */
 
   .profile-container {
     padding: 50px;
@@ -42,14 +46,14 @@ body {
 .social-account-head{
   color: #424242;
   margin-bottom: 20px;
-}
+} 
 
-button {
+ button {
   border-radius: 5px;
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
-}
+} 
 
 button.edit {
   background-color: #424242;
@@ -133,4 +137,4 @@ button.cpass {
 }
 .delete {
   width: 20px;
-}
+} 

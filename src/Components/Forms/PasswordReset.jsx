@@ -18,7 +18,7 @@ export const InputText = ({placeholder}) =>{
   return <input type="text" className="mailInput" placeholder={placeholder} />
 };
 export const ForgotButton = ({action, to }) =>{
-  return <button className="continurButton"><Link to={to}>{action}</Link></button>
+  return <button className="continurButton"><Link to={to}><p className="aabbcc">{action}</p></Link></button>
 };
 
 
