@@ -55,12 +55,14 @@ export const FormFooter = ({ text }) => {
           <span className="coloredText"> Services & Privacy Policy*</span>
         </p>
       </div>
-      <button className="inputButton"><Link to="/LoginPage" >{text}</Link></button>
+      <button className="inputButton">
+        <Link to="/LoginPage">{text}</Link>
+      </button>
     </div>
   );
 };
 
-export const BigInput = ({ type , placeholder}) => {
+export const BigInput = ({ type, placeholder }) => {
   return (
     <React.Fragment>
       <input type={type} placeholder={placeholder} className="bigInput" />
@@ -71,8 +73,8 @@ export const BigInput = ({ type , placeholder}) => {
 export const InputFields = () => {
   return (
     <React.Fragment>
-      <BigInput type={'text'} placeholder={'Name'}/>
-      <BigInput type={'email'} placeholder={'Email'}/>
+      <BigInput type={"text"} placeholder={"Name"} />
+      <BigInput type={"email"} placeholder={"Email"} />
       <SmallPasswordInput />
     </React.Fragment>
   );
@@ -87,17 +89,41 @@ export const PictureText = ({ smallText, textarea }) => {
   );
 };
 
-export const LoginFooter = () =>{
-  return(
+export const LoginFooter = ({to}) => {
+  return (
     <React.Fragment>
-    <div className="Login-footer">
-  <h1>
-    <input type="checkbox" name="check" id="checked" />
-    Remember Me
-  </h1>
-  <p className="coloredText forgot"><Link to="/ForgotPassword"> forgot Password?</Link></p>
-</div>
-<button class="LogIn-Button">Login</button>
-</React.Fragment>
+      <div className="Login-footer">
+        <h1>
+          <input type="checkbox" name="check" id="checked" />
+          Remember Me
+        </h1>
+        <p className="coloredText forgot">
+          <Link to="/ForgotPassword"> forgot Password?</Link>
+        </p>
+      </div>
+      <Link to={to}><button class="LogIn-Button">Login</button></Link>
+    </React.Fragment>
+  );
+};
+
+export const VerificationInput = () => {
+  return (
+    <React.Fragment>
+      <div class="NumInpContainer">
+        <input type="text" class="NumInp" />
+        <input type="text" class="NumInp" />
+        <input type="text" class="NumInp" />
+        <input type="text" class="NumInp" />
+      </div>
+      <h6 class="timeCount">00:30</h6>
+    </React.Fragment>
+  );
+};
+
+export const BottomOfButton = () => {
+  return (
+    <h6 class="bottomOfButton">
+      If you didn't receive a code! <span id="colorResend"> Resend </span>
+    </h6>
   );
 };
