@@ -14,7 +14,7 @@ const Successful = () =>{
     <>
      <FormHeaderWithHeader />
      <section className="PasswordResetContainer">
-        <img src={verify} alt="SetterApp-Logo"  width={"40px"}/>
+        <img src={verify} alt="verified-Logo"/>
         <Headline headline={headline} />
         <Paragraph paragraph={paragraph} />
         <ForgotButton action={action} to={to}/>
