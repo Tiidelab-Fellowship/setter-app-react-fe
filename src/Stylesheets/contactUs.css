@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+} 
+
+.contactUsHeaderContainer{
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.contactContainer{
+  margin: 3% 10%;
+  background: #000000;
+  border-radius: 40px;
+  padding: 3% 5%;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.ContactHeader{
+  font-family: open Sans;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+
+.smallLine{
+  height: 12px;
+  width: 5%;
+  border: none;
+  background-color: #dddddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.belowContactUs{
+  text-align: center;
+  font-family: open Sans;
+}
+
+.smallInputContact{
+  background-color: #dddddd;
+  color: #424242;
+  width: 49%;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 1% 2%;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  margin-top: 2%;
+}
+
+.Right{
+  margin-left: 2%;
+}
+
+.bottomOfContactUs{
+  display: flex;
+  justify-content: space-between;
+  font-family: Open Sans;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.bOCUL{
+  display: flex;
+  font-size: 12px;
+}
+
+.coloredTexts{
+  color: #673AB7;
+}
+
+.inputButtonContact{
+  border-radius: 39px;
+  background: #673AB7;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  padding: 1.5%;
+}
+
+.inputButtonContact:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
+.inputMessage{
+  width: 100%;
+  background-color: #dddddd;
+  color: #424242;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 1% 2%;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  margin-top: 2%;
+  height: 150px;
+}
+
