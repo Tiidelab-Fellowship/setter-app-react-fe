@@ -1,5 +1,5 @@
 import { Footer } from "../Components/Footer/Footer"
-import { SideBar } from "../Components/Sidebar/SideBar";
+import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { MessageContent } from "../Components/DashboardContent/messages";
 
@@ -13,8 +13,8 @@ const Messages = () =>{
         smallName="Banwo O."
         occupation="Web Developer"
       />
-      <SideBar />
-      <MessageContent />
+      <MessageContent  />
+      <SideBarTwo />
      <Footer />
     </>
    );
