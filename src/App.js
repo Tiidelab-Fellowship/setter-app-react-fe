@@ -13,7 +13,7 @@ import SocialDashboard from "./Pages/SocialDashboardPage";
 import AnalyticsPage from "./Pages/AnalyticsPage";
 import PostQueue from "./Pages/PostQueuePage";
 import Messages from "./Pages/MessagePage";
-import PostSchedule from "./Pages/PostSchedule";
+import PostSchedule from "./Pages/PostSchedule";  
 import ProfilePage from "./Pages/ProfilePage";
 
 function App() {
