@@ -2,6 +2,7 @@ import { Footer } from "../Components/Footer/Footer"
 // import { ProfileContent } from "../Components/DashboardContent/Profile";
 import { SideBar } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
+import { ProfileContent} from "../Components/DashboardContent/Profile"
 
 
 
@@ -16,6 +17,7 @@ const ProfilePage = () =>{
         smallName="Banwo O."
         occupation="Web Developer"
       />
+      <ProfileContent />
      <SideBar />
      <Footer />
     </>
