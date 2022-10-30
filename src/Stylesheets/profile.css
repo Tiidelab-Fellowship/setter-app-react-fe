@@ -1,56 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
 *{
     box-sizing: border-box;
     margin:0;
     padding:0;
-    font-family: 'Roboto', sans-serif
+    font-family: Inter;
 }
 
-html,body{
-    background: #E5E5E5;
-}
 
 #dashboard-profile-con{
   width: 84%;
-  margin-left: 16%;
+  margin-left: 18%;
+  position: absolute;
 }
 
 .dashboard-prof-details{
   width: 80%;
   margin-top: 100px;
   display: flex;
-  background: #ffffff;
-  border: 1px solid #424242;
+  background: #F2F8FF;
+  border: none;
+  border-radius: 20px;
+  box-shadow:10px 10px 10px 10px #dbdbdb;
 }
 
 .dashboard-profile-img{
-  /* width: 30%; */
   margin: 1.5rem;
 }
 
 .prof-img{
   width: 200px;
   height: 200px;
-  /* border: 2px solid #424242; */
   border-radius: 10px;
 }
 
 .profile-data{
   margin-top: 1.5rem;
-  /* display: flex;
-  flex-direction: column; */
+ 
+}
+
+.profile-data > p{
+  margin-top: 10px;
 }
 
 .profile-button{
-  margin: 40px 0 35px;
+  margin: 20px 0 10px;
   
 }
 
 .profile-edit-btn{
   height: 48px;
   width: 111px;
-  /* left: 0px; */
-  /* top: 0px; */
   border-radius: 8px;
   background-color: #424242;
   color: #ffffff;
@@ -62,16 +64,14 @@ html,body{
   font-size: 16px;
   font-weight: 600;
   height: 48px;
-  width: 155px;
-  left: 135px;
   top: 0px;
   border: 1px solid #424242;
   border-radius: 8px;
   color: #424242;
   margin: 1.2rem;
 }
+
 .dashboard-socials > p{
-  /* text-align: center; */
   font-weight: 700;
   margin-top: 30px;
   color: #424242;
@@ -81,15 +81,12 @@ html,body{
   width: 200px;
   display: flex;
   justify-content: space-between;
-  /* margin: 2rem; */
 }
+
 .profile-box{
   display: flex;
   align-items: center;
-  margin: 1.5rem;
-  /* background-color: #ffffff; */
-  /* border-right: 1px solid #424242; */
-  /* border-radius: 8px; */
+  margin: 1.5rem 1.5rem 1.5rem 0;
 }
 
 .profile-social-icon-text{
@@ -104,14 +101,12 @@ html,body{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color:  #4460A0; */
 }
 
 .profile-facebook{
   color: #4460A0;
   font-size: 30px;
   background-color: rgba(68, 96, 160, 0.13);
-  /* padding: 12px; */
   border-radius:8px;
   width: 56px;
   height: 56px;
@@ -121,7 +116,6 @@ html,body{
   color:  rgba(212, 47, 127, 0.5);
   font-size: 30px;
   background-color: rgba(92, 90, 205, 0.24);
-  /* padding: 12px; */
   border-radius:8px;
   width: 56px;
   height: 56px;
@@ -132,7 +126,6 @@ html,body{
   font-size: 30px;
  background-color:  rgba(0, 170, 236, 0.19);
  border-radius: 8px;
- /* padding: 12px; */
  width: 56px;
  height: 56px;
 
@@ -142,7 +135,6 @@ html,body{
   color: #0072b1;
   font-size: 30px;
   background-color: rgba(68, 96, 160, 0.13);
-  /* padding: 12px; */
   border-radius:8px;
   width: 56px;
   height: 56px;
@@ -161,11 +153,8 @@ html,body{
 
 .profile-line{
   height: 70px;
-  border-left: 2px solid #424242;
+  border-left: 2px solid #c2c0c0;
   margin-top: 20px;
-  /* font-size: 25px; */
-  /* font-weight: lighter; */
-  /* color: #424242; */
 }
 
 .profile-box p{
