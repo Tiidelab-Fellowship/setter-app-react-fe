@@ -1,125 +1,173 @@
-
-  .profile-container {
-    padding: 50px;
-    background-color: white;
-    width: 80%;
-    box-shadow: 1px 1px 2px 1px #888888;
-    border-radius: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif
 }
-.inner-profile-container{
+
+html,body{
+    background: #E5E5E5;
+}
+
+#dashboard-profile-con{
+  width: 84%;
+  margin-left: 16%;
+}
+
+.dashboard-prof-details{
+  width: 80%;
+  margin-top: 100px;
   display: flex;
-  gap: 50px;
-}
-#profile-heading h2{
-  margin-bottom: 20px;
-  color: #424242;
-}
-.profile img{
-  display: inline-block;
-  width: 238px;
-  height: 256px;
-  border-radius: 50%;
-}
-.details h2 {
-  color: #424242;
-  font-size: 1.2em;
-}
-.details {
-  font-size: 2em;
-}
-
-.social-account-head{
-  color: #424242;
-  margin-bottom: 20px;
-} 
-
- button {
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-} 
-
-button.edit {
-  background-color: #424242;
-  color:white;
-  border: none;
-  cursor: pointer;
-}
-
-button.cpass {
-  background-color: white;
-  color: #424242;
-  font-weight: 40px;
+  background: #ffffff;
   border: 1px solid #424242;
-  cursor: pointer;
-}
-.social-account-head {
-  margin-top: 50px;
-}
-.social {
-  background-color: white;
-  margin-top: 0.1rem;
-  width: 80%;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
 }
 
-.social-text{
-    color:#1f64ff;
+.dashboard-profile-img{
+  /* width: 30%; */
+  margin: 1.5rem;
 }
 
-.social-container{
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  background-color: #ffffff;
-  padding: 20px 10px;
-  box-shadow: 1px 1px 2px 1px #888888;
+.prof-img{
+  width: 200px;
+  height: 200px;
+  /* border: 2px solid #424242; */
   border-radius: 10px;
-  margin-bottom: 100px;
-  flex-direction: column;
+}
+
+.profile-data{
+  margin-top: 1.5rem;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.profile-button{
+  margin: 40px 0 35px;
   
 }
-.social-accounts{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-#account-actions{
-  display: flex;
-  margin-left: 10px;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-#account-actions .social-1{
-  background: #F0F0F0;
-  border: none;
-  box-shadow: 1px 1px 1px grey;
-}
-.social-1 {
-  background: #ffffff;
-  width:fit-content;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  border-radius: 10px;
-  padding: 10px;
-  flex: 0 1 auto;
-  border: 1px solid grey;
+
+.profile-edit-btn{
+  height: 48px;
+  width: 111px;
+  /* left: 0px; */
+  /* top: 0px; */
+  border-radius: 8px;
+  background-color: #424242;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.icon-background{
-  box-shadow: 1px 1px 1px grey;
+.profile-password-btn{
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  width: 155px;
+  left: 135px;
+  top: 0px;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  color: #424242;
+  margin: 1.2rem;
 }
-.social-img {
-  width: 30px;
-  height: 30px;
+.dashboard-socials > p{
+  /* text-align: center; */
+  font-weight: 700;
+  margin-top: 30px;
+  color: #424242;
+  font-size: 24px;
 }
-.delete {
-  width: 20px;
-} 
+.profile-socials{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  /* margin: 2rem; */
+}
+.profile-box{
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+  /* background-color: #ffffff; */
+  /* border-right: 1px solid #424242; */
+  /* border-radius: 8px; */
+}
+
+.profile-social-icon-text{
+  margin: 1rem;
+  color: #1F64FF;
+  font-size: 18px;
+}
+
+.profile-social-icon{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color:  #4460A0; */
+}
+
+.profile-facebook{
+  color: #4460A0;
+  font-size: 30px;
+  background-color: rgba(68, 96, 160, 0.13);
+  /* padding: 12px; */
+  border-radius:8px;
+  width: 56px;
+  height: 56px;
+}
+
+.profile-instagram{
+  color:  rgba(212, 47, 127, 0.5);
+  font-size: 30px;
+  background-color: rgba(92, 90, 205, 0.24);
+  /* padding: 12px; */
+  border-radius:8px;
+  width: 56px;
+  height: 56px;
+}
+
+.profile-twitter{
+  color: #00AAEC;
+  font-size: 30px;
+ background-color:  rgba(0, 170, 236, 0.19);
+ border-radius: 8px;
+ /* padding: 12px; */
+ width: 56px;
+ height: 56px;
+
+}
+
+.profile-linkedin{
+  color: #0072b1;
+  font-size: 30px;
+  background-color: rgba(68, 96, 160, 0.13);
+  /* padding: 12px; */
+  border-radius:8px;
+  width: 56px;
+  height: 56px;
+}
+
+.profile-delete-icon{
+  color: #D84749;
+  font-size: 15px;
+}
+
+.profile-delete-icon:hover{
+  opacity: 0.7;
+  font-size: 20px;
+
+}
+
+.profile-line{
+  height: 70px;
+  border-left: 2px solid #424242;
+  margin-top: 20px;
+  /* font-size: 25px; */
+  /* font-weight: lighter; */
+  /* color: #424242; */
+}
+
+.profile-box p{
+  display: inline;
+}
