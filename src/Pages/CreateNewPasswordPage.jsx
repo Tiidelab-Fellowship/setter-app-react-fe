@@ -16,6 +16,7 @@ const CreateNewPasswordPage = () => {
   const paragraph =
     "Set the new password for your account so you can login and access all features.";
   const action = "Update Password";
+  const to = "/Successful"
   return (
     <React.Fragment>
       <FormHeaderWithHeader />
@@ -24,10 +25,10 @@ const CreateNewPasswordPage = () => {
         <Headline headline={headline} />
         <Paragraph paragraph={paragraph} />
         <Label label={"Enter New Password"} />
-        <InputText placeholder={"It must be less 8 characters"} />
+        <InputText placeholder={"Password must be at least 8 Characters"} />
         <Label label={"Confirm Password"} />
-        <InputText placeholder={"It must be at least 8 characters"} />
-        <ForgotButton action={action} />
+        <InputText placeholder={"Password must be at least 8 Characters"} />
+        <ForgotButton action={action} to={to} />
       </section>
       <Footer />
     </React.Fragment>

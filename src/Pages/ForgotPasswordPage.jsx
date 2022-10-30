@@ -16,6 +16,7 @@ const ForgotPasswordPage = () => {
   const paragraph =
     "Enter your email for the verification proccess,we will send 4 digits code to your email.";
   const action = "continue";
+  const to = "/Verification"
   return (
     <React.Fragment>
       <FormHeaderWithHeader />
@@ -25,7 +26,7 @@ const ForgotPasswordPage = () => {
         <Paragraph paragraph={paragraph} />
         <Label label={"Email"} />
         <InputText placeholder={"Enter email"} />
-        <ForgotButton action={action} />
+        <ForgotButton action={action} to={to}/>
       </section>
       <Footer />
     </React.Fragment>

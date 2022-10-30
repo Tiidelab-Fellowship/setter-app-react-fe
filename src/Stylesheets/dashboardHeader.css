@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+
+.headerDashContainer{
+  width: 84%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter;
+  color: #262930;
+  margin-left: 16%;
+  margin-top: 1.5%;
+}
+
+.DBUsername > h2 {
+  text-align: start;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 2%;
+}
+
+.DBsmallWelcome > p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #858688;
+}
+
+.DBrightHeader{
+  display: flex;
+  width: 38%;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding-left: 38%;  */
+}
+
+.pickSocials > select{
+  padding: 10%;
+  border: none;
+  border-radius: 8px;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.createPostBtn{
+  padding: 3%;
+  width: 32%;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: Inter;
+  font-weight: 600;
+}
+
+.createPostBtn:hover{
+  color: #FFFFFF;
+  background-color: #858688;
+  cursor: pointer;
+}
+
+.theTwoHeaderIcons{
+  display: flex;
+  margin: 0 10%;
+}
+
+.searchIcon,
+.notificationIcon{
+  background-color: #FFFFFF;
+  padding: 40%;
+  border-radius: 40%;
+  margin: 0 10%;
+}
+
+.searchIcon:hover,
+.notificationIcon:hover{
+  color: #FFFFFF;
+  background-color:  #858688;
+}
+
+.smallProfile{
+  display: flex;
+  margin-left: 10%;
+  width: 40%;
+}
+
+.smallProfile > img{
+  border-radius: 50%;
+  align-self: center;
+}
+
+
+.smallName > h3{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #323335;
+}
+
+.smallName > p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #858688;
+}
+
+/* PROFILE HOVER */
+.view-profile{
+  display: none;
+  background: #FAFAFA;
+  border-radius: 10px;
+  font-family: Inter;
+  font-size: 12px;
+}
+
+.smallProfile:hover .view-profile{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    z-index: 1000;
+    left: 87%;
+    cursor: pointer;
+}
+.profile-boy{
+  padding: .5rem 1rem;
+}
+
+.profile-color{
+  color: #262930;
+}

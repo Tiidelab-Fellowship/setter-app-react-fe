@@ -9,10 +9,7 @@
   text-decoration: none;
 } 
 
-body{
-  background: #F2F8FF;
-  ;
-}
+
 
 .totalContainer{
   margin: 3% 10%;
@@ -93,7 +90,7 @@ body{
   width: 93%;
   font-size: 16px;
   border-radius: 8px;
-  padding: 1% 2%;
+  padding: 2% 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,13 +101,14 @@ body{
 .smallInput{
   background-color: #dddddd;
   color: #424242;
-  width: 44%;
+  width: 45%;
   font-size: 16px;
   border-radius: 8px;
-  padding: 1% 2%;
+  padding: 2% 2%;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.42);
   margin-top: 8%;
+  margin-right: 4%;
 
 }
 
@@ -155,6 +153,10 @@ body{
   background: #673AB7;
   color: #ffffff;
   font-size: 16px;
+}
+
+.inputButton > a{
+  color: #ffffff;
 }
 
 .pictureSide{
