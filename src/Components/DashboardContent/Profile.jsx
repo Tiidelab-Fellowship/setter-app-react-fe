@@ -1,4 +1,6 @@
 import "../../Stylesheets/profile.css"
+import profile from "../../SetterApp-Assets/profilePagePicture.jpg"
+import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaTrash, FaTwitter } from "react-icons/fa"
 
 
 
@@ -7,11 +9,11 @@ export const ProfileContent = () => {
         <section id="dashboard-profile-con">
   <div className="dashboard-prof-details">
     <div className="dashboard-profile-img">
-      <img src="./images/image 7.png" alt="profile-pic" className="prof-img" />
+      <img src={profile} alt="profile-pic" className="prof-img" />
     </div>
     <div className="profile-data">
-      <h1>Maymounah Mogaji</h1>
-      <p>maymounahmogaji@gmail.com</p>
+      <h1>Banwo Olorunsogo Olubowale</h1>
+      <p>sogobanwo@gmail.com</p>
       <p>09095351248</p>
       <p>1-Oct-1978</p>
       <div className="profile-button">
@@ -24,23 +26,23 @@ export const ProfileContent = () => {
     <p>Social Accounts</p>
     <div className="profile-socials">
       <div className="profile-box">
-        <i className="fa-brands fa-square-facebook profile-social-icon profile-facebook " /><span className="profile-social-icon-text">Facebook</span>
-        <i className="fa-sharp fa-solid fa-trash profile-social-icon profile-delete-icon" />
+        <div className="profile-social-icon profile-facebook "><FaFacebookSquare /></div><span className="profile-social-icon-text">Facebook</span>
+        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
       <span className="profile-line" />
       <div className="profile-box">
-        <i className="fa-brands fa-square-instagram profile-social-icon profile-instagram" /><span className="profile-social-icon-text">Instagram</span>
-        <i className="fa-sharp fa-solid fa-trash profile-social-icon profile-delete profile-delete-icon" />
+      <div className="profile-social-icon profile-instagram "><FaInstagramSquare /></div><span className="profile-social-icon-text">Instagram</span>
+        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
       <span className="profile-line" />
       <div className="profile-box">
-        <i className="fa-brands fa-twitter profile-social-icon profile-twitter" /><span className="profile-social-icon-text">Twitter</span>
-        <i className="fa-sharp fa-solid fa-trash profile-social-icon profile-delete-icon" />
+      <div className="profile-social-icon profile-twitter "><FaTwitter /></div><span className="profile-social-icon-text">Twitter</span>
+        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
       <span className="profile-line" />
       <div className="profile-box">
-        <i className="fa-brands fa-linkedin profile-social-icon profile-linkedin" /><span className="profile-social-icon-text">Linkedin</span>
-        <i className="fa-sharp fa-solid fa-trash profile-social-icon profile-delete-icon" />
+      <div className="profile-social-icon profile-linkedin "><FaLinkedin /></div><span className="profile-social-icon-text">Linkedin</span>
+        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
     </div>
   </div>
