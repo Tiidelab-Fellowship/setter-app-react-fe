@@ -14,8 +14,8 @@ import { FormHeaderWithHeader } from "../Components/Forms/formheader";
 const ForgotPasswordPage = () => {
   const headline = "Forgot Password";
   const paragraph =
-    "Enter your email for the verification proccess,we will send 4 digits code to your email.";
-  const action = "continue";
+    "Enter your email for the verification proccess, we will send 4 digits code to your email.";
+  const action = "Continue";
   const to = "/Verification"
   return (
     <React.Fragment>

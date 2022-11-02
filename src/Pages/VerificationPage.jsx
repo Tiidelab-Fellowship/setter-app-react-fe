@@ -8,7 +8,7 @@ const Verification = () =>{
   const headline = "Verification";
   const paragraph =
     "Enter your 4 digits code that you received on your email.";
-  const action = "continue";
+  const action = "Continue";
   const to = "/CreateNewPassword"
   return (
     <>

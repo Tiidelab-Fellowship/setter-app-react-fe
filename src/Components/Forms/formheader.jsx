@@ -2,11 +2,14 @@ import React from "react";
 import logo from "../../SetterApp-Assets/SetterApp-Logo.png";
 import { FaWrench } from "react-icons/fa";
 import "../../Stylesheets/form-header.css"
+import { Link } from "react-router-dom";
 
 export const FormHeaderWithHeader = () => {
   return (
       <header>
+        <Link to = '/'>
     <h2 className="leftHeader"> <img src={logo} alt = "SetterApp-Logo" /><span> SetterApp </span></h2>
+        </Link>
     <div className="rightHeader">
       <div className="logReg">
         <a href="www.google.com" className="login">LOGIN</a>

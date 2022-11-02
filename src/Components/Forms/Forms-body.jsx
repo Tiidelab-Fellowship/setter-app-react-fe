@@ -37,7 +37,7 @@ export const SmallPasswordInput = () => {
       <input type="password" placeholder="Password" className="smallInput" />
       <input
         type="password"
-        placeholder="Repeat password*"
+        placeholder="Repeat password"
         className="smallInput"
       />
     </div>
@@ -144,14 +144,14 @@ export const ContactUsBody = () => {
       <div className="smallContactContainer">
         <input
           type="text"
-          placeholder="Enter Your Name"
+          placeholder="Enter Your Name*"
           className="smallInputContact"
-        />
+        required = { true }/>
         <input
           type="text"
           placeholder="Enter Your Email*"
           className="smallInputContact Right"
-        />
+        required = {true}/>
       </div>
       <div className="smallContactContainer">
         <input
