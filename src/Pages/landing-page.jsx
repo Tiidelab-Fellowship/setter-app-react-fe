@@ -126,27 +126,24 @@ export const Features = () => {
               <img src={webApp} alt="webApp" />
               <h4>Web app</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                exercitationem natus quas t enetur distinctio a impedit maxime
-                non, minus rem?
+                Don’t worry about any installation our web app gives you quick and
+                easy access to your account through any browser.
               </p>
             </div>
             <div className="feature-box">
               <img src={pricing} alt="Pricing" />
               <h4>Affordable pricing</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                exercitationem natus quas t enetur distinctio a impedit maxime
-                non, minus rem?
+                Manage all your business social media accounts for a jaw-dropping
+                lead at prices lower than our competitors.
               </p>
             </div>
             <div className="feature-box">
               <img src={secured} alt="Secure" />
               <h4>Secured</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                exercitationem natus quas t enetur distinctio a impedit maxime
-                non, minus rem?
+                Your social media accounts are highly secured and protected
+                from cyber-attacks. 
               </p>
             </div>
           </div>
@@ -155,27 +152,26 @@ export const Features = () => {
               <img src={support} alt="Support" />
               <h4>World-class support</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                exercitationem natus quas t enetur distinctio a impedit maxime
-                non, minus rem?
+                Improve your customer service by providing value through our
+                well-tailored ready-made or customized marketing content that
+                converts.
               </p>
             </div>
             <div className="feature-box">
               <img src={analytics} alt="Analytics" />
               <h4>Accurate Analytics</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                exercitationem natus quas t enetur distinctio a impedit maxime
-                non, minus rem?
+                Get a clear understanding of what your customer wants and
+                make the best business decision with our customer focus and 
+                well-detailed analytics.
               </p>
             </div>
             <div className="feature-box">
               <img src={payment} alt="Payments" />
               <h4>Automatic payments</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                exercitationem natus quas t enetur distinctio a impedit maxime
-                non, minus rem?
+                Offer your customers a multichoice payment experience at the
+                click of a button with instant notification
               </p>
             </div>
           </div>
@@ -429,7 +425,7 @@ export const GetStartedFooter = () => {
       <h2>
         We are here to help <br /> you grow your business
       </h2>
-      <button className="small-titled-box"><Link to="/SignUp">Get Started Now </Link></button>
+      <Link to="/SignUp"><button className="small-titled-box">Get Started Now </button></Link>
     </section>
   );
 };

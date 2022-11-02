@@ -46,10 +46,13 @@
 }
 
 .signUpMethods{
-  padding: 1% 0;
+  padding: 1% 4%;
   width: 30%;
   border-radius: 8px;
   color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .formHeader{
@@ -146,8 +149,12 @@
   text-align: center;
 }
 
+.LogIn-Button:hover{
+  opacity: .8;
+  cursor: pointer;
+}
+
 .inputButton{
-  height: 35px;
   width: 130px;
   border-radius: 39px;
   background: #673AB7;
@@ -155,8 +162,9 @@
   font-size: 16px;
 }
 
-.inputButton > a{
-  color: #ffffff;
+.inputButton:hover{
+  opacity: .8;
+  cursor: pointer;
 }
 
 .pictureSide{

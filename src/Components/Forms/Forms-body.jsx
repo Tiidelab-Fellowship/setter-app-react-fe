@@ -11,7 +11,7 @@ export const FormTextHeader = ({ text1, text2 }) => {
       <div className="signUpMethodsContainer">
         <button className="signUpMethods" id="facebookButton">
           <FaFacebook />
-          Facebook
+          <span>Facebook</span>
         </button>
         <button className="signUpMethods" id="twitterButton">
           <FaTwitter />
@@ -56,9 +56,9 @@ export const FormFooter = ({ text }) => {
           <span className="coloredText"> Services & Privacy Policy*</span>
         </p>
       </div>
-      <button className="inputButton">
-        <Link to="/LoginPage">{text}</Link>
-      </button>
+      <Link to="/LoginPage"><button className="inputButton">
+        {text}
+      </button></Link>
     </div>
   );
 };
