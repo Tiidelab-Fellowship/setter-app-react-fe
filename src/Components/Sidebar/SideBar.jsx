@@ -4,6 +4,7 @@ import {
   FaChartLine,
   FaEnvelope,
   FaFoursquare,
+  FaPhone,
   FaSignal,
   FaSignOutAlt,
   FaWrench,
@@ -61,6 +62,14 @@ export const SideBar = () => {
               <FaChartLine />
             </span>{" "}
             Analytics
+          </Link>
+        </div>
+        <div className="eachPage">
+          <Link to="/ContactUs">
+            <span className="fontspace">
+              <FaPhone />
+            </span>{" "}
+            Contact Us
           </Link>
         </div>
         <div className="eachPage">
@@ -134,6 +143,14 @@ export const SideBarTwo = () => {
               <FaChartLine />
             </span>{" "}
             Analytics
+          </Link>
+        </div>
+        <div className="eachPage">
+          <Link to="/ContactUs">
+            <span className="fontspace">
+              <FaPhone />
+            </span>{" "}
+            Contact Us
           </Link>
         </div>
         <div className="eachPage">

@@ -13,7 +13,7 @@ export const Queue = () => {
         <div className="EPright">
           <h2 className="postMainHeader">Tech Life with Mr Shams</h2>
           <p className="postParagraph">
-            Oya Clear Road for Mr Shams! The Big Brother of TIIDELabs is getting
+            Oya Clear Road for Mr Shams! The Big Brother of TIIDELab is getting
             a mansion in Lagos. Our real estate agents are dedicated to helping
             him find houses, apartments, condos and commercial properties.
           </p>

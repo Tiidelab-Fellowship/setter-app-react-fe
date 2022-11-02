@@ -9,11 +9,13 @@ export const PostQueueContent = () => {
     <section className="PSPQDashboardContainer">
       <main className="bigestSide">
         <Queue />
+        <Queue />
       </main>
       <aside className="besideBigestSide">
         <div className="asideTop"></div>
         <div className="asideBottom">
           <h2 className="TopPost">Top Post</h2>
+          <TopPost />
           <TopPost />
         </div>
       </aside>

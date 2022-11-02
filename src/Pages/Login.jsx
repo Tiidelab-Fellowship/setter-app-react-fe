@@ -16,8 +16,7 @@ export const LoginBody = () => {
         <FormTextHeader text1={text1} text2={text2} />
         <BigInput type={"email"} placeholder={"Enter your Email"}/>
         <BigInput type={'password'} placeholder={'Enter password'}/>
-        < LoginFooter to= {"/SocialDashboard"}/>
-       
+        < LoginFooter to= {"/ProfilePage"}/>
       </div>
       <div className="pictureSide">
         <PictureText smallText={smallText} textarea = {textarea}/>
