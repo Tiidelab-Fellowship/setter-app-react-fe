@@ -16,10 +16,12 @@ export const SideBar = () => {
   return (
     <div className="sidebarContainer" style={{height : "90vh"}}>
       <div className="logoContainer">
+        <Link to = '/'>
         <p className="logoItself">
           <img src={logo} alt="SetterApp-Logo" />
           <span> SetterApp </span>
         </p>
+        </Link> 
       </div>
       <div className="linkToEachPage">
         <div className="eachPage CurrentPage">
@@ -97,10 +99,12 @@ export const SideBarTwo = () => {
   return (
     <div className="sidebarContainer" style={{padding : "3% 0 21% 2%"}}>
       <div className="logoContainer">
+      <Link to ='/'>
         <p className="logoItself">
-          <img src={logo} alt="SetterApp-Logo" />
-          <span> SetterApp </span>
+         <img src={logo} alt="SetterApp-Logo" />
+         <span> SetterApp </span> 
         </p>
+        </Link>
       </div>
       <div className="linkToEachPage">
         <div className="eachPage CurrentPage">
