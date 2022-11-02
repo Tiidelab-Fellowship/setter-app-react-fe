@@ -51,9 +51,11 @@ export const Header = () => {
         </ul>
       </nav>
       <div id="auth">
+        <Link to = "/LoginPage">
         <a href id="login">
           Login
         </a>
+        </Link>
         <button>
           <Link to="/SignUp" id="signup">
             Get Started
@@ -80,9 +82,12 @@ export const Hero = () => {
         </div>
         <div className="cta-container">
           <button className="black-button">
+            <Link to ='/SignUp'>
             <a href style={{ color: "#fff" }}>
               Get started
             </a>
+            </Link>
+            
           </button>
           <button className="white-button">
             <a href style={{ color: "#090909" }}>
@@ -178,9 +183,12 @@ export const Features = () => {
         </div>
         <div className="cta-container">
           <button className="black-button">
+            <Link to ="/SignUp">
             <a href style={{ color: "#fff" }}>
               Get started
             </a>
+            </Link>
+            
           </button>
           <button className="white-button">
             <a href style={{ color: "#090909" }}>
