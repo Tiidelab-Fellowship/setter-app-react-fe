@@ -1,11 +1,10 @@
 import React from "react";
 import "../Stylesheets/landing-page.css";
 import logo from "../SetterApp-Assets/logo.png";
-import heroImage from "../SetterApp-Assets/hero-image.png";
+import heroImage from "../SetterApp-Assets/hero-image.jpg";
 import analytics from "../SetterApp-Assets/analytics.png";
 import engage from "../SetterApp-Assets/engage.png";
 import grow from "../SetterApp-Assets/grow.png";
-import Image from "../SetterApp-Assets/Image.png";
 // import innovative from "../SetterApp-Assets/innovative.png"
 import payment from "../SetterApp-Assets/payment.png";
 import plan from "../SetterApp-Assets/plan.png";
@@ -14,7 +13,11 @@ import Review from "../SetterApp-Assets/Review.png";
 import secured from "../SetterApp-Assets/secured.png";
 import support from "../SetterApp-Assets/support.png";
 import webApp from "../SetterApp-Assets/web app.png";
-import woman from "../SetterApp-Assets/woman.png";
+import woman from "../SetterApp-Assets/woman.jpg";
+import hauwa from "../SetterApp-Assets/hauwa.png";
+import maymouna from "../SetterApp-Assets/maymouna.png";
+import udeme from "../SetterApp-Assets/udeme.png";
+
 
 import { Footer } from "../Components/Footer/Footer";
 import { Link } from "react-router-dom";
@@ -65,7 +68,6 @@ export const Hero = () => {
   return (
     <section id="hero-section">
       <div className="container">
-        <button className="small-titled-box">Adtech app</button>
         <h2>
           The most efficient &amp; optimized <br /> social experience ever
         </h2>
@@ -380,10 +382,10 @@ export const Customer = () => {
               social media so much easier.
             </p>
             <div className="customer">
-              <img src={Image} alt="CurrentProfile" />
+              <img src={hauwa} alt="CurrentProfile" />
               <div className="customer-profile">
-                <p className="customer-name">George Bassey</p>
-                <p className="customer-location">Egbeda, Lagos</p>
+                <p className="customer-name">Hauwa Opaluwa</p>
+                <p className="customer-location">Accra, Ghana</p>
               </div>
             </div>
           </div>
@@ -394,10 +396,10 @@ export const Customer = () => {
               social media so much easier.
             </p>
             <div className="customer">
-              <img src={Image} alt="CurrentProfile" />
+              <img src={udeme} alt="CurrentProfile" />
               <div className="customer-profile">
-                <p className="customer-name">George Bassey</p>
-                <p className="customer-location">Egbeda, Lagos</p>
+                <p className="customer-name">Udeme Eko</p>
+                <p className="customer-location">Abuja, Nigeria</p>
               </div>
             </div>
           </div>
@@ -408,10 +410,10 @@ export const Customer = () => {
               social media so much easier.
             </p>
             <div className="customer">
-              <img src={Image} alt="CurrentProfile" />
+              <img src={maymouna} alt="CurrentProfile" />
               <div className="customer-profile">
-                <p className="customer-name">George Bassey</p>
-                <p className="customer-location">Egbeda, Lagos</p>
+                <p className="customer-name">Maymouna Mogaji</p>
+                <p className="customer-location">Lagos, Nigeria</p>
               </div>
             </div>
           </div>

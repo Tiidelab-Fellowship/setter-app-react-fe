@@ -119,6 +119,7 @@ header h1{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 200px;
 }
 .black-button{
     background-color: #1B1B1B;
@@ -136,8 +137,9 @@ header h1{
 }
 
 #hero-section img{
-    margin-top: 80px;
+    margin-top: 200px;
     width: 750px;
+    border-radius: 10px;
 }
 #section-details p{
     margin-top: 35px;
@@ -237,6 +239,11 @@ header h1{
 }
 .container .left-container{
     width: 45%;
+ }
+
+ #product-section .left-container img{
+    width: 450px;
+    border-radius: 5px 200px 5px 5px;
  }
 
  .right-container .product-button{
@@ -442,6 +449,7 @@ input::placeholder{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
+    font-size: 12px;
 
 }
 
@@ -494,6 +502,10 @@ input::placeholder{
 }
 .customer img{
     margin-right: 0;
+    width: 40px;
+    border-radius: 100%;
+    border: 1px solid rgba(212, 211, 211, 0.431);
+    padding: 2px;
 }
 .customer-name{
     width: fit-content;
