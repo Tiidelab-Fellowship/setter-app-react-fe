@@ -12,8 +12,11 @@ export const FormHeaderWithHeader = () => {
         </Link>
     <div className="rightHeader">
       <div className="logReg">
-        <a href="www.google.com" className="login">LOGIN</a>
-        <a href="www.google.com" className="register">REGISTER</a>
+        
+        <a className="login"><Link to ="/LoginPage">LOGIN</Link></a>
+        
+        
+        <a className="register"><Link to="/SignUp">REGISTER</Link></a>
       </div>
       <div className="vl">|</div>
       <FaWrench /> 

@@ -47,7 +47,10 @@ Header{
   line-height: 1.4rem;
   letter-spacing: 0px;
   text-align: center;
+}
 
+.register > a{
+  color: #ffffff;
 }
 
 .login{
@@ -60,6 +63,7 @@ Header{
   text-align: center;
   color: #302F2F;
 }
+
 
 .logReg{
   display: flex;
