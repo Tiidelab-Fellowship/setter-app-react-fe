@@ -15,6 +15,7 @@ import PostQueue from "./Pages/PostQueuePage";
 import Messages from "./Pages/MessagePage";
 import PostSchedule from "./Pages/PostSchedule";  
 import ProfilePage from "./Pages/ProfilePage";
+import FAQpage from "./Pages/FAQ";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Route path="/LoginPage" element={<LoginPage />} />
       <Route path="/ForgotPassword" element={<ForgotPasswordPage />} />
       <Route path="/CreateNewPassword" element={<CreateNewPasswordPage />} />
+      <Route path="/FAQ" element={<FAQpage />} />
     </Routes>
 
   );

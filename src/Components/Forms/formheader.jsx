@@ -13,10 +13,10 @@ export const FormHeaderWithHeader = () => {
     <div className="rightHeader">
       <div className="logReg">
         
-        <a className="login"><Link to ="/LoginPage">LOGIN</Link></a>
+        <h1 className="login"><Link to ="/LoginPage">LOGIN</Link></h1>
         
         
-        <a className="register"><Link to="/SignUp">REGISTER</Link></a>
+        <h1 className="register"><Link to="/SignUp">REGISTER</Link></h1>
       </div>
       <div className="vl">|</div>
       <FaWrench /> 

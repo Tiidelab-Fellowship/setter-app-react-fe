@@ -3,6 +3,10 @@ import "../../Stylesheets/formsBody.css";
 import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../Stylesheets/contactUs.css"
+// import Swal from 'sweetalert2'
+const Swal = require('sweetalert2')
+
+
 
 export const FormTextHeader = ({ text1, text2 }) => {
   return (
@@ -56,7 +60,13 @@ export const FormFooter = ({ text }) => {
           <span className="coloredText"> Services & Privacy Policy*</span>
         </p>
       </div>
-      <Link to="/LoginPage"><button className="inputButton">
+      <Link to="/LoginPage" ><button onClick={()=>{
+        Swal.fire({
+          title: 'Registration Successful',
+          icon: 'success',
+          confirmButtonText: 'Continue'
+        })
+      }}  className="inputButton">
         {text}
       </button></Link>
     </div>
@@ -103,7 +113,13 @@ export const LoginFooter = ({ to }) => {
         </p>
       </div>
       <Link to={to}>
-        <button class="LogIn-Button">Login</button>
+        <button onClick={()=>{
+        Swal.fire({
+          title: 'LogIn Successful',
+          icon: 'success',
+          confirmButtonText: 'Continue'
+        })
+      }} class="LogIn-Button">Login</button>
       </Link>
     </React.Fragment>
   );
@@ -182,7 +198,15 @@ export const ContactUsBody = () => {
             </span>
           </p>
         </div>
-        <button className="inputButtonContact">Send Message</button>
+        
+        <button onClick={()=>{
+          Swal.fire({
+            title: 'Message Sent',
+            icon: 'success',
+            text: 'We will reply shortly.',  
+            confirmButtonText: 'Continue'
+          })
+        }} className="inputButtonContact"><Link to="/">Send Message</Link></button>
       </div>
     </section>
   );

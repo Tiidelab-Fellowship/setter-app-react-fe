@@ -1,14 +1,17 @@
 import { Footer } from "../Components/Footer/Footer";
-import { SideBar } from "../Components/Sidebar/SideBar";
+import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
+import DemoApp from "../Components/FullCalendar/FullCalendarComponent";
 
 export const PostScheduleContent = () => {
   return (
     <section className="PSPQDashboardContainer">
-      <main className="bigestSide">
-
+      <main className="bigestSideP">
+        <div>
+        <DemoApp />
+        </div>
       </main>
       <aside className="besideBigestSide">
         <div className="asideTop">
@@ -36,7 +39,7 @@ const PostSchedule = () => {
         occupation="Web Developer"
       />
       <PostScheduleContent />
-      <SideBar />
+      <SideBarTwo />
       <Footer />
     </>
   );
