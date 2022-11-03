@@ -225,3 +225,7 @@ text-align: center;
   letter-spacing: 0px;
 
 }
+
+.inputButtonContact > a{
+  color: #ffffff;
+}

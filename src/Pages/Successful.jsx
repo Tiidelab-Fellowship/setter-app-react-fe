@@ -1,10 +1,10 @@
 import { Footer } from "../Components/Footer/Footer"
 import { FormHeaderWithHeader } from "../Components/Forms/formheader"
 import { Headline, Paragraph, ForgotButton  } from "../Components/Forms/PasswordReset";
-import verify from "../SetterApp-Assets/VerifyImage.png";
+import verify from "../SetterApp-Assets/success-icon-10.png";
 
 const Successful = () =>{
-  const headline = "Succesful";
+  const headline = "Successful";
   const paragraph =
     "Your password has been reset successfully";
   const action = "Procced to Login";

@@ -1,8 +1,9 @@
 import { Footer } from "../Components/Footer/Footer";
-import { SideBar } from "../Components/Sidebar/SideBar";
+import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
+import  { DemoAppTwo } from "../Components/FullCalendar/FullCalendarComponent";
 
 export const PostQueueContent = () => {
   return (
@@ -12,7 +13,11 @@ export const PostQueueContent = () => {
         <Queue />
       </main>
       <aside className="besideBigestSide">
-        <div className="asideTop"></div>
+        <div className="asideTopP">
+          <div>
+            <DemoAppTwo />
+          </div>
+        </div>
         <div className="asideBottom">
           <h2 className="TopPost">Top Post</h2>
           <TopPost />
@@ -33,7 +38,7 @@ const PostQueue = () => {
         occupation="Web Developer"
       />
       <PostQueueContent />
-      <SideBar />
+      <SideBarTwo />
       <Footer />
     </>
   );

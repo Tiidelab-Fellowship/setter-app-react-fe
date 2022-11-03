@@ -46,7 +46,9 @@ export const Header = () => {
             <a href>Pricing</a>
           </li>
           <li>
+          <Link to = "/FAQ">
             <a href>FAQs</a>
+          </Link>
           </li>
         </ul>
       </nav>

@@ -15,7 +15,7 @@
   margin: 8% 1% 1% 16%;
   display: flex;
   gap: 1%;
-  height: 70vh;
+  height: 95vh;
   position: absolute;
 }
 
@@ -24,6 +24,12 @@
   background-color: #ffffff;
   border-radius: 20px;
   font-size: 27px;
+}
+.bigestSideP{
+  width: 67%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1%
 }
 
 .besideBigestSide{
@@ -37,6 +43,16 @@
   border-radius: 20px;
   padding-top: 1%;
 }
+
+
+.asideTopP{
+  height: 65%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1%;
+  font: 10px;
+}
+
 
 .asideBottom{
   height: 35%;
