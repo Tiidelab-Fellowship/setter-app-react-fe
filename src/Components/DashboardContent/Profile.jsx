@@ -27,22 +27,22 @@ export const ProfileContent = () => {
     <div className="profile-socials">
       <div className="profile-box">
         <div className="profile-social-icon profile-facebook "><FaFacebookSquare /></div><span className="profile-social-icon-text">Facebook</span>
-        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
+        <div className="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
       <span className="profile-line" />
       <div className="profile-box">
       <div className="profile-social-icon profile-instagram "><FaInstagramSquare /></div><span className="profile-social-icon-text">Instagram</span>
-        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
+        <div className="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
       <span className="profile-line" />
       <div className="profile-box">
       <div className="profile-social-icon profile-twitter "><FaTwitter /></div><span className="profile-social-icon-text">Twitter</span>
-        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
+        <div className="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
       <span className="profile-line" />
       <div className="profile-box">
       <div className="profile-social-icon profile-linkedin "><FaLinkedin /></div><span className="profile-social-icon-text">Linkedin</span>
-        <div class="profile-delete profile-delete-icon"><FaTrash /></div>
+        <div className="profile-delete profile-delete-icon"><FaTrash /></div>
       </div>
     </div>
   </div>
