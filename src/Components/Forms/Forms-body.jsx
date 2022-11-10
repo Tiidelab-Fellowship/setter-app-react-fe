@@ -35,20 +35,7 @@ export const FormTextHeader = ({ text1, text2 }) => {
   );
 };
 
-export const SmallPasswordInput = () => {
-  return (
-    <div className="smallInputContainer">
-      <input type="password" placeholder="Password" className="smallInput" />
-      <input
-        type="password"
-        placeholder="Repeat password"
-        className="smallInput"
-      />
-    </div>
-  );
-};
-
-export const FormFooter = ({ text }) => {
+export const FormFooter = ({ text, isSubmitting, handleSubmit  }) => {
   return (
     <div className="bottomOfContainer">
       <div className="bOCL">
@@ -60,36 +47,27 @@ export const FormFooter = ({ text }) => {
           <span className="coloredText"> Services & Privacy Policy*</span>
         </p>
       </div>
-      <Link to="/LoginPage" ><button onClick={()=>{
-        Swal.fire({
-          title: 'Registration Successful',
-          icon: 'success',
-          confirmButtonText: 'Continue'
-        })
-      }}  className="inputButton">
-        {text}
-      </button></Link>
+      <button type="submit" className="inputButton" disabled={isSubmitting} onClick={handleSubmit}>{isSubmitting ? "Registering" : "Register"}</button>
     </div>
   );
 };
 
-export const BigInput = ({ type, placeholder }) => {
+export const BigInput = ({ type, placeholder, sogo,
+  handleChange,
+  handleBlur, name
+  }) => {
   return (
     <React.Fragment>
-      <input type={type} placeholder={placeholder} className="bigInput" />
+      <input type={type} placeholder={placeholder} className="bigInput"
+             name={name}
+             onChange={handleChange}
+             onBlur={handleBlur}
+             value={sogo}/>
     </React.Fragment>
   );
 };
 
-export const InputFields = () => {
-  return (
-    <React.Fragment>
-      <BigInput type={"text"} placeholder={"Name"} />
-      <BigInput type={"email"} placeholder={"Email"} />
-      <SmallPasswordInput />
-    </React.Fragment>
-  );
-};
+
 
 export const PictureText = ({ smallText, textarea }) => {
   return (
@@ -100,7 +78,7 @@ export const PictureText = ({ smallText, textarea }) => {
   );
 };
 
-export const LoginFooter = ({ to }) => {
+export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   return (
     <React.Fragment>
       <div className="Login-footer">
@@ -112,15 +90,7 @@ export const LoginFooter = ({ to }) => {
           <Link to="/ForgotPassword"> forgot Password?</Link>
         </p>
       </div>
-      <Link to={to}>
-        <button onClick={()=>{
-        Swal.fire({
-          title: 'LogIn Successful',
-          icon: 'success',
-          confirmButtonText: 'Continue'
-        })
-      }} class="LogIn-Button">Login</button>
-      </Link>
+        <button type="submit" className="LogIn-Button" disabled={isSubmitting} onClick={handleSubmit} >{isSubmitting ? "Logging In" : "Log In"}</button>
     </React.Fragment>
   );
 };
