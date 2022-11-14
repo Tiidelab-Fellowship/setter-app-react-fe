@@ -28,35 +28,35 @@ export const Header = () => {
       <div className="logo-container">
         <img src={logo} alt="SetterAppLogo" />
         <h1>
-          <a href="./index.html">SetterApp</a>
+          SetterApp
         </h1>
       </div>
       <nav>
         <ul>
           <li>
-            <a href="./index.html">Home</a>
+            <p >Home</p>
           </li>
           <li>
-            <a href>About</a>
+            <p >About</p>
           </li>
           <li>
-            <a href>Dashboard</a>
+            <p >Dashboard</p>
           </li>
           <li>
-            <a href>Pricing</a>
+            <p >Pricing</p>
           </li>
           <li>
           <Link to = "/FAQ">
-            <a href>FAQs</a>
+            <p >FAQs</p>
           </Link>
           </li>
         </ul>
       </nav>
       <div id="auth">
         <Link to = "/LoginPage">
-        <a href id="login">
+        <p id="login">
           Login
-        </a>
+        </p>
         </Link>
         <button>
           <Link to="/SignUp" id="signup">
@@ -85,16 +85,16 @@ export const Hero = () => {
         <div className="cta-container">
           <button className="black-button">
             <Link to ='/SignUp'>
-            <a href style={{ color: "#fff" }}>
+            <p  style={{ color: "#fff" }}>
               Get started
-            </a>
+            </p>
             </Link>
             
           </button>
           <button className="white-button">
-            <a href style={{ color: "#090909" }}>
+            <p  style={{ color: "#090909" }}>
               Learn more
-            </a>
+            </p>
           </button>
         </div>
         <img src={heroImage} alt="heroImage" />
@@ -186,16 +186,16 @@ export const Features = () => {
         <div className="cta-container">
           <button className="black-button">
             <Link to ="/SignUp">
-            <a href style={{ color: "#fff" }}>
+            <p  style={{ color: "#fff" }}>
               Get started
-            </a>
+            </p>
             </Link>
             
           </button>
           <button className="white-button">
-            <a href style={{ color: "#090909" }}>
+            <p  style={{ color: "#090909" }}>
               Browse all features
-            </a>
+            </p>
           </button>
         </div>
       </div>
@@ -213,9 +213,9 @@ export const Product = () => {
         </div>
         <div className="right-container">
           <button className="product-button">
-            <a href style={{ color: "#111" }}>
+            <p  style={{ color: "#111" }}>
               Our Product
-            </a>
+            </p>
           </button>
           <h3>
             We are the next-gen <br /> Adtech Solution{" "}
@@ -239,9 +239,9 @@ export const Product = () => {
             experiences.
           </p>
           <button className="white-button">
-            <a href style={{ color: "#090909" }}>
+            <p  style={{ color: "#090909" }}>
               Get started
-            </a>
+            </p>
           </button>
         </div>
       </div>
@@ -326,15 +326,15 @@ export const GetStarted = () => {
           Be ominipresent present on all your social media accounts and enjoy
           the best social media management from one platform.
         </p>
-        <form action>
+        <form >
           <input type="email" placeholder="Enter your email" />
           <button type="submit">Sign Up</button>
         </form>
         <p className="terms-conditions-paragraph">
           By clicking Sign Up you're confirming that you agree with our{" "}
-          <a href className="terms">
+          <span  className="terms">
             Terms and Conditions.
-          </a>
+          </span>
         </p>
       </div>
     </section>
