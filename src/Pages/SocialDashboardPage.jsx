@@ -1,6 +1,7 @@
+import { SocialDashboardContent } from "../Components/DashboardContent/SocialDashboard";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Footer } from "../Components/Footer/Footer";
-import { SideBar } from "../Components/Sidebar/SideBar";
+import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import "../Stylesheets/dashboardHeader.css";
 
 const SocialDashboard = () => {
@@ -14,7 +15,8 @@ const SocialDashboard = () => {
         smallName="Banwo O."
         occupation="Web Developer"
       />
-      <SideBar />
+      <SocialDashboardContent />
+      <SideBarTwo />
       <Footer />
     </>
   );
