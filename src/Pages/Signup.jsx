@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import { SignupSchema } from "../Utils/Validation/validationSchema";
+import { toast } from 'react-toastify';
+
 const Swal = require('sweetalert2')
 
 
@@ -72,11 +74,9 @@ const Swal = require('sweetalert2')
               navigate("/LoginPage");
             }
           } catch (error) {
-            Swal.fire({
-              title: 'Email has already been registered',
-              icon: 'error',
-              confirmButtonText: 'Try Again'
-            })
+            toast.error("Email has already been", {
+              position: "top-center",
+            });
           }
           
 

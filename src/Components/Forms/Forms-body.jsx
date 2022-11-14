@@ -20,7 +20,7 @@ export const FormTextHeader = ({ text1, text2 }) => {
         <button className="signUpMethods" id="twitterButton">
           <FaTwitter />
           Twitter
-        </button>
+        </button>git 
         <button className="signUpMethods" id="googleButton">
           <FaGoogle />
           Google
