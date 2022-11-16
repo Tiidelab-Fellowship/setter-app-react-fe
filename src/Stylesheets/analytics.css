@@ -1,0 +1,230 @@
+body {
+  background-color: azure;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid grey; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+.container .top-header,
+.container .inner-body {
+  display: flex;
+  gap: 2%;
+}
+
+.inner-body {
+  display: flex;
+  gap: 2%;
+}
+
+.inner-body .followers-growth {
+  width: 70%;
+  gap: 2%;
+}
+
+
+.followers-growth .user-country {
+  height: 330px;
+}
+
+.inner-body .scheduled-posts {
+  width: 30%;
+}
+
+.top-header .account-data {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  gap: 10%;
+  display: flex;
+  width: 260px;
+}
+
+.account-data .top-top {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.account-data .top-bottom {
+  display: flex;
+  align-items: stretch;
+  gap: 2%;
+  justify-content: space-between;
+}
+
+.top-top .top-title {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #323335;
+}
+
+.top-bottom .top-followers {
+  font-weight: 600;
+  font-size: 28px;
+  color: #1B1C1E;
+}
+
+.top-bottom .bottom-data {
+  display: flex;
+  font-size: 16px;
+}
+
+.inner-body .user-growth {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.user-growth #myChart {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.scheduled-posts {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.scheduled-posts .schedule-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.schedule-header .schedule-title,
+.activities .activity-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1B1C1E;
+  padding-bottom: 10px;
+}
+
+.schedule-header .add-post a {
+  font-weight: 500;
+  font-size: 15px;
+  color: #0CAF60;
+  text-decoration: underline;
+}
+
+.scheduled-posts .post-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 5%;
+  padding-bottom: 10px;
+}
+
+.post-container .post-heading {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1B1C1E;
+}
+
+.post-container .post-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  gap: 2px;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.post-info .post-details {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.post-details p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #1B1C1E;
+}
+
+.post-details p span {
+  font-weight: 400;
+  font-size: 10px;
+  color: #858688;
+}
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.activities .activity-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.activities,
+.activity-person {
+  display: flex;
+  gap: 2%;
+  align-items: stretch;
+}
+
+.activities .activity-content {
+  display: flex;
+}
+
+.activities .ending {
+  display: flex;
+}
+
+.activity-person .name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1B1C1E;
+}
+
+.activity-person .action {
+  font-size: 12px;
+  line-height: 15px;
+  color: #858688;
+}
+
+.activity-content .content {
+  width: 50%;
+  margin-right: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #5B5C5E;
+}
+
+.activity-content .ending {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ending .time {
+  margin-right: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #858688;
+}
