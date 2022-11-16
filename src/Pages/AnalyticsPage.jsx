@@ -1,5 +1,5 @@
 import { Footer } from "../Components/Footer/Footer"
-import { SideBar } from "../Components/Sidebar/SideBar";
+import { SideBar, SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { AnalyticsContent } from "../Components/DashboardContent/analytics";
 
@@ -16,7 +16,7 @@ const AnalyticsPage = () =>{
         occupation="Web Developer"
       />
       <AnalyticsContent />
-     <SideBar />
+     <SideBarTwo />
      <Footer />
     </>
    );

@@ -9,7 +9,7 @@ body {
   /* border: 1px solid grey; */
 }
 
-.container {
+.Acontainer {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -17,34 +17,38 @@ body {
   padding: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-sizing: border-box;
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 100px;
+  
 }
 
-.container .top-header,
-.container .inner-body {
+.Acontainer .Atop-header,
+.Acontainer .Ainner-body {
   display: flex;
   gap: 2%;
 }
 
-.inner-body {
+.Ainner-body {
   display: flex;
   gap: 2%;
 }
 
-.inner-body .followers-growth {
+.Ainner-body .Afollowers-growth {
   width: 70%;
   gap: 2%;
 }
 
 
-.followers-growth .user-country {
-  height: 330px;
+.Afollowers-growth .Auser-country {
+  /* height: 330px; */
 }
 
-.inner-body .scheduled-posts {
+.Ainner-body .Ascheduled-posts {
   width: 30%;
 }
 
-.top-header .account-data {
+.Atop-header .Aaccount-data {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -55,92 +59,92 @@ body {
   width: 260px;
 }
 
-.account-data .top-top {
+.Aaccount-data .Atop-top {
   display: flex;
   align-items: center;
   gap: 2%;
 }
 
-.account-data .top-bottom {
+.Aaccount-data .Atop-bottom {
   display: flex;
   align-items: stretch;
   gap: 2%;
   justify-content: space-between;
 }
 
-.top-top .top-title {
+.Atop-top .Atop-title {
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.A2em;
   color: #323335;
 }
 
-.top-bottom .top-followers {
+.Atop-bottom .Atop-followers {
   font-weight: 600;
   font-size: 28px;
   color: #1B1C1E;
 }
 
-.top-bottom .bottom-data {
+.Atop-bottom .Abottom-data {
   display: flex;
   font-size: 16px;
 }
 
-.inner-body .user-growth {
+.Ainner-body .Auser-growth {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 10px;
 }
 
-.user-growth #myChart {
+.Auser-growth #myChart {
   background-color: #fff;
   border: none;
   border-radius: 10px;
   padding: 20px;
 }
 
-.scheduled-posts {
+.Ascheduled-posts {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   padding: 10px;
 }
 
-.scheduled-posts .schedule-header {
+.Ascheduled-posts .Aschedule-header {
   display: flex;
   justify-content: space-between;
 }
 
-.schedule-header .schedule-title,
-.activities .activity-title {
+.Aschedule-header .Aschedule-title,
+.Aactivities .Aactivity-title {
   font-weight: 600;
   font-size: 18px;
   color: #1B1C1E;
   padding-bottom: 10px;
 }
 
-.schedule-header .add-post a {
+.Aschedule-header .Aadd-post a {
   font-weight: 500;
   font-size: 15px;
   color: #0CAF60;
   text-decoration: underline;
 }
 
-.scheduled-posts .post-container {
+.Ascheduled-posts .Apost-container {
   display: flex;
   align-items: flex-start;
   gap: 5%;
   padding-bottom: 10px;
 }
 
-.post-container .post-heading {
+.Apost-container .Apost-heading {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #1B1C1E;
 }
 
-.post-container .post-info {
+.Apost-container .Apost-info {
   display: flex;
   flex-direction: column;
   margin-right: auto;
@@ -149,66 +153,66 @@ body {
   width: fit-content;
 }
 
-.post-info .post-details {
+.Apost-info .Apost-details {
   display: flex;
   align-items: stretch;
   gap: 20px;
   justify-content: space-between;
 }
 
-.post-details p {
+.Apost-details p {
   font-weight: 400;
   font-size: 12px;
   color: #1B1C1E;
 }
 
-.post-details p span {
+.Apost-details p span {
   font-weight: 400;
   font-size: 10px;
   color: #858688;
 }
 
-.activities {
+.Aactivities {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.activities .activity-box {
+.Aactivities .Aactivity-box {
   display: flex;
   flex-direction: column;
   gap: 10px
 }
 
-.activities,
-.activity-person {
+.Aactivities,
+.Aactivity-person {
   display: flex;
   gap: 2%;
   align-items: stretch;
 }
 
-.activities .activity-content {
+.Aactivities .Aactivity-content {
   display: flex;
 }
 
-.activities .ending {
+.Aactivities .Aending {
   display: flex;
 }
 
-.activity-person .name {
+.Aactivity-person .Aname {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #1B1C1E;
 }
 
-.activity-person .action {
+.Aactivity-person .Aaction {
   font-size: 12px;
   line-height: 15px;
   color: #858688;
 }
 
-.activity-content .content {
+.Aactivity-content .Acontent {
   width: 50%;
   margin-right: auto;
   font-size: 13px;
@@ -216,13 +220,13 @@ body {
   color: #5B5C5E;
 }
 
-.activity-content .ending {
+.Aactivity-content .Aending {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.ending .time {
+.Aending .Atime {
   margin-right: auto;
   font-size: 13px;
   line-height: 19px;
