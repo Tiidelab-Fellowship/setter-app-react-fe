@@ -3,10 +3,14 @@ import { Footer } from "../Components/Footer/Footer"
 import { SideBar } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { ProfileContent} from "../Components/DashboardContent/Profile"
+import {ProfileModalBusiness, ProfileModalName} from "../Components/Modals/ProfileModal";
+import { useState } from "react";
 
 
 
 const ProfilePage = () =>{
+  const [modal, setModal] = useState(false);
+  const [modal2, setModal2] = useState(false);
   return (
     <>
       <DBheader
@@ -17,7 +21,9 @@ const ProfilePage = () =>{
         smallName="Banwo O."
         occupation="Web Developer"
       />
-      <ProfileContent />
+      <ProfileModalName modal2={modal2} setModal2={setModal2} />
+      <ProfileModalBusiness  modal={modal} setModal={setModal} />
+      <ProfileContent setModal={setModal} setModal2={setModal2}/>
      <SideBar />
      <Footer />
     </>

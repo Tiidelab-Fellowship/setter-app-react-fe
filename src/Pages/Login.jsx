@@ -59,7 +59,14 @@ export const LoginBody = () => {
                 if (token) {
                   navigate("/ProfilePage");
                 }
-              } catch (error) {}
+              } catch (error) {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Login Failed',
+                  text: 'User not found.',
+                  confirmButtonText: 'Retry'
+                })
+              }
        }}
      >
        {({
