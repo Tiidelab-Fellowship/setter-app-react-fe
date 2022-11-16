@@ -3,7 +3,7 @@ import { FaSearch, FaBell, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import profilePicture from "../../SetterApp-Assets/profilePicture.png"
 
-export const DBheader = ({ headline, headlineDetails, hideButton, hidePickSocials, smallName, occupation }) => {
+export const DBheader = ({ headline, headlineDetails, hideButton, hidePickSocials, smallName, occupation, modal, setModal }) => {
   return (
     <div className="headerDashContainer">
       <div className="DBleftHeader">
@@ -15,7 +15,7 @@ export const DBheader = ({ headline, headlineDetails, hideButton, hidePickSocial
         </div>
       </div>
       <div className="DBrightHeader">
-        {hideButton? null :<button className="createPostBtn">Create Post +</button>}
+        {hideButton? null :<button className="createPostBtn" onClick={()=>setModal(true)}>Create Post +</button>}
         {hidePickSocials? null: <div className="pickSocials">
           <select name="socialAccounts" id="socialAccounts">
             <option value="instagram">Instagram</option>

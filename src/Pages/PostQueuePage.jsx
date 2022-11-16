@@ -4,9 +4,14 @@ import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
 import  { DemoAppTwo } from "../Components/FullCalendar/FullCalendarComponent";
+import { PostModal } from "../Components/Modals/PostModal";
+import React, {useState} from "react";
 
-export const PostQueueContent = () => {
+export const PostQueueContent = ({modal,setModal}) => {
   return (
+    <React.Fragment>
+    <PostModal modal={modal}
+        setModal={setModal}/>
     <section className="PSPQDashboardContainer">
       <main className="bigestSide">
         <Queue />
@@ -25,9 +30,11 @@ export const PostQueueContent = () => {
         </div>
       </aside>
     </section>
+    </React.Fragment>
   );
 };
 const PostQueue = () => {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <DBheader
@@ -36,8 +43,11 @@ const PostQueue = () => {
         hidePickSocials
         smallName="Banwo O."
         occupation="Web Developer"
+        modal={modal}
+        setModal={setModal}
       />
-      <PostQueueContent />
+      <PostQueueContent modal={modal}
+        setModal={setModal}/>
       <SideBarTwo />
       <Footer />
     </>

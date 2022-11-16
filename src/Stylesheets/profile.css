@@ -9,9 +9,11 @@
     font-family: Inter;
 }
 
-
+button:hover{
+  cursor: pointer;
+}
 #dashboard-profile-con{
-  width: 84%;
+  width: 82%;
   margin-left: 18%;
   position: absolute;
 }
@@ -52,7 +54,7 @@
 
 .profile-edit-btn{
   height: 48px;
-  width: 111px;
+  padding: .2rem .5rem;
   border-radius: 8px;
   background-color: #424242;
   color: #ffffff;

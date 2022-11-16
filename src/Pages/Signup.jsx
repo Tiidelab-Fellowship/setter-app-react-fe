@@ -8,12 +8,21 @@ import { useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import { SignupSchema } from "../Utils/Validation/validationSchema";
-import { toast } from 'react-toastify';
 
 const Swal = require('sweetalert2')
 
 
  export const SignUpBody = () => {
+const notification =()=>{
+  Swal.fire({
+    icon: 'error',
+    title: 'Registration Failed',
+    text: 'This Email has previously registered with us.',
+    footer: 'Change your email',
+    confirmButtonText: 'Retry'
+  })
+}
+
   const text1 = "Create Your Account"
   const text2 =" Or register with email"
   const text =  "Register"
@@ -31,7 +40,7 @@ const Swal = require('sweetalert2')
 
   return(
     <section className="totalContainer">
-      <Formik className="formSide"
+      <Formik 
         initialValues={{
           firstName: "",
           lastName: "",
@@ -43,7 +52,8 @@ const Swal = require('sweetalert2')
         onSubmit={async (values, { setSubmitting }) => {
           const { firstName, lastName, password, email } = values;
           setSubmitting(true);
-          console.log(values);
+          // console.log(values);
+          try {
           let response = await axios.post(
             "https://setter-app-cohort4.herokuapp.com/v1/auth/register",
             {
@@ -53,8 +63,7 @@ const Swal = require('sweetalert2')
               email,
             }
           );
-          try {
-            console.log(response)
+          
             const { access, refresh } = response.data.tokens;
             const tokens = [];
             tokens.push({
@@ -73,14 +82,10 @@ const Swal = require('sweetalert2')
             if (token) {
               navigate("/LoginPage");
             }
-          } catch (error) {
-            toast.error("Email has already been", {
-              position: "top-center",
-            });
+          }catch (error) {
+            // console.log(error)
+            notification();
           }
-          
-
-
         }}
       >
         {({
