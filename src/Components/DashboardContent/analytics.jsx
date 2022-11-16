@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import '../../Stylesheets/analytics.css'
 import arrowUp from '../../SetterApp-Assets/arrow-up.png';
 import more from '../../SetterApp-Assets/more.png';
@@ -9,7 +9,6 @@ import like from '../../SetterApp-Assets/like.png';
 import share from '../../SetterApp-Assets/share.png';
 import growth from '../../SetterApp-Assets/growth.png';
 import moreBottom from '../../SetterApp-Assets/more-bottom.png';
-import arrowDown from '../../SetterApp-Assets/arrow-down.png';
 import "../../Stylesheets/analytics.css";
 import { BarChart } from '../AnalyticsChart/line';
 import { useState } from "react";
@@ -17,6 +16,7 @@ import { Chart as ChartJS } from "chart.js/auto"
 
 
 import { LikesData } from '../AnalyticsChart/analyticsData';
+import { BarChart } from '../Chart/BarChart';
 
 
 
@@ -39,6 +39,7 @@ const [userLikes, setUserLikes] = useState({
 
   return (
     <fragment>
+
   <div className="Acontainer">
     <div className="Atop-header">
       <div className="Aaccount-data">
@@ -119,6 +120,26 @@ const [userLikes, setUserLikes] = useState({
           <div className="Aschedule-title">Schedule Post</div>
           <div className="Aadd-post"><a href>Add Post</a></div>
         </div>
+
+        <div className="Apost-container">
+          <img src={cat} alt />
+          <div className="Apost-info">
+            <div className="Apost-heading">For Fox Sake</div>
+            <div className="Apost-details">
+
+              <p>
+                <span>Posted on</span><br />
+                Instagram
+              </p>
+              <p>
+                <span>Posting Date</span><br />
+                13 March, 2020
+              </p>
+            </div>
+          </div>
+          <img src={more} alt="" />
+        </div>
+
         <div className="Apost-container">
           <img src={cat} alt />
           <div className="Apost-info">
@@ -134,25 +155,9 @@ const [userLikes, setUserLikes] = useState({
               </p>
             </div>
           </div>
-          <img src={more} alt />
+          <img src={more} alt="" />
         </div>
-        <div className="Apost-container">
-          <img src={cat} alt />
-          <div className="Apost-info">
-            <div className="Apost-heading">For Fox Sake</div>
-            <div className="Apost-details">
-              <p>
-                <span>Posted on</span><br />
-                Instagram
-              </p>
-              <p>
-                <span>Posting Date</span><br />
-                13 March, 2020
-              </p>
-            </div>
-          </div>
-          <img src={more} alt />
-        </div>
+      <div className="action">Commented on your photo</div>
         <div className="Aactivities">
           <div className="Aactivity-title">Activities</div>
           <div className="Aactivity-box">
@@ -167,8 +172,9 @@ const [userLikes, setUserLikes] = useState({
               <div className="Acontent">
                 Great work deserves appreciations. This is so amazing! 😍🎉
               </div>
-              <img src={abstract} alt />
+              <img src={abstract} alt="" />
             </div>
+
             <div className="Aending">
               <div className="Atime">1 h ago</div>
               <img src={like} alt />
@@ -188,8 +194,9 @@ const [userLikes, setUserLikes] = useState({
               <div className="Acontent">
                 Great work deserves appreciations. This is so amazing! 😍🎉
               </div>
-              <img src={abstract} alt />
+              <img src={abstract} alt="" />
             </div>
+
             <div className="Aending">
               <div className="Atime">1 h ago</div>
               <img src={like} alt />

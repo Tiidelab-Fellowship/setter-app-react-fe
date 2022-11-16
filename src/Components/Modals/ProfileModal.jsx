@@ -1,12 +1,12 @@
 import React from "react";
-import { Formik } from 'formik';
+import { Formik } from "formik";
 import "../../Stylesheets/ProfileModal.css";
 import { category } from "./Business-options";
 import axios from "axios";
 
-const Swal = require('sweetalert2')
+const Swal = require("sweetalert2");
 
-export const ProfileModalBusiness = ({modal, setModal}) => {
+export const ProfileModalBusiness = ({ modal, setModal }) => {
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -23,61 +23,84 @@ export const ProfileModalBusiness = ({modal, setModal}) => {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
             <Formik
-            initialValues={{
-              businessName: "",
-              businessSize: "",
-              businessCategory: "",
-            }}
+              initialValues={{
+                businessName: "",
+                businessSize: "",
+                businessCategory: "",
+              }}
+              onSubmit={async (values, { setSubmitting }) => {
+                const { businessName, businessSize, businessCategory } = values;
+                setSubmitting(true);
 
-            onSubmit={async (values, { setSubmitting }) => {
-              const { businessName, businessSize, businessCategory } = values;
-              setSubmitting(true);
-
-              try {
-                let response = await axios.post(
-                  "https://setter-app-cohort4.herokuapp.com/v1/",
-                  {
-                    businessName,
-                    businessSize
-                  }
-                );
-                console.log(response)
-                Swal.fire({
-                  title: 'Registration Successful',
-                  icon: 'success',
-                  confirmButtonText: 'Ok'
-                })
-              } catch (error) {
-                Swal.fire({
-                  title: 'Registration Failed',
-                  icon: 'error',
-                  confirmButtonText: 'Try again'
-                })
-              };
-            }}
-            >
-            <form>
-              <h3 className="Your-Profile">Business Profile</h3>
-              <label className="profileLabelModal">Business Name</label>
-              <br />
-              <input name="businessName" className="profileModalInput" type="text" />
-              <br />
-              <label className="profileLabelModal">Business Size</label>
-              <br />
-              <input name="businessSize" className="profileModalInput" type="text" placeholder="Small, medium or Large-scale"/>
-
-              <br />
-              <label className="profileLabelModal">Business Category</label>
-              <br />
-              <select name="businessCategory" className="profileModalInput">
-              {
-                  category.map(opt=> <option>{opt}</option>)
+                try {
+                  let response = await axios.post(
+                    "https://setter-app-cohort4.herokuapp.com/v1/businessInformation",
+                    {
+                      businessName,
+                      businessSize,
+                    }
+                  );
+                  console.log(response);
+                  Swal.fire({
+                    title: "Registration Successful",
+                    icon: "success",
+                    confirmButtonText: "Ok",
+                  });
+                } catch (error) {
+                  Swal.fire({
+                    title: "Registration Failed",
+                    icon: "error",
+                    confirmButtonText: "Try again",
+                  });
                 }
-              </select>
-              <br />
-              <button id="close" onClick={toggleModal}>Cancel</button>
-              <button id="close" type="submit">Save</button>
-            </form>
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting,
+                /* and other goodies */
+              }) => (
+                <form>
+                  <h3 className="Your-Profile">Business Profile</h3>
+                  <label className="profileLabelModal">Business Name</label>
+                  <br />
+                  <input
+                    name="businessName"
+                    className="profileModalInput"
+                    type="text"
+                  />
+                  <br />
+                  <label className="profileLabelModal">Business Size</label>
+                  <br />
+                  <input
+                    name="businessSize"
+                    className="profileModalInput"
+                    type="text"
+                    placeholder="Small, medium or Large-scale"
+                  />
+
+                  <br />
+                  <label className="profileLabelModal">Business Category</label>
+                  <br />
+                  <select name="businessCategory" className="profileModalInput">
+                    {category.map((opt) => (
+                      <option>{opt}</option>
+                    ))}
+                  </select>
+                  <br />
+                  <button id="close" onClick={toggleModal}>
+                    Cancel
+                  </button>
+                  <button id="close" type="submit" disabled={isSubmitting}  onClick={handleSubmit}>
+                    { isSubmitting ? "Registering Business" : "Register"}
+                  </button>
+                </form>
+              )}
             </Formik>
 
             <button className="close-modal" onClick={toggleModal}>
@@ -90,9 +113,7 @@ export const ProfileModalBusiness = ({modal, setModal}) => {
   );
 };
 
-
-export const ProfileModalName = ({modal2, setModal2}) => {
-  
+export const ProfileModalName = ({ modal2, setModal2 }) => {
   const toggleModal = () => {
     setModal2(!modal2);
   };
@@ -108,23 +129,88 @@ export const ProfileModalName = ({modal2, setModal2}) => {
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
-            
+          <Formik
+              initialValues={{
+                businessName: "",
+                businessSize: "",
+                businessCategory: "",
+              }}
+              onSubmit={async (values, { setSubmitting }) => {
+                const { userName, phoneNumber } = values;
+                setSubmitting(true);
+
+                try {
+                  let response = await axios.patch(
+                    `https://setter-app-cohort4.herokuapp.com/v1/users/1`,
+                    {
+                      phoneNumber,
+                      userName,
+                    }
+                  );
+                  console.log(response);
+                  Swal.fire({
+                    title: "Registration Successful",
+                    icon: "success",
+                    confirmButtonText: "Ok",
+                  });
+                } catch (error) {
+                  Swal.fire({
+                    title: "Registration Failed",
+                    icon: "error",
+                    confirmButtonText: "Try again",
+                  });
+                }
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting,
+                /* and other goodies */
+              }) => (
             <form>
               <h3 className="Your-Profile">Your Profile</h3>
               <label className="profileLabelModal">UserName</label>
               <br />
-              <input name="userName" className="profileModalInput" type="text" />
+              <input
+                name="userName"
+                className="profileModalInput"
+                type="text"
+                value={values.userName}
+                onChange={handleChange}
+              />
               <br />
               <label className="profileLabelModal">Phone</label>
               <br />
-              <input name="phoneNumber" className="profileModalInput" type="number" />
+              <input
+                name="phoneNumber"
+                className="profileModalInput"
+                type="number"
+                value={values.phoneNumber}
+                onChange={handleChange}
+              />
               <br />
               <label className="profileLabelModal">Profile Picture</label>
               <br />
-              <input className="profileModalInput" type="file" id="myFile" name="filename" />
-              <button id="close" onClick={toggleModal}>Cancel</button>
-              <button id="close" type="submit">Save</button>
+              <input
+                className="profileModalInput"
+                type="file"
+                id="myFile"
+                name="filename"
+              />
+              <button id="close" onClick={toggleModal}>
+                Cancel
+              </button>
+              <button id="close" type="submit" disabled={isSubmitting}  onClick={handleSubmit}>
+               {isSubmitting ? "Updating" : "Update"} 
+              </button>
             </form>
+              )}
+              </Formik>
 
             <button className="close-modal" onClick={toggleModal}>
               X
@@ -135,5 +221,3 @@ export const ProfileModalName = ({modal2, setModal2}) => {
     </React.Fragment>
   );
 };
-
-
