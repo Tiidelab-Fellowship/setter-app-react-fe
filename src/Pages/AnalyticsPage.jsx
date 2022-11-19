@@ -1,8 +1,7 @@
 import { Footer } from "../Components/Footer/Footer"
-import { SideBar, SideBarTwo } from "../Components/Sidebar/SideBar";
+import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { AnalyticsContent } from "../Components/DashboardContent/analytics";
-
 
 
 const AnalyticsPage = () =>{

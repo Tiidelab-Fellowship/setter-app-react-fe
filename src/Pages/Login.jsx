@@ -5,9 +5,9 @@ import { FormHeaderWithHeader } from "../Components/Forms/formheader"
 import { FormTextHeader,  PictureText, LoginFooter, BigInput } from "../Components/Forms/Forms-body";
 import { Formik } from 'formik';
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { LoginSchema } from "../Utils/Validation/validationSchema";
+import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 const Swal = require('sweetalert2')
 
 
@@ -34,8 +34,7 @@ export const LoginBody = () => {
         const {password, email } = values;
               setSubmitting(true);
               try {
-                let response = await axios.post(
-                  "https://setter-app-cohort4.herokuapp.com/v1/auth/login",
+                let response = await axiosInstance.post("/auth/login",
                   {
                     password,
                     email,
@@ -57,7 +56,7 @@ export const LoginBody = () => {
                   confirmButtonText: 'Continue'
                 })
                 if (token) {
-                  navigate("/ProfilePage");
+                  navigate("/SocialDashboard");
                 }
               } catch (error) {
                 Swal.fire({

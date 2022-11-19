@@ -1,8 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
 import "../../Stylesheets/ProfileModal.css";
-import { category } from "./Business-options";
-import axios from "axios";
+import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
 
 const Swal = require("sweetalert2");
 
@@ -24,20 +23,21 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
           <div className="modal-content">
             <Formik
               initialValues={{
-                businessName: "",
-                businessSize: "",
-                businessCategory: "",
+                name: "",
+                size: "",
+                businessCategoryName: "",
               }}
               onSubmit={async (values, { setSubmitting }) => {
-                const { businessName, businessSize, businessCategory } = values;
+                const { name, size, businessCategoryName } = values;
                 setSubmitting(true);
 
                 try {
-                  let response = await axios.post(
-                    "https://setter-app-cohort4.herokuapp.com/v1/businessInformation",
+                  let response = await axiosInstance.post(
+                    "/businessInformation",
                     {
-                      businessName,
-                      businessSize,
+                      name,
+                      size,
+                      businessCategoryName,
                     }
                   );
                   console.log(response);
@@ -70,28 +70,40 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
                   <label className="profileLabelModal">Business Name</label>
                   <br />
                   <input
-                    name="businessName"
+                    name="name"
                     className="profileModalInput"
                     type="text"
+                    value={values.name}
+                    onChange={handleChange}
                   />
                   <br />
                   <label className="profileLabelModal">Business Size</label>
                   <br />
                   <input
-                    name="businessSize"
+                    name="size"
                     className="profileModalInput"
                     type="text"
                     placeholder="Small, medium or Large-scale"
+                    value={values.size}
+                    onChange={handleChange}
                   />
 
                   <br />
                   <label className="profileLabelModal">Business Category</label>
                   <br />
-                  <select name="businessCategory" className="profileModalInput">
+                  {/* <select name="businessCategory" className="profileModalInput" value={values.businessCategoryName}>
                     {category.map((opt) => (
                       <option>{opt}</option>
                     ))}
-                  </select>
+                  </select> */}
+                   <input
+                    name="businessCategoryName"
+                    className="profileModalInput"
+                    type="text"
+                    value={values.businessCategoryName}
+                    onChange={handleChange}
+                  />
+
                   <br />
                   <button id="close" onClick={toggleModal}>
                     Cancel
@@ -131,21 +143,21 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
           <div className="modal-content">
           <Formik
               initialValues={{
-                businessName: "",
-                businessSize: "",
-                businessCategory: "",
+                userName: "",
+                phoneNumber: "",
               }}
               onSubmit={async (values, { setSubmitting }) => {
                 const { userName, phoneNumber } = values;
                 setSubmitting(true);
 
                 try {
-                  let response = await axios.patch(
-                    `https://setter-app-cohort4.herokuapp.com/v1/users/1`,
+                  let response = await axiosInstance.patch(
+                    `/users/:id`,
                     {
-                      phoneNumber,
+                      phoneNumber: toString(phoneNumber),
                       userName,
-                    }
+                    },
+                    
                   );
                   console.log(response);
                   Swal.fire({
