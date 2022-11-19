@@ -8,7 +8,7 @@ import { LikesData } from "../Chart/Data/LikesData"
 import { Chart as ChartJS } from "chart.js/auto"
 
 export const SocialDashboardContent = () => {
-  console.log(LikesData)
+  // console.log(LikesData)
  const [userLikes, setUserLikes] = useState({
   
   labels: LikesData.map((data)=> data.month),
