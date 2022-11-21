@@ -5,12 +5,17 @@ import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { ProfileContent} from "../Components/DashboardContent/Profile"
 import {ProfileModalBusiness, ProfileModalName} from "../Components/Modals/ProfileModal";
 import { useState } from "react";
+import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
 
 
-const ProfilePage = () =>{
+const ProfilePage = async () =>{
   const [modal, setModal] = useState(false);
   const [modal2, setModal2] = useState(false);
+  // const id = JSON.parse(localStorage.getItem("userId"));
+  // const userInfo = await axiosInstance.get(`/users/${id}`)
+  // console.log(userInfo)
+  // const { firstName, lastName} = userInfo.data
   return (
     <>
       <DBheader
