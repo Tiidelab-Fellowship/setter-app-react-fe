@@ -40,6 +40,9 @@ export const LoginBody = () => {
                     email,
                   }
                 );
+                console.log(response.data.user.id)
+                const userId = response.data.user.id
+                localStorage.setItem("userId", JSON.stringify(userId))
                 const { access, refresh } = response.data.tokens;
                 const tokens = [];
                 tokens.push({

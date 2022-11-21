@@ -150,9 +150,10 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
                 const { userName, phoneNumber } = values;
                 setSubmitting(true);
 
+                const id = JSON.parse(localStorage.getItem("userId"));
                 try {
                   let response = await axiosInstance.patch(
-                    `/users/:id`,
+                    `/users/${id}`,
                     {
                       phoneNumber: toString(phoneNumber),
                       userName,
