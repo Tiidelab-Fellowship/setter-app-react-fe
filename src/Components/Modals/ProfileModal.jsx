@@ -149,7 +149,6 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
               onSubmit={async (values, { setSubmitting }) => {
                 const { userName, phoneNumber } = values;
                 setSubmitting(true);
-
                 const id = JSON.parse(localStorage.getItem("userId"));
                 try {
                   let response = await axiosInstance.patch(

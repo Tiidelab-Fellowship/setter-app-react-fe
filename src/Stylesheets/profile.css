@@ -43,7 +43,7 @@ button:hover{
  
 }
 
-.profile-data > p{
+.profile-data > p, h4{
   margin-top: 10px;
 }
 

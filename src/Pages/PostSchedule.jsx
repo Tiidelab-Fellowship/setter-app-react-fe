@@ -4,11 +4,13 @@ import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
 import DemoApp from "../Components/FullCalendar/FullCalendarComponent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PostModal } from "../Components/Modals/PostModal";
+import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
 
 export const PostScheduleContent = ({modal, setModal}) => {
+ 
   return (
     <>
     <PostModal modal={modal} setModal={setModal}/>
@@ -35,6 +37,15 @@ export const PostScheduleContent = ({modal, setModal}) => {
 };
 
 const PostSchedule = () => {
+  const [user, setUser] = useState({})
+  useEffect(() => {
+    const id = JSON.parse(localStorage.getItem("userId"));
+    axiosInstance.get(`/users/${id}`).then((response)=>{
+      setUser(response.data)
+    });
+  }, []);
+  
+  const { firstName } = user
   const [modal, setModal] = useState(false);
   return (
     <>
@@ -42,7 +53,7 @@ const PostSchedule = () => {
         headline="Post Schedule 😘"
         headlineDetails="Schedule your post here and go to rest, We will do the rest."
         hidePickSocials
-        smallName="Banwo O."
+        smallName={firstName}
         occupation="Web Developer"
         modal={modal}
         setModal={setModal}

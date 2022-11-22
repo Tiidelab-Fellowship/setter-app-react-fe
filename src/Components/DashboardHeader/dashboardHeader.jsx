@@ -1,9 +1,18 @@
 import React from "react";
 import { FaSearch, FaBell, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import profilePicture from "../../SetterApp-Assets/profilePicture.png"
+import profilePicture from "../../SetterApp-Assets/profilePicture.png";
 
-export const DBheader = ({ headline, headlineDetails, hideButton, hidePickSocials, smallName, occupation, modal, setModal }) => {
+export const DBheader = ({
+  headline,
+  headlineDetails,
+  hideButton,
+  hidePickSocials,
+  smallName,
+  occupation,
+  modal,
+  setModal,
+}) => {
   return (
     <div className="headerDashContainer">
       <div className="DBleftHeader">
@@ -15,15 +24,21 @@ export const DBheader = ({ headline, headlineDetails, hideButton, hidePickSocial
         </div>
       </div>
       <div className="DBrightHeader">
-        {hideButton? null :<button className="createPostBtn" onClick={()=>setModal(true)}>Create Post +</button>}
-        {hidePickSocials? null: <div className="pickSocials">
-          <select name="socialAccounts" id="socialAccounts">
-            <option value="instagram">Instagram</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Twitter">Twitter</option>
-            <option value="LinkedIn">LinkedIn</option>
-          </select>
-        </div>}
+        {hideButton ? null : (
+          <button className="createPostBtn" onClick={() => setModal(true)}>
+            Create Post +
+          </button>
+        )}
+        {hidePickSocials ? null : (
+          <div className="pickSocials">
+            <select name="socialAccounts" id="socialAccounts">
+              <option value="instagram">Instagram</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Twitter">Twitter</option>
+              <option value="LinkedIn">LinkedIn</option>
+            </select>
+          </div>
+        )}
         <div className="theTwoHeaderIcons">
           <div className="searchIcon">
             <FaSearch />
@@ -33,9 +48,11 @@ export const DBheader = ({ headline, headlineDetails, hideButton, hidePickSocial
           </div>
         </div>
         <div className="smallProfile">
-          <img src={profilePicture} alt="profilePicture"/>
+          <img src={profilePicture} alt="profilePicture" />
           <div className="smallName">
-            <h3>{smallName} <FaCheckCircle/></h3>
+            <h3>
+              {smallName} <FaCheckCircle />
+            </h3>
             <p>{occupation}</p>
             <div className="view-profile">
               <h3 className="profile-boy">
