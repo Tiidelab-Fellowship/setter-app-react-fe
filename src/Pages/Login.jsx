@@ -40,7 +40,6 @@ export const LoginBody = () => {
                     email,
                   }
                 );
-                console.log(response.data.user.id)
                 const userId = response.data.user.id
                 localStorage.setItem("userId", JSON.stringify(userId))
                 const { access, refresh } = response.data.tokens;
@@ -51,7 +50,6 @@ export const LoginBody = () => {
                 tokens.push({
                   refresh: refresh.token,
                 });
-                console.log(tokens);
                 localStorage.setItem("EachUser", JSON.stringify(tokens));
                 Swal.fire({
                   title: 'Welcome back',
