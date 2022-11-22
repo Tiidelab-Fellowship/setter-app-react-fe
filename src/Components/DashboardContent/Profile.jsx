@@ -8,15 +8,16 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-export const ProfileContent = ({ modal, setModal, modal2, setModal2 }) => {
+export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => {
+  console.log(user)
+  const { firstName, lastName, phoneNumber, email, userName } = user
+  const handleEditModal = () => {
+    setModal(!modal);
+  };
 
-  const handleEditModal =()=>{
-    setModal(!modal)
-  }
-
-  const handleEditModal2 =()=>{
-    setModal2(!modal2)
-  }
+  const handleEditModal2 = () => {
+    setModal2(!modal2);
+  };
 
   return (
     <section id="dashboard-profile-con">
@@ -25,13 +26,17 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2 }) => {
           <img src={profile} alt="profile-pic" className="prof-img" />
         </div>
         <div className="profile-data">
-          <h1>Banwo Olorunsogo Olubowale</h1>
-          <h4>Username</h4>
-          <p>sogobanwo@gmail.com</p>
-          <p>09095351248</p>
+          <h1>{firstName + " " + lastName}</h1>
+          <p>Username: {userName}</p>
+          <p>Email: {email}</p>
+          <p> Phone Number: { phoneNumber }</p>
           <div className="profile-button">
-            <button className="profile-edit-btn" onClick={handleEditModal2}>Update Profile</button>
-            <button className="profile-password-btn" onClick={handleEditModal}>Register Business</button>
+            <button className="profile-edit-btn" onClick={handleEditModal2}>
+              Update Profile
+            </button>
+            <button className="profile-password-btn" onClick={handleEditModal}>
+              Register Business
+            </button>
           </div>
         </div>
       </div>
