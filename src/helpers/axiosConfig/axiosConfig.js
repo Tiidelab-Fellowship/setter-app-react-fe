@@ -13,7 +13,7 @@ axiosInstance.interceptors.request.use(
     (config) => {
         const allToken =JSON.parse(localStorage.getItem("EachUser"))
         const token = allToken[0].access
-        console.log(token)
+        // console.log(token)
         if(token) {
           config.headers["Authorization"] = 'Bearer ' + token; 
         }
