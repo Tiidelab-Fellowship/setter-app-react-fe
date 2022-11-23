@@ -1,6 +1,5 @@
 import { SocialDashboardContent } from "../Components/DashboardContent/SocialDashboard";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
-import { Footer } from "../Components/Footer/Footer";
 import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import "../Stylesheets/dashboardHeader.css";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
@@ -22,13 +21,11 @@ const SocialDashboard = () => {
         headline={`Welcome, ${firstName}🎉`}
         headlineDetails="Here is an overview of your Social Media Accounts."
         hideButton
-        hidePickSocials
         smallName= {firstName}
         occupation="Web Developer"
       />
       <SocialDashboardContent />
       <SideBarTwo />
-      <Footer />
     </>
   );
 };

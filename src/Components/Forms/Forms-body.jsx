@@ -35,6 +35,7 @@ export const FormTextHeader = ({ text1, text2 }) => {
   );
 };
 
+
 export const FormFooter = ({ text, isSubmitting, handleSubmit  }) => {
   return (
     <div className="bottomOfContainer">
@@ -51,6 +52,7 @@ export const FormFooter = ({ text, isSubmitting, handleSubmit  }) => {
     </div>
   );
 };
+
 
 export const BigInput = ({ type, placeholder, sogo,
   handleChange,
@@ -78,6 +80,7 @@ export const PictureText = ({ smallText, textarea }) => {
   );
 };
 
+
 export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   return (
     <React.Fragment>
@@ -95,6 +98,7 @@ export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   );
 };
 
+
 export const VerificationInput = () => {
   return (
     <React.Fragment>
@@ -109,6 +113,7 @@ export const VerificationInput = () => {
   );
 };
 
+
 export const BottomOfButton = () => {
   return (
     <h6 class="bottomOfButton">
@@ -116,6 +121,7 @@ export const BottomOfButton = () => {
     </h6>
   );
 };
+
 
 export const ContactUsBody = () => {
   return (

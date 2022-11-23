@@ -82,13 +82,14 @@ button:hover{
 .profile-socials{
   width: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .profile-box{
   display: flex;
   align-items: center;
-  margin: 1.5rem 1.5rem 1.5rem 0;
+  margin: 1.5rem 1.5rem .1rem 0;
 }
 
 .profile-social-icon-text{
@@ -153,11 +154,11 @@ button:hover{
 
 }
 
-.profile-line{
+/* .profile-line{
   height: 70px;
   border-left: 2px solid #c2c0c0;
   margin-top: 20px;
-}
+} */
 
 .profile-box p{
   display: inline;
