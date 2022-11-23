@@ -1,6 +1,5 @@
 import React from "react";
 import pics from "../SetterApp-Assets/Login-Img.png";
-import { Footer } from "../Components/Footer/Footer"
 import { FormHeaderWithHeader } from "../Components/Forms/formheader"
 import { FormTextHeader,  PictureText, LoginFooter, BigInput } from "../Components/Forms/Forms-body";
 import { Formik } from 'formik';
@@ -104,7 +103,6 @@ const LoginPage = () =>{
     <>
      <FormHeaderWithHeader />
      <LoginBody />
-     <Footer />
     </>
    );
 }

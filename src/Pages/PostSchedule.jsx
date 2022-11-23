@@ -1,4 +1,3 @@
-import { Footer } from "../Components/Footer/Footer";
 import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
@@ -61,7 +60,6 @@ const PostSchedule = () => {
       <PostScheduleContent modal={modal}
         setModal={setModal}/>
       <SideBarTwo />
-      <Footer />
     </>
   );
 };

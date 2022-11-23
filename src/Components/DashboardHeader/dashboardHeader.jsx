@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch, FaBell, FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import profilePicture from "../../SetterApp-Assets/profilePicture.png";
 
@@ -39,14 +39,6 @@ export const DBheader = ({
             </select>
           </div>
         )}
-        <div className="theTwoHeaderIcons">
-          <div className="searchIcon">
-            <FaSearch />
-          </div>
-          <div className="notificationIcon">
-            <FaBell />
-          </div>
-        </div>
         <div className="smallProfile">
           <img src={profilePicture} alt="profilePicture" />
           <div className="smallName">

@@ -1,6 +1,4 @@
-import { Footer } from "../Components/Footer/Footer"
-// import { ProfileContent } from "../Components/DashboardContent/Profile";
-import { SideBar } from "../Components/Sidebar/SideBar";
+import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { ProfileContent} from "../Components/DashboardContent/Profile"
 import {ProfileModalBusiness, ProfileModalName} from "../Components/Modals/ProfileModal";
@@ -20,9 +18,6 @@ const ProfilePage = () =>{
   }, []);
   
   const { firstName } = user
-  // const userInfo = await axiosInstance.get(`/users/${id}`)
-  // console.log(userInfo)
-  // const { firstName, lastName} = userInfo.data
   return (
     <>
       <DBheader
@@ -36,8 +31,7 @@ const ProfilePage = () =>{
       <ProfileModalName modal2={modal2} setModal2={setModal2} />
       <ProfileModalBusiness  modal={modal} setModal={setModal} />
       <ProfileContent setModal={setModal} setModal2={setModal2} user={user}/>
-     <SideBar />
-     <Footer />
+     <SideBarTwo />
     </>
    );
 }
