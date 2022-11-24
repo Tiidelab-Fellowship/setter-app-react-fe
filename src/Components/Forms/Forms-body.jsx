@@ -3,6 +3,8 @@ import "../../Stylesheets/formsBody.css";
 import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../Stylesheets/contactUs.css"
+import { Field, Formik } from "formik";
+import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
 // import Swal from 'sweetalert2'
 const Swal = require('sweetalert2')
 
@@ -35,6 +37,7 @@ export const FormTextHeader = ({ text1, text2 }) => {
   );
 };
 
+
 export const FormFooter = ({ text, isSubmitting, handleSubmit  }) => {
   return (
     <div className="bottomOfContainer">
@@ -51,6 +54,7 @@ export const FormFooter = ({ text, isSubmitting, handleSubmit  }) => {
     </div>
   );
 };
+
 
 export const BigInput = ({ type, placeholder, sogo,
   handleChange,
@@ -78,6 +82,7 @@ export const PictureText = ({ smallText, textarea }) => {
   );
 };
 
+
 export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   return (
     <React.Fragment>
@@ -95,6 +100,7 @@ export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   );
 };
 
+
 export const VerificationInput = () => {
   return (
     <React.Fragment>
@@ -109,6 +115,7 @@ export const VerificationInput = () => {
   );
 };
 
+
 export const BottomOfButton = () => {
   return (
     <h6 class="bottomOfButton">
@@ -116,6 +123,7 @@ export const BottomOfButton = () => {
     </h6>
   );
 };
+
 
 export const ContactUsBody = () => {
   return (
@@ -127,34 +135,77 @@ export const ContactUsBody = () => {
           Send us a message. Be rest assured that we will respond as soon as possible.
         </p>
       </div>
+        <Formik 
+        initialValues={{ email: '', name: '', phoneNumber: '', text: '' }}
+
+        onSubmit={async(values, { setSubmitting }) => {
+          const{name, email, phoneNumber, text} = values;
+          setSubmitting(true);
+          try {
+            let response = await axiosInstance.post('/contactUs',
+            {name, email, phoneNumber, text});
+          } catch (error) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Post not sent',
+              text: 'Check your details.',
+              confirmButtonText: 'Retry'
+            })
+          }
+        }}
+        >
+          {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleBlur,
+         handleSubmit,
+         isSubmitting,
+         /* and other goodies */
+       }) => (
+        <form>
       <div className="smallContactContainer">
         <input
-          type="text"
+        onChange={handleChange}
+        name="name"
+        value={values.name}
+        type="text"
           placeholder="Enter Your Name*"
           className="smallInputContact"
-        required = { true }/>
+        />
         <input
-          type="text"
+          onChange={handleChange}
+          name="email"
+          value={values.email}
+          type="email"
           placeholder="Enter Your Email*"
           className="smallInputContact Right"
-        required = {true}/>
+        />
       </div>
       <div className="smallContactContainer">
         <input
+          onChange={handleChange}
+          name="phoneNumber"
+          value={values.phoneNumber}
           type="text"
           placeholder="Enter Phone Number"
           className="smallInputContact"
         />
         <input
+          onChange={handleChange}
+          name="companyName"
           type="text"
           placeholder="Enter Your Company Name"
           className="smallInputContact Right"
         />
       </div>
       <textarea
+        onChange={handleChange}
+        name="text"
+        value={values.text}
         className="inputMessage"
         placeholder="Write Your message here"
-        defaultValue={""}
       />
       <div className="bottomOfContactUs">
         <div className="bOCUL">
@@ -169,15 +220,11 @@ export const ContactUsBody = () => {
           </p>
         </div>
         
-        <button onClick={()=>{
-          Swal.fire({
-            title: 'Message Sent',
-            icon: 'success',
-            text: 'We will reply shortly.',  
-            confirmButtonText: 'Continue'
-          })
-        }} className="inputButtonContact"><Link to="/">Send Message</Link></button>
+        <button disabled={isSubmitting} onClick={handleSubmit} className="inputButtonContact">{isSubmitting ? "Sending" : "Send"}</button>
       </div>
+      </form>
+      )}
+        </Formik>
     </section>
   );
 };

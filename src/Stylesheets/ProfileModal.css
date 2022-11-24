@@ -32,8 +32,8 @@ body.active-modal {
   background: #f1f1f1;
   padding: 14px 28px;
   border-radius: 3px;
-  max-width: 450px;
-  min-width: 300px;
+  width: 40vw;
+  height: 53vh;
   z-index: 2;
 }
 
@@ -55,7 +55,7 @@ body.active-modal {
 }
 
 #close{
-  margin-top: 10px;
+  margin: 10px 0;
   background-color: #673AB7;
   color: #ffffff;
   border: none;

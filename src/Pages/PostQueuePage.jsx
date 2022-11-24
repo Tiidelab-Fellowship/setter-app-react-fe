@@ -1,11 +1,11 @@
-import { Footer } from "../Components/Footer/Footer";
 import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
 import  { DemoAppTwo } from "../Components/FullCalendar/FullCalendarComponent";
 import { PostModal } from "../Components/Modals/PostModal";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
 export const PostQueueContent = ({modal,setModal}) => {
   return (
@@ -35,13 +35,22 @@ export const PostQueueContent = ({modal,setModal}) => {
 };
 const PostQueue = () => {
   const [modal, setModal] = useState(false);
+  const [user, setUser] = useState({})
+  useEffect(() => {
+    const id = JSON.parse(localStorage.getItem("userId"));
+    axiosInstance.get(`/users/${id}`).then((response)=>{
+      setUser(response.data)
+    });
+  }, []);
+  
+  const { firstName } = user
   return (
     <>
       <DBheader
         headline="Posts Queue 📬"
         headlineDetails="See what post goes out next and do well to re-schedule if you want to."
         hidePickSocials
-        smallName="Banwo O."
+        smallName={firstName}
         occupation="Web Developer"
         modal={modal}
         setModal={setModal}
@@ -49,7 +58,6 @@ const PostQueue = () => {
       <PostQueueContent modal={modal}
         setModal={setModal}/>
       <SideBarTwo />
-      <Footer />
     </>
   );
 };

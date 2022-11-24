@@ -16,6 +16,7 @@ import { Chart as ChartJS } from "chart.js/auto"
 
 
 import { LikesData } from '../AnalyticsChart/analyticsData';
+// import { BarChart } from '../Chart/BarChart';
 
 
 
@@ -24,7 +25,7 @@ const [userLikes, setUserLikes] = useState({
   
   labels: LikesData.map((data)=> data.month),
   datasets: [{
-    label: "number of likes",
+    label: "number of Followers",
     data : LikesData.map((data)=> data.numberOfLikes),
     backgroundColor: color => {
       let colors = color.index === 5 ? '#000000' : '#eeeeee'
@@ -37,7 +38,7 @@ const [userLikes, setUserLikes] = useState({
  })
 
   return (
-    <fragment>
+    <React.Fragment>
 
   <div className="Acontainer">
     <div className="Atop-header">
@@ -110,18 +111,18 @@ const [userLikes, setUserLikes] = useState({
       <div className="Afollowers-growth">
         <div className="Auser-growth">
           <div>Follower Growth</div>
-          <BarChart chartData= {userLikes} /> 
+          <div className='barchartWrapper'><BarChart chartData= {userLikes} /> </div>
         </div>
         <div className="Auser-country" />
       </div>
       <div className="Ascheduled-posts">
         <div className="Aschedule-header">
           <div className="Aschedule-title">Schedule Post</div>
-          <div className="Aadd-post"><a href>Add Post</a></div>
+          <div className="Aadd-post"><a href="./" >Add Post</a></div>
         </div>
 
         <div className="Apost-container">
-          <img src={cat} alt />
+          <img src={cat} alt="" />
           <div className="Apost-info">
             <div className="Apost-heading">For Fox Sake</div>
             <div className="Apost-details">
@@ -140,7 +141,7 @@ const [userLikes, setUserLikes] = useState({
         </div>
 
         <div className="Apost-container">
-          <img src={cat} alt />
+          <img src={cat} alt="" />
           <div className="Apost-info">
             <div className="Apost-heading">For Fox Sake</div>
             <div className="Apost-details">
@@ -154,14 +155,14 @@ const [userLikes, setUserLikes] = useState({
               </p>
             </div>
           </div>
-          <img src={more} alt="" />
+          <img src={more} alt=""/>
         </div>
       <div className="action">Commented on your photo</div>
         <div className="Aactivities">
           <div className="Aactivity-title">Activities</div>
           <div className="Aactivity-box">
             <div className="Aactivity-person">
-              <img src={man} alt />
+              <img src={man} alt="" />
               <div className="Aperson-action">
                 <div className="Aname">Banwo Olorun</div>
                 <div className="Aaction">Commented on your photo</div>
@@ -176,14 +177,14 @@ const [userLikes, setUserLikes] = useState({
 
             <div className="Aending">
               <div className="Atime">1 h ago</div>
-              <img src={like} alt />
-              <img src={share} alt />
-              <img src={moreBottom} alt />
+              <img src={like} alt="" />
+              <img src={share} alt="" />
+              <img src={moreBottom} alt="" />
             </div>
           </div>
           <div className="Aactivity-box">
             <div className="Aactivity-person">
-              <img src="./images/man.png" alt />
+              <img src="./images/man.png" alt="" />
               <div className="Aperson-action">
                 <div className="Aname">Banwo Olorun</div>
                 <div className="Aaction">Commented on your photo</div>
@@ -198,16 +199,16 @@ const [userLikes, setUserLikes] = useState({
 
             <div className="Aending">
               <div className="Atime">1 h ago</div>
-              <img src={like} alt />
-              <img src={share} alt />
-              <img src={moreBottom} alt />
+              <img src={like} alt="" />
+              <img src={share} alt="" />
+              <img src={moreBottom} alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</fragment>
+</React.Fragment>
 
   )
 }

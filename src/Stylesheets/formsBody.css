@@ -215,3 +215,15 @@ text-align: center;
 .inputButtonContact > a{
   color: #ffffff;
 }
+
+
+@media(max-width: 576px){
+  .pictureSide{
+    display: none;
+  }
+
+  .leftHeader > span{
+    font-size: 1rem;
+
+  }
+}

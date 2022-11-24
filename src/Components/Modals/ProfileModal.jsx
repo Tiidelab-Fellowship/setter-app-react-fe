@@ -1,10 +1,9 @@
 import React from "react";
 import { Formik } from "formik";
 import "../../Stylesheets/ProfileModal.css";
-import { category } from "./Business-options";
-import axios from "axios";
-
-const Swal = require("sweetalert2");
+import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ProfileModalBusiness = ({ modal, setModal }) => {
   const toggleModal = () => {
@@ -24,34 +23,45 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
           <div className="modal-content">
             <Formik
               initialValues={{
-                businessName: "",
-                businessSize: "",
-                businessCategory: "",
+                name: "",
+                size: "",
+                businessCategoryName: "",
               }}
               onSubmit={async (values, { setSubmitting }) => {
-                const { businessName, businessSize, businessCategory } = values;
+                const { name, size, businessCategoryName } = values;
                 setSubmitting(true);
 
                 try {
-                  let response = await axios.post(
-                    "https://setter-app-cohort4.herokuapp.com/v1/businessInformation",
+                  let response = await axiosInstance.post(
+                    "/businessInformation",
                     {
-                      businessName,
-                      businessSize,
+                      name,
+                      size,
+                      businessCategoryName,
                     }
                   );
                   console.log(response);
-                  Swal.fire({
-                    title: "Registration Successful",
-                    icon: "success",
-                    confirmButtonText: "Ok",
-                  });
-                } catch (error) {
-                  Swal.fire({
-                    title: "Registration Failed",
-                    icon: "error",
-                    confirmButtonText: "Try again",
-                  });
+                  toast.success("Business registration successful", {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });               
+                  } catch (error) {
+                    toast.warning('Registration Unsuccessful', {
+                      position: "top-center",
+                      autoClose: 4000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });
                 }
               }}
             >
@@ -70,28 +80,40 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
                   <label className="profileLabelModal">Business Name</label>
                   <br />
                   <input
-                    name="businessName"
+                    name="name"
                     className="profileModalInput"
                     type="text"
+                    value={values.name}
+                    onChange={handleChange}
                   />
                   <br />
                   <label className="profileLabelModal">Business Size</label>
                   <br />
                   <input
-                    name="businessSize"
+                    name="size"
                     className="profileModalInput"
                     type="text"
                     placeholder="Small, medium or Large-scale"
+                    value={values.size}
+                    onChange={handleChange}
                   />
 
                   <br />
                   <label className="profileLabelModal">Business Category</label>
                   <br />
-                  <select name="businessCategory" className="profileModalInput">
+                  {/* <select name="businessCategory" className="profileModalInput" value={values.businessCategoryName}>
                     {category.map((opt) => (
                       <option>{opt}</option>
                     ))}
-                  </select>
+                  </select> */}
+                   <input
+                    name="businessCategoryName"
+                    className="profileModalInput"
+                    type="text"
+                    value={values.businessCategoryName}
+                    onChange={handleChange}
+                  />
+
                   <br />
                   <button id="close" onClick={toggleModal}>
                     Cancel
@@ -109,6 +131,7 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
           </div>
         </div>
       )}
+      <ToastContainer />
     </React.Fragment>
   );
 };
@@ -131,34 +154,44 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
           <div className="modal-content">
           <Formik
               initialValues={{
-                businessName: "",
-                businessSize: "",
-                businessCategory: "",
+                userName: "",
+                phoneNumber: "",
               }}
               onSubmit={async (values, { setSubmitting }) => {
                 const { userName, phoneNumber } = values;
                 setSubmitting(true);
-
+                const id = JSON.parse(localStorage.getItem("userId"));
                 try {
-                  let response = await axios.patch(
-                    `https://setter-app-cohort4.herokuapp.com/v1/users/1`,
+                  let response = await axiosInstance.patch(
+                    `/users/${id}`,
                     {
                       phoneNumber,
                       userName,
-                    }
+                    },
+                    
                   );
                   console.log(response);
-                  Swal.fire({
-                    title: "Registration Successful",
-                    icon: "success",
-                    confirmButtonText: "Ok",
-                  });
+                  toast.success('Profile Updated Successfully', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 } catch (error) {
-                  Swal.fire({
-                    title: "Registration Failed",
-                    icon: "error",
-                    confirmButtonText: "Try again",
-                  });
+                  toast.warning('Profile update unsuccessful', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 }
               }}
             >
@@ -189,7 +222,7 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
               <input
                 name="phoneNumber"
                 className="profileModalInput"
-                type="number"
+                type="text"
                 value={values.phoneNumber}
                 onChange={handleChange}
               />
@@ -218,6 +251,7 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
           </div>
         </div>
       )}
+      <ToastContainer />
     </React.Fragment>
   );
 };

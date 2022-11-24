@@ -9,6 +9,12 @@ body {
   /* border: 1px solid grey; */
 }
 
+.barchartWrapper{
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .Acontainer {
   display: flex;
   flex-direction: column;
