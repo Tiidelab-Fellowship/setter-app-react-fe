@@ -2,8 +2,8 @@ import React from "react";
 import { Formik } from "formik";
 import "../../Stylesheets/ProfileModal.css";
 import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
-
-const Swal = require("sweetalert2");
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ProfileModalBusiness = ({ modal, setModal }) => {
   const toggleModal = () => {
@@ -41,17 +41,27 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
                     }
                   );
                   console.log(response);
-                  Swal.fire({
-                    title: "Registration Successful",
-                    icon: "success",
-                    confirmButtonText: "Ok",
-                  });
-                } catch (error) {
-                  Swal.fire({
-                    title: "Registration Failed",
-                    icon: "error",
-                    confirmButtonText: "Try again",
-                  });
+                  toast.success("Business registration successful", {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });               
+                  } catch (error) {
+                    toast.warning('Registration Unsuccessful', {
+                      position: "top-center",
+                      autoClose: 4000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });
                 }
               }}
             >
@@ -121,6 +131,7 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
           </div>
         </div>
       )}
+      <ToastContainer />
     </React.Fragment>
   );
 };
@@ -149,29 +160,38 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
               onSubmit={async (values, { setSubmitting }) => {
                 const { userName, phoneNumber } = values;
                 setSubmitting(true);
-
                 const id = JSON.parse(localStorage.getItem("userId"));
                 try {
                   let response = await axiosInstance.patch(
                     `/users/${id}`,
                     {
-                      phoneNumber: toString(phoneNumber),
+                      phoneNumber,
                       userName,
                     },
                     
                   );
                   console.log(response);
-                  Swal.fire({
-                    title: "Registration Successful",
-                    icon: "success",
-                    confirmButtonText: "Ok",
-                  });
+                  toast.success('Profile Updated Successfully', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 } catch (error) {
-                  Swal.fire({
-                    title: "Registration Failed",
-                    icon: "error",
-                    confirmButtonText: "Try again",
-                  });
+                  toast.warning('Profile update unsuccessful', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 }
               }}
             >
@@ -202,7 +222,7 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
               <input
                 name="phoneNumber"
                 className="profileModalInput"
-                type="number"
+                type="text"
                 value={values.phoneNumber}
                 onChange={handleChange}
               />
@@ -231,6 +251,7 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
           </div>
         </div>
       )}
+      <ToastContainer />
     </React.Fragment>
   );
 };
