@@ -21,7 +21,7 @@ const ProfilePage = () =>{
   return (
     <>
       <DBheader
-        headline="My Profile 👩👨"
+        headline="My Profile"
         headlineDetails="Feel free to edit your profile and add accounts."
         hideButton
         hidePickSocials
