@@ -50,14 +50,14 @@ export const SideBar = () => {
             Post Queue
           </Link>
         </div>
-        <div className="eachPage">
+        {/* <div className="eachPage">
           <Link to="/Messages">
             <span className="fontspace">
               <FaEnvelope />
             </span>{" "}
             Messages
           </Link>
-        </div>
+        </div> */}
         <div className="eachPage">
           <Link to="/AnalyticsPage">
             <span className="fontspace">
@@ -74,14 +74,14 @@ export const SideBar = () => {
             Contact Us
           </Link>
         </div>
-        <div className="eachPage">
+        {/* <div className="eachPage">
           <Link to="/">
             <span className="fontspace">
               <FaWrench />
             </span>{" "}
             Settings
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="bottomSideFooter">
         <Link to="/">
@@ -133,14 +133,14 @@ export const SideBarTwo = () => {
             Post Queue
           </Link>
         </div>
-        <div className="eachPage">
+        {/* <div className="eachPage">
           <Link to="/Messages">
             <span className="fontspace">
               <FaEnvelope />
             </span>{" "}
             Messages
           </Link>
-        </div>
+        </div> */}
         <div className="eachPage">
           <Link to="/AnalyticsPage">
             <span className="fontspace">
@@ -157,14 +157,14 @@ export const SideBarTwo = () => {
             Contact Us
           </Link>
         </div>
-        <div className="eachPage">
+        {/* <div className="eachPage">
           <Link to="/">
             <span className="fontspace">
               <FaWrench />
             </span>{" "}
             Settings
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="bottomSideFooter">
         <Link to="/">

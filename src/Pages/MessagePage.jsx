@@ -1,7 +1,7 @@
 import { Footer } from "../Components/Footer/Footer"
 import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
-import { MessageContent } from "../Components/DashboardContent/messages";
+// import { MessageContent } from "../Components/DashboardContent/messages";
 
 const Messages = () =>{
   return (
@@ -13,7 +13,7 @@ const Messages = () =>{
         smallName="Banwo O."
         occupation="Web Developer"
       />
-      <MessageContent  />
+      {/* <MessageContent  /> */}
       <SideBarTwo />
      <Footer />
     </>
