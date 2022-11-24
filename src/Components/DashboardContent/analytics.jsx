@@ -16,7 +16,6 @@ import { Chart as ChartJS } from "chart.js/auto"
 
 
 import { LikesData } from '../AnalyticsChart/analyticsData';
-import { BarChart } from '../Chart/BarChart';
 
 
 
