@@ -1,6 +1,5 @@
 import React from "react";
 import pics from "../SetterApp-Assets/Register-Img.png";
-import { Footer } from "../Components/Footer/Footer"
 import { FormHeaderWithHeader } from "../Components/Forms/formheader"
 import { FormTextHeader, BigInput, FormFooter, PictureText } from "../Components/Forms/Forms-body";
 import { useState, useEffect } from "react";
@@ -139,7 +138,6 @@ const SignUpPage = () =>{
     <>
      <FormHeaderWithHeader />
      <SignUpBody />
-     <Footer />
     </>
    );
 }
