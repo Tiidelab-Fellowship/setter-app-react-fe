@@ -5,7 +5,7 @@ export const PostModal = ({modal, setModal}) => {
     setModal(!modal);
   };
 
-  if (modal) {
+  if (modal) {g
     document.body.classList.add("active-modal");
   } else {
     document.body.classList.remove("active-modal");
@@ -26,6 +26,10 @@ export const PostModal = ({modal, setModal}) => {
                 <hr />
                 <input type="text" id="title" placeholder="Post Title" />
                 <div id="inputContainer">
+
+
+              
+            
                   <textarea
                     name="input-text"
                     id="input-text"
@@ -34,6 +38,8 @@ export const PostModal = ({modal, setModal}) => {
                     rows={5}
                     defaultValue={""}
                   />
+
+                  
                   <input type="file" accept="image/*" id="picture" />
                   <div id="add-date">
                   <select name="socials" id="socials-account">
@@ -54,6 +60,7 @@ export const PostModal = ({modal, setModal}) => {
                     </div>
                   </div>
                 </div>
+                
                 <div id="select-spacing">
                   <button id="post-button">Schedule</button>
                 </div>
