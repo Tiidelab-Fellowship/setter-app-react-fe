@@ -3,7 +3,7 @@ import "../../Stylesheets/formsBody.css";
 import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../Stylesheets/contactUs.css"
-import { Field, Formik } from "formik";
+import { Formik } from "formik";
 import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
 // import Swal from 'sweetalert2'
 const Swal = require('sweetalert2')
@@ -142,7 +142,7 @@ export const ContactUsBody = () => {
           const{name, email, phoneNumber, text} = values;
           setSubmitting(true);
           try {
-            let response = await axiosInstance.post('/contactUs',
+             await axiosInstance.post('/contactUs',
             {name, email, phoneNumber, text});
           } catch (error) {
             Swal.fire({
