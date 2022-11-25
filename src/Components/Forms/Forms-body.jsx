@@ -3,7 +3,6 @@ import "../../Stylesheets/formsBody.css";
 import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../Stylesheets/contactUs.css"
-// import Swal from 'sweetalert2'
 const Swal = require('sweetalert2')
 
 
