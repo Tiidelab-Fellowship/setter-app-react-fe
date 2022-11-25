@@ -17,6 +17,36 @@ export const PostModal = ({modal, setModal}) => {
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="Pmodal-content">
+          <Formik 
+        initialValues={{ email: '', name: '', phoneNumber: '', text: '' }}
+
+        onSubmit={async(values, { setSubmitting }) => {
+          const{name, email, phoneNumber, text} = values;
+          setSubmitting(true);
+          try {
+            let response = await axiosInstance.post('/contactUs',
+            {name, email, phoneNumber, text});
+          } catch (error) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Post not sent',
+              text: 'Check your details.',
+              confirmButtonText: 'Retry'
+            })
+          }
+        }}
+        >
+          {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleBlur,
+         handleSubmit,
+         isSubmitting,
+         /* and other goodies */
+       }) => (
+        <form>
             <div id="body_modal">
               <div className="popUpContainer">
                 <div id="modal-top">
@@ -59,6 +89,9 @@ export const PostModal = ({modal, setModal}) => {
                 </div>
               </div>
             </div>
+            </form>
+       )}
+            </Formik>
             <button className="close-modal" onClick={toggleModal}>
               X
             </button>
