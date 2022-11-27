@@ -2,12 +2,14 @@ import "../../Stylesheets/SideBar.css";
 import {
   FaCalendar,
   FaChartLine,
+  FaPeopleArrows,
   FaEnvelope,
   FaFoursquare,
   FaPhone,
   FaSignal,
   FaSignOutAlt,
   FaWrench,
+  FaChessBoard
 } from "react-icons/fa";
 import logo from "../../SetterApp-Assets/SetterApp-Logo.png";
 import { Link } from "react-router-dom";
@@ -27,7 +29,7 @@ export const SideBar = () => {
         <div className="eachPage CurrentPage">
           <Link to="/SocialDashboard">
             <span className="fontspace ">
-              <FaFoursquare />
+              <FaChessBoard />
             </span>{" "}
             Dashboard
           </Link>
@@ -45,7 +47,7 @@ export const SideBar = () => {
           <Link to="/PostQueue">
             {" "}
             <span className="fontspace">
-              <FaSignal />
+              <FaPeopleArrows />
             </span>{" "}
             Post Queue
           </Link>

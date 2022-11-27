@@ -141,6 +141,22 @@ header h1{
     width: 750px;
     border-radius: 10px;
 }
+
+ .supportedSocials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-top:0;
+    gap: 20px;
+}
+
+.supportedSocials .supportedIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+}
+
 #section-details p{
     margin-top: 35px;
     text-align: center;
