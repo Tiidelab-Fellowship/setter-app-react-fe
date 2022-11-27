@@ -8,7 +8,6 @@ import {
 } from "../Components/Forms/PasswordReset";
 import logo from "../SetterApp-Assets/SetterApp-Logo.png";
 import "../Stylesheets/PasswordReset.css";
-import { Footer } from "../Components/Footer/Footer";
 import { FormHeaderWithHeader } from "../Components/Forms/formheader";
 
 const CreateNewPasswordPage = () => {
@@ -16,7 +15,7 @@ const CreateNewPasswordPage = () => {
   const paragraph =
     "Set the new password for your account so you can login and access all features.";
   const action = "Update Password";
-  const to = "/Successful"
+  const to = "/LoginPage"
   return (
     <React.Fragment>
       <FormHeaderWithHeader />
@@ -30,7 +29,7 @@ const CreateNewPasswordPage = () => {
         <InputText placeholder={"Password must be at least 8 Characters"} />
         <ForgotButton action={action} to={to} />
       </section>
-      <Footer />
+    
     </React.Fragment>
   );
 };

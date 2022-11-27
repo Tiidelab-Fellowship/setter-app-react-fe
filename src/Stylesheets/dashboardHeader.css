@@ -36,7 +36,7 @@
 .DBrightHeader{
   display: flex;
   width: 38%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   /* padding-left: 38%;  */
 }

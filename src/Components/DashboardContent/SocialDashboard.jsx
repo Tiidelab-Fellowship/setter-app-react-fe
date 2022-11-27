@@ -4,11 +4,11 @@ import "../../Stylesheets/socialDashboard.css"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaUser, FaThumbsUp, FaComment,FaShare } from "react-icons/fa"
 import { BarChart } from "../Chart/BarChart";
 import { useState } from "react";
-import { LikesData } from "../../Data/LikesData"
+import { LikesData } from "../Chart/Data/LikesData"
 import { Chart as ChartJS } from "chart.js/auto"
 
 export const SocialDashboardContent = () => {
-  console.log(LikesData)
+  // console.log(LikesData)
  const [userLikes, setUserLikes] = useState({
   
   labels: LikesData.map((data)=> data.month),

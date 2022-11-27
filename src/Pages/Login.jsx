@@ -1,13 +1,12 @@
 import React from "react";
 import pics from "../SetterApp-Assets/Login-Img.png";
-import { Footer } from "../Components/Footer/Footer"
 import { FormHeaderWithHeader } from "../Components/Forms/formheader"
 import { FormTextHeader,  PictureText, LoginFooter, BigInput } from "../Components/Forms/Forms-body";
 import { Formik } from 'formik';
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { LoginSchema } from "../Utils/Validation/validationSchema";
+import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 const Swal = require('sweetalert2')
 
 
@@ -34,13 +33,14 @@ export const LoginBody = () => {
         const {password, email } = values;
               setSubmitting(true);
               try {
-                let response = await axios.post(
-                  "https://setter-app-cohort4.herokuapp.com/v1/auth/login",
+                let response = await axiosInstance.post("/auth/login",
                   {
                     password,
                     email,
                   }
                 );
+                const userId = response.data.user.id
+                localStorage.setItem("userId", JSON.stringify(userId))
                 const { access, refresh } = response.data.tokens;
                 const tokens = [];
                 tokens.push({
@@ -49,7 +49,6 @@ export const LoginBody = () => {
                 tokens.push({
                   refresh: refresh.token,
                 });
-                console.log(tokens);
                 localStorage.setItem("EachUser", JSON.stringify(tokens));
                 Swal.fire({
                   title: 'Welcome back',
@@ -57,9 +56,16 @@ export const LoginBody = () => {
                   confirmButtonText: 'Continue'
                 })
                 if (token) {
-                  navigate("/ProfilePage");
+                  navigate("/SocialDashboard");
                 }
-              } catch (error) {}
+              } catch (error) {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Login Failed',
+                  text: 'User not found.',
+                  confirmButtonText: 'Retry'
+                })
+              }
        }}
      >
        {({
@@ -97,7 +103,6 @@ const LoginPage = () =>{
     <>
      <FormHeaderWithHeader />
      <LoginBody />
-     <Footer />
     </>
    );
 }

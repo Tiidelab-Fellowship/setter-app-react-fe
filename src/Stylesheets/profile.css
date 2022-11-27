@@ -9,9 +9,11 @@
     font-family: Inter;
 }
 
-
+button:hover{
+  cursor: pointer;
+}
 #dashboard-profile-con{
-  width: 84%;
+  width: 82%;
   margin-left: 18%;
   position: absolute;
 }
@@ -41,7 +43,7 @@
  
 }
 
-.profile-data > p{
+.profile-data > p, h4{
   margin-top: 10px;
 }
 
@@ -52,7 +54,7 @@
 
 .profile-edit-btn{
   height: 48px;
-  width: 111px;
+  padding: .2rem .5rem;
   border-radius: 8px;
   background-color: #424242;
   color: #ffffff;
@@ -80,13 +82,14 @@
 .profile-socials{
   width: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .profile-box{
   display: flex;
   align-items: center;
-  margin: 1.5rem 1.5rem 1.5rem 0;
+  margin: 1.5rem 1.5rem .1rem 0;
 }
 
 .profile-social-icon-text{
@@ -151,11 +154,11 @@
 
 }
 
-.profile-line{
+/* .profile-line{
   height: 70px;
   border-left: 2px solid #c2c0c0;
   margin-top: 20px;
-}
+} */
 
 .profile-box p{
   display: inline;

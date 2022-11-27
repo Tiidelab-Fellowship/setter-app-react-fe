@@ -5,7 +5,6 @@ import heroImage from "../SetterApp-Assets/hero-image.jpg";
 import analytics from "../SetterApp-Assets/analytics.png";
 import engage from "../SetterApp-Assets/engage.png";
 import grow from "../SetterApp-Assets/grow.png";
-// import innovative from "../SetterApp-Assets/innovative.png"
 import payment from "../SetterApp-Assets/payment.png";
 import plan from "../SetterApp-Assets/plan.png";
 import pricing from "../SetterApp-Assets/pricing.png";

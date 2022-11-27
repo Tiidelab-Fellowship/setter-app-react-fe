@@ -8,7 +8,6 @@ import {
 } from "../Components/Forms/PasswordReset";
 import logo from "../SetterApp-Assets/SetterApp-Logo.png";
 import "../Stylesheets/PasswordReset.css";
-import { Footer } from "../Components/Footer/Footer";
 import { FormHeaderWithHeader } from "../Components/Forms/formheader";
 
 const ForgotPasswordPage = () => {
@@ -16,7 +15,7 @@ const ForgotPasswordPage = () => {
   const paragraph =
     "Enter your email for the verification proccess, we will send 4 digits code to your email.";
   const action = "Continue";
-  const to = "/Verification"
+  const to = "/CreateNewPassword"
   return (
     <React.Fragment>
       <FormHeaderWithHeader />
@@ -28,7 +27,6 @@ const ForgotPasswordPage = () => {
         <InputText placeholder={"Enter email"} />
         <ForgotButton action={action} to={to}/>
       </section>
-      <Footer />
     </React.Fragment>
   );
 };
