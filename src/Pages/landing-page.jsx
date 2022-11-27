@@ -16,6 +16,10 @@ import woman from "../SetterApp-Assets/woman.jpg";
 import hauwa from "../SetterApp-Assets/hauwa.png";
 import maymouna from "../SetterApp-Assets/maymouna.png";
 import udeme from "../SetterApp-Assets/udeme.png";
+import topFb from "../SetterApp-Assets/top-fb.png";
+import topIn from "../SetterApp-Assets/top-insta.png";
+import topLi from "../SetterApp-Assets/top-linkedin.png";
+import topTw from "../SetterApp-Assets/top-twitter.png";
 
 
 import { Footer } from "../Components/Footer/Footer";
@@ -96,6 +100,7 @@ export const Hero = () => {
             </p>
           </button>
         </div>
+         
         <img src={heroImage} alt="heroImage" />
         <div id="trusted">
           <h3>Trusted By</h3>
@@ -424,6 +429,13 @@ export const Customer = () => {
           </div>
         </div>
       </div>
+      <div className="supportedSocials">
+        <p>Supported Socials:</p>
+            <img src={topFb} className="supportedIcon" alt="facebook" />
+            <img src={topIn} className="supportedIcon" alt="instagram" />
+            <img src={topTw} className="supportedIcon" alt="twitter" />
+            <img src={topLi} className="supportedIcon" alt="linkedin" />
+          </div>
     </section>
   );
 };

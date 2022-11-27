@@ -87,15 +87,11 @@ export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   return (
     <React.Fragment>
       <div className="Login-footer">
-        <h1>
-          <input type="checkbox" name="check" id="checked" />
-          Remember Me
-        </h1>
-        <p className="coloredText forgot">
-          <Link to="/ForgotPassword"> forgot Password?</Link>
-        </p>
       </div>
         <button type="submit" className="LogIn-Button" disabled={isSubmitting} onClick={handleSubmit} >{isSubmitting ? "Logging In" : "Log In"}</button>
+        <p className="coloredText forgot">
+          <Link to="/ForgotPassword" className="forgotLink"> Forgot Password?</Link>
+        </p>
     </React.Fragment>
   );
 };
