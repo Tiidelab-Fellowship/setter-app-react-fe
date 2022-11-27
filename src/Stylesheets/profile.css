@@ -25,17 +25,17 @@ button:hover{
   background: #F2F8FF;
   border: none;
   border-radius: 20px;
-  box-shadow:10px 10px 10px 10px #dbdbdb;
+  box-shadow:4px 4px 4px 4px #dbdbdb;
 }
 
 .dashboard-bus-details {
   width: 80%;
-  margin-top: 50px;
+  margin-top: 40px;
   background: #F2F8FF;
   padding: 20px;
   border: none;
   border-radius: 20px;
-  box-shadow: 10px 10px 10px 10px #dbdbdb;
+  box-shadow: 4px 4px 4px 4px #dbdbdb;
 }
 
 .dashboard-bus-details h2 {
@@ -97,14 +97,14 @@ button:hover{
 
 .dashboard-socials{
   width: 80%;
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     background: #F2F8FF;
     padding: 20px;
     border: none;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 10px #dbdbdb;
+    box-shadow: 4px 4px 4px 4px #dbdbdb;
 }
 
 .dashboard-socials > p{
@@ -128,12 +128,12 @@ button:hover{
 .profile-social-icon-text{
   margin: 1rem;
   color: #1F64FF;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .profile-social-icon{
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

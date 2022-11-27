@@ -1,9 +1,11 @@
 import "../../Stylesheets/profile.css";
 import avatar from "../../SetterApp-Assets/avatar.png";
 import {
+  FaConnectdevelop,
   FaFacebookSquare,
   FaInstagramSquare,
   FaLinkedin,
+  FaPlusCircle,
   FaTrash,
   FaTwitter,
 } from "react-icons/fa";
@@ -48,7 +50,7 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
         <p>Business Type:</p>
         </div>
       </div>
-      
+
       <div className="dashboard-socials">
         <p>Social Accounts</p>
         <div className="profile-socials">
@@ -59,6 +61,7 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
             <span className="profile-social-icon-text">Facebook</span>
             <div className="profile-delete profile-delete-icon">
               <FaTrash />
+              <FaPlusCircle />
             </div>
           </div>
           <span className="profile-line" />
