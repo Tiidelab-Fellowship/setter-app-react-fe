@@ -1,5 +1,5 @@
 import "../../Stylesheets/profile.css";
-import profile from "../../SetterApp-Assets/profilePagePicture.jpg";
+import avatar from "../../SetterApp-Assets/avatar.png";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -23,7 +23,7 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
     <section id="dashboard-profile-con">
       <div className="dashboard-prof-details">
         <div className="dashboard-profile-img">
-          <img src={profile} alt="profile-pic" className="prof-img" />
+          <img src={avatar} alt="profile-pic" className="prof-img" />
         </div>
         <div className="profile-data">
           <h1>{firstName + " " + lastName}</h1>
@@ -40,6 +40,15 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
           </div>
         </div>
       </div>
+      <div className="dashboard-bus-details">
+        <h2>Business Information</h2>
+        <div className="bus-details">
+        <p>Business Name:</p>
+        <p>Business Size:</p>
+        <p>Business Type:</p>
+        </div>
+      </div>
+      
       <div className="dashboard-socials">
         <p>Social Accounts</p>
         <div className="profile-socials">

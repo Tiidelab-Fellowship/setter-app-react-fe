@@ -28,6 +28,28 @@ button:hover{
   box-shadow:10px 10px 10px 10px #dbdbdb;
 }
 
+.dashboard-bus-details {
+  width: 80%;
+  margin-top: 50px;
+  background: #F2F8FF;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px #dbdbdb;
+}
+
+.dashboard-bus-details h2 {
+  font-weight: 700;
+  color: #424242;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.dashboard-bus-details p {
+  line-height: 1.7em;
+}
+
 .dashboard-profile-img{
   margin: 1.5rem;
 }
@@ -73,29 +95,40 @@ button:hover{
   margin: 1.2rem;
 }
 
+.dashboard-socials{
+  width: 80%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background: #F2F8FF;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px #dbdbdb;
+}
+
 .dashboard-socials > p{
   font-weight: 700;
-  margin-top: 30px;
   color: #424242;
   font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 .profile-socials{
   width: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .profile-box{
   display: flex;
   align-items: center;
-  margin: 1.5rem 1.5rem .1rem 0;
 }
 
 .profile-social-icon-text{
   margin: 1rem;
   color: #1F64FF;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .profile-social-icon{
