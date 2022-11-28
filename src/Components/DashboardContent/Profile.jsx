@@ -1,12 +1,9 @@
 import "../../Stylesheets/profile.css";
 import avatar from "../../SetterApp-Assets/avatar.png";
 import {
-  FaConnectdevelop,
   FaFacebookSquare,
   FaInstagramSquare,
   FaLinkedin,
-  FaPlusCircle,
-  FaTrash,
   FaTwitter,
 } from "react-icons/fa";
 
@@ -54,25 +51,24 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
       <div className="dashboard-socials">
         <p>Social Accounts</p>
         <div className="profile-socials">
+          
           <div className="profile-box">
-            <div className="profile-social-icon profile-facebook ">
+            <div className="profile-social-icon profile-facebook">
               <FaFacebookSquare />
             </div>
             <span className="profile-social-icon-text">Facebook</span>
-            <div className="profile-delete profile-delete-icon">
-              <FaTrash />
-              <FaPlusCircle />
-            </div>
+            <button className="profile-connect">Connect</button>
           </div>
+          
           <span className="profile-line" />
           <div className="profile-box">
             <div className="profile-social-icon profile-instagram ">
               <FaInstagramSquare />
             </div>
             <span className="profile-social-icon-text">Instagram</span>
-            <div className="profile-delete profile-delete-icon">
-              <FaTrash />
-            </div>
+            <button className="profile-connect">
+              Connect
+            </button>
           </div>
           <span className="profile-line" />
           <div className="profile-box">
@@ -80,9 +76,9 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
               <FaTwitter />
             </div>
             <span className="profile-social-icon-text">Twitter</span>
-            <div className="profile-delete profile-delete-icon">
-              <FaTrash />
-            </div>
+            <button className="profile-connect">
+              Connect
+            </button>
           </div>
           <span className="profile-line" />
           <div className="profile-box">
@@ -90,9 +86,9 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
               <FaLinkedin />
             </div>
             <span className="profile-social-icon-text">Linkedin</span>
-            <div className="profile-delete profile-delete-icon">
-              <FaTrash />
-            </div>
+           <button className="profile-connect">
+              Connect
+            </button>
           </div>
         </div>
       </div>

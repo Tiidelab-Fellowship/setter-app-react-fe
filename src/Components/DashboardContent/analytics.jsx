@@ -48,11 +48,11 @@ const [userLikes, setUserLikes] = useState({
           <div className="Atop-title">Account Reached</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">404k</div>
+          <div className="Atop-followers">Counting</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
-              <p>0.85%</p>
+              <p>0%</p>
             </div>
             <div className="Abottom-period">This week</div>
           </div>
@@ -64,11 +64,11 @@ const [userLikes, setUserLikes] = useState({
           <div className="Atop-title">Account Reached</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">404k</div>
+          <div className="Atop-followers">Counting</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
-              <p>0.85%</p>
+              <p>0%</p>
             </div>
             <div className="Abottom-period">This week</div>
           </div>
@@ -80,11 +80,11 @@ const [userLikes, setUserLikes] = useState({
           <div className="Atop-title">Account Reached</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">404k</div>
+          <div className="Atop-followers">Counting</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
-              <p>0.85%</p>
+              <p>0%</p>
             </div>
             <div className="Abottom-period">This week</div>
           </div>
@@ -96,11 +96,11 @@ const [userLikes, setUserLikes] = useState({
           <div className="Atop-title">Account Reached</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">404k</div>
+          <div className="Atop-followers">Coming</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
-              <p>0.85%</p>
+              <p>0%</p>
             </div>
             <div className="Abottom-period">This week</div>
           </div>
@@ -110,7 +110,6 @@ const [userLikes, setUserLikes] = useState({
     <div className="Ainner-body">
       <div className="Afollowers-growth">
         <div className="Auser-growth">
-          <div>Follower Growth</div>
           <div className='barchartWrapper'><BarChart chartData= {userLikes} /> </div>
         </div>
         <div className="Auser-country" />
