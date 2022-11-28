@@ -3,7 +3,7 @@ import "../../Stylesheets/formsBody.css";
 import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../Stylesheets/contactUs.css"
-import { Field, Formik } from "formik";
+import { Formik } from "formik";
 import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
 // import Swal from 'sweetalert2'
 const Swal = require('sweetalert2')
@@ -87,15 +87,11 @@ export const LoginFooter = ({ isSubmitting, handleSubmit }) => {
   return (
     <React.Fragment>
       <div className="Login-footer">
-        <h1>
-          <input type="checkbox" name="check" id="checked" />
-          Remember Me
-        </h1>
-        <p className="coloredText forgot">
-          <Link to="/ForgotPassword"> forgot Password?</Link>
-        </p>
       </div>
         <button type="submit" className="LogIn-Button" disabled={isSubmitting} onClick={handleSubmit} >{isSubmitting ? "Logging In" : "Log In"}</button>
+        <p className="coloredText forgot">
+          <Link to="/ForgotPassword" className="forgotLink"> Forgot Password?</Link>
+        </p>
     </React.Fragment>
   );
 };
@@ -142,7 +138,7 @@ export const ContactUsBody = () => {
           const{name, email, phoneNumber, text} = values;
           setSubmitting(true);
           try {
-            let response = await axiosInstance.post('/contactUs',
+             await axiosInstance.post('/contactUs',
             {name, email, phoneNumber, text});
           } catch (error) {
             Swal.fire({
