@@ -18,14 +18,14 @@ export const PostModal = ({modal, setModal}) => {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="Pmodal-content">
           <Formik 
-        initialValues={{ email: '', name: '', phoneNumber: '', text: '' }}
+        initialValues={{ title: '', body: '', scheduleDate: ''}}
 
         onSubmit={async(values, { setSubmitting }) => {
-          const{name, email, phoneNumber, text} = values;
+          const{title, body, scheduleDate} = values;
           setSubmitting(true);
           try {
-            let response = await axiosInstance.post('/contactUs',
-            {name, email, phoneNumber, text});
+            let response = await axiosInstance.post('/posts',
+            {title, body, scheduleDate});
           } catch (error) {
             Swal.fire({
               icon: 'error',
