@@ -22,7 +22,7 @@ const SocialDashboard = () => {
         headlineDetails="Here is an overview of your Social Media Accounts."
         hideButton
         smallName= {firstName}
-        occupation="Web Developer"
+        // occupation="Web Developer"
       />
       <SocialDashboardContent />
       <SideBarTwo />
