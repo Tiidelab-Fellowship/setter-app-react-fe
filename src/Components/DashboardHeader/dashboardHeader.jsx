@@ -2,6 +2,8 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import profilePicture from "../../SetterApp-Assets/profilePicture.png";
+import avatar from "../../SetterApp-Assets/avatar.png";
+
 
 export const DBheader = ({
   headline,
@@ -40,7 +42,7 @@ export const DBheader = ({
           </div>
         )}
         <div className="smallProfile">
-          <img src={profilePicture} alt="profilePicture" />
+          <img src={avatar} alt="profilePicture" />
           <div className="smallName">
             <h3>
               {smallName} <FaCheckCircle />

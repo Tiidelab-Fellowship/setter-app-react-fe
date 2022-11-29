@@ -105,6 +105,7 @@ button:hover{
     border: none;
     border-radius: 20px;
     box-shadow: 4px 4px 4px 4px #dbdbdb;
+  position: relative;
 }
 
 .dashboard-socials > p{
@@ -120,10 +121,6 @@ button:hover{
   flex-direction: column;
 }
 
-.profile-box{
-  display: flex;
-  align-items: center;
-}
 
 .profile-social-icon-text{
   margin: 1rem;
@@ -139,52 +136,32 @@ button:hover{
   align-items: center;
 }
 
-.profile-facebook{
+.profile-facebook, .profile-instagram, .profile-twitter, .profile-linkedin{
   color: #4460A0;
   font-size: 30px;
   background-color: rgba(68, 96, 160, 0.13);
   border-radius:8px;
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 48px;
 }
 
-.profile-instagram{
-  color:  rgba(212, 47, 127, 0.5);
-  font-size: 30px;
-  background-color: rgba(92, 90, 205, 0.24);
-  border-radius:8px;
-  width: 56px;
-  height: 56px;
+ .profile-box {
+  display: flex;
+  align-items: center;
 }
 
-.profile-twitter{
+.profile-box .profile-connect{
   color: #00AAEC;
-  font-size: 30px;
- background-color:  rgba(0, 170, 236, 0.19);
- border-radius: 8px;
- width: 56px;
- height: 56px;
-
-}
-
-.profile-linkedin{
-  color: #0072b1;
-  font-size: 30px;
-  background-color: rgba(68, 96, 160, 0.13);
-  border-radius:8px;
-  width: 56px;
-  height: 56px;
-}
-
-.profile-delete-icon{
-  color: #D84749;
   font-size: 15px;
+  position: absolute;
+  right: 50px;
 }
 
-.profile-delete-icon:hover{
+.profile-box .profile-connect:hover{
   opacity: 0.7;
-  font-size: 20px;
-
+  font-size: 16px;
+  background-color: tomato;
+  color: #eee;
 }
 
 /* .profile-line{

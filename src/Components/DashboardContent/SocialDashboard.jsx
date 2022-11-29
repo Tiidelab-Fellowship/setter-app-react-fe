@@ -6,6 +6,8 @@ import { BarChart } from "../Chart/BarChart";
 import { useState } from "react";
 import { LikesData } from "../Chart/Data/LikesData"
 import { Chart as ChartJS } from "chart.js/auto"
+import avatar from "../../SetterApp-Assets/avatar.png";
+
 
 export const SocialDashboardContent = () => {
   // console.log(LikesData)
@@ -31,29 +33,29 @@ export const SocialDashboardContent = () => {
     <div className="box">
       <div className="fIcons"> <FaTwitter/> </div>
       <div>
-        <h3>204k Followers</h3>
-        <h6><span className="green">0.8%</span>This week</h6>
+        <h3>Counting</h3>
+        <h6><span className="green">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
       <div className="fIcons"> <FaFacebookF /> </div>
       <div>
-        <h3>340k Followers</h3>
-        <h6><span className="red">0.8%</span>This week</h6>
+        <h3>Counting</h3>
+        <h6><span className="red">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
       <div className="fIcons"> <FaLinkedinIn /> </div>
       <div>
-        <h3>124k Followers</h3>
-        <h6><span className="green">0.8%</span>This week</h6>
+        <h3>Counting</h3>
+        <h6><span className="green">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
       <div className="fIcons"> <FaInstagram /> </div>
       <div>
-        <h3>440k Followers</h3>
-        <h6><span className="red">0.8%</span>This week</h6>
+        <h3>Counting</h3>
+        <h6><span className="red">0%</span>This week</h6>
       </div>
     </div>
   </div>
@@ -72,7 +74,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Followers</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>10000</h6><span className="green">+1.90%</span>
+            <h6>Counting</h6><span className="green">+0%</span>
           </div>
         </div>
         <div className="dashboard-card">
@@ -81,7 +83,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Likes</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>12,000</h6><span className="red">-1.90%</span>
+            <h6>Counting</h6><span className="red">-0%</span>
           </div>
         </div>
         <div className="dashboard-card">
@@ -90,7 +92,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Comment</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>1,000</h6><span className="green">+1.90%</span>
+            <h6>Counting</h6><span className="green">+0%</span>
           </div>
         </div>
         <div className="dashboard-card">
@@ -99,28 +101,28 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Share</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>1,300</h6><span className="red">-1.90%</span>
+            <h6>Counting</h6><span className="red">-0%</span>
           </div>
         </div>
       </div>
     </div>
     <div className="social-dashboard-prof">
       <div className="dashboard-prof-img-con">
-        <div><img src={profile} className="dashboard-prof-img" alt="profile-img"/> </div>
+        <div><img src={avatar} className="dashboard-prof-img" alt="profile-img"/> </div>
       </div>
       <h3>Olorunsogo Banwo</h3>
       <p className="dashboard-light-text">Realtor</p>
       <div className="social-dashboard-info">
         <div>
-          <h3>193</h3>
+          <h3>Counting</h3>
           <p className="dashboard-light-text">Post</p>
         </div>
         <div>
-          <h3>17,536</h3>
+          <h3>Counting</h3>
           <p className="dashboard-light-text">Followers</p>
         </div>
         <div>
-          <h3>274</h3>
+          <h3>Counting</h3>
           <p className="dashboard-light-text">Following</p>
         </div>
       </div>
@@ -132,7 +134,7 @@ export const SocialDashboardContent = () => {
         <div>
           <div className="dashboard-acc-details">
             <div className="dashboard-post-img-con">
-              <div><img src={profile} className="dashboard-post-img" alt="profile-pic"/> </div>
+              <div><img src={avatar} className="dashboard-post-img" alt="profile-pic"/> </div>
             </div>
             <p className="dashboard-light-text">@thomas.fetcher</p>
           </div>
