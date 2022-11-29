@@ -110,8 +110,8 @@ export const SocialDashboardContent = () => {
       <div className="dashboard-prof-img-con">
         <div><img src={avatar} className="dashboard-prof-img" alt="profile-img"/> </div>
       </div>
-      <h3>Olorunsogo Banwo</h3>
-      <p className="dashboard-light-text">Realtor</p>
+      {/* <h3>Olorunsogo Banwo</h3>
+      <p className="dashboard-light-text">Realtor</p> */}
       <div className="social-dashboard-info">
         <div>
           <h3>Counting</h3>
@@ -129,10 +129,10 @@ export const SocialDashboardContent = () => {
       <div>
         <h2 className="latest-text">Latest Post</h2>
         <div className="dashboard-post-con">
-          <div><img src={TIIDELab} className="social-dashboard-post-img" alt="post-img"/> </div>
+          {/* <div><img src={TIIDELab} className="social-dashboard-post-img" alt="post-img"/> </div> */}
         </div>
         <div>
-          <div className="dashboard-acc-details">
+          {/* <div className="dashboard-acc-details">
             <div className="dashboard-post-img-con">
               <div><img src={avatar} className="dashboard-post-img" alt="profile-pic"/> </div>
             </div>
@@ -142,7 +142,9 @@ export const SocialDashboardContent = () => {
             <p>“One touch of nature makes the whole world kin.” 
               “Look deep into nature, and then you will understand everything better.”
             </p>
-          </div>
+          </div> */}
+            <p>Coming Soon...
+            </p>
         </div>
       </div>
     </div>
