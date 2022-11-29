@@ -1,0 +1,14 @@
+i{
+  background-color: blueviolet;
+  color: white;
+  font-size: 15px;
+  width: 80%;
+  text-align: center;
+  border-radius: 3px;
+  padding: 3px 0;
+}
+
+.fc-event{
+  display: flex;
+  flex-direction: column-reverse;
+}
