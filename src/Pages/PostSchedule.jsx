@@ -2,7 +2,7 @@ import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
 import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
-import DemoApp from "../Components/FullCalendar/FullCalendarComponent";
+import {DemoApp} from "../Components/FullCalendar/FullCalendarComponent";
 import { useEffect, useState } from "react";
 import { PostModal } from "../Components/Modals/PostModal";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
@@ -16,7 +16,7 @@ export const PostScheduleContent = ({modal, setModal}) => {
     <section className="PSPQDashboardContainer">
       <main className="bigestSideP">
         <div>
-        <DemoApp />
+        <DemoApp/>
         </div>
       </main>
       <aside className="besideBigestSide">
@@ -37,10 +37,12 @@ export const PostScheduleContent = ({modal, setModal}) => {
 
 const PostSchedule = () => {
   const [user, setUser] = useState({})
+  // const [post, setPost] = useState([])
   useEffect(() => {
     const id = JSON.parse(localStorage.getItem("userId"));
     axiosInstance.get(`/users/${id}`).then((response)=>{
       setUser(response.data)
+      // setPost(response.data)
     });
   }, []);
   
