@@ -10,8 +10,6 @@ import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
 export const LoginBody = () => {
   const text1 = "Login to Your Account"
   const text2 =" Or Login with Mail"

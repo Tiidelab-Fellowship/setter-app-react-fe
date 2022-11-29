@@ -42,13 +42,6 @@ export const FormFooter = ({ text, isSubmitting, handleSubmit  }) => {
   return (
     <div className="bottomOfContainer">
       <div className="bOCL">
-        <p>
-          <input type="checkbox" name="check" id="check" />
-          I have read and accepted the Terms
-          <br />
-          of
-          <span className="coloredText"> Services & Privacy Policy*</span>
-        </p>
       </div>
       <button type="submit" className="inputButton" disabled={isSubmitting} onClick={handleSubmit}>{isSubmitting ? "Registering" : "Register"}</button>
     </div>
@@ -205,15 +198,6 @@ export const ContactUsBody = () => {
       />
       <div className="bottomOfContactUs">
         <div className="bOCUL">
-          <p>
-            <input type="checkbox" name="check" id="checks" />
-            I have read and accepted the Terms of
-            <br />
-            <span className="coloredTexts">
-              {" "}
-              Services &amp; Privacy Policy*
-            </span>
-          </p>
         </div>
         
         <button disabled={isSubmitting} onClick={handleSubmit} className="inputButtonContact">{isSubmitting ? "Sending" : "Send"}</button>
