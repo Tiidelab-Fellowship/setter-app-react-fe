@@ -94,6 +94,7 @@
 .smallProfile > img{
   border-radius: 50%;
   align-self: center;
+  width: 40px;
 }
 
 

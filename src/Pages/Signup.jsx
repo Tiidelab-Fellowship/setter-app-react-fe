@@ -7,20 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import { SignupSchema } from "../Utils/Validation/validationSchema";
-
-const Swal = require('sweetalert2')
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
  export const SignUpBody = () => {
-const notification =()=>{
-  Swal.fire({
-    icon: 'error',
-    title: 'Registration Failed',
-    text: 'This Email has previously registered with us.',
-    footer: 'Change your email',
-    confirmButtonText: 'Retry'
-  })
-}
 
   const text1 = "Create Your Account"
   const text2 =" Or register with email"
@@ -73,17 +63,30 @@ const notification =()=>{
             });
             console.log(tokens);
             localStorage.setItem("EachUser", JSON.stringify(tokens));
-            Swal.fire({
-              title: 'Registration Successful',
-              icon: 'success',
-              confirmButtonText: 'Continue'
-            })
+            toast.success("Registration Successful", {
+              position: "top-center",
+              autoClose: 4000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });   
             if (token) {
-              navigate("/LoginPage");
+              navigate("/SocialDashboard");
             }
           }catch (error) {
-            // console.log(error)
-            notification();
+            toast.error('Registration Unsuccessful', {
+              position: "top-center",
+              autoClose: 4000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
           }
         }}
       >
@@ -136,6 +139,7 @@ const notification =()=>{
 const SignUpPage = () =>{
   return (
     <>
+     <ToastContainer />
      <FormHeaderWithHeader />
      <SignUpBody />
     </>

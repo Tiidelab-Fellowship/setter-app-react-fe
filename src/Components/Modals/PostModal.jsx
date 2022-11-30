@@ -1,7 +1,8 @@
 import "../../Stylesheets/PostModal.css";
 import { Formik } from "formik";
 import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
-const Swal = require("sweetalert2");
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const PostModal = ({ modal, setModal }) => {
   const toggleModal = () => {
@@ -26,18 +27,33 @@ export const PostModal = ({ modal, setModal }) => {
                 const { title, body, scheduledDate } = values;
                 setSubmitting(true);
                 try {
-                  let response = await axiosInstance.post("/posts", {
+                    await axiosInstance.post("/posts", {
                     title,
                     body,
                     scheduledDate,
                   });
+                  toast.success('Post Scheduled', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+                    setModal(!modal)
                 } catch (error) {
-                  Swal.fire({
-                    icon: "error",
-                    title: "Post not sent",
-                    text: "Check your details.",
-                    confirmButtonText: "Retry",
-                  });
+                  toast.error('Please fill all fields Appropriately', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
                 }
               }}
             >
@@ -109,6 +125,8 @@ export const PostModal = ({ modal, setModal }) => {
         </div>
       )}
       <p></p>
+      <ToastContainer />
+
     </>
   );
 };

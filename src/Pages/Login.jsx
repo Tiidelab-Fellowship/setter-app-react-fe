@@ -7,9 +7,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginSchema } from "../Utils/Validation/validationSchema";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
-const Swal = require('sweetalert2')
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const LoginBody = () => {
   const text1 = "Login to Your Account"
@@ -50,21 +49,30 @@ export const LoginBody = () => {
                   refresh: refresh.token,
                 });
                 localStorage.setItem("EachUser", JSON.stringify(tokens));
-                Swal.fire({
-                  title: 'Welcome back',
-                  icon: 'success',
-                  confirmButtonText: 'Continue'
-                })
+                toast.success("Welcome Back", {
+                  position: "top-center",
+                  autoClose: 4000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                  }); 
                 if (token) {
                   navigate("/SocialDashboard");
                 }
               } catch (error) {
-                Swal.fire({
-                  icon: 'error',
-                  title: 'Login Failed',
-                  text: 'User not found.',
-                  confirmButtonText: 'Retry'
-                })
+                toast.error('Registration Unsuccessful', {
+                  position: "top-center",
+                  autoClose: 4000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                  });
               }
        }}
      >
@@ -101,6 +109,7 @@ export const LoginBody = () => {
 const LoginPage = () =>{
   return (
     <>
+      <ToastContainer /> 
      <FormHeaderWithHeader />
      <LoginBody />
     </>

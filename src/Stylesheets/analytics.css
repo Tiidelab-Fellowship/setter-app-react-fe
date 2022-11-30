@@ -32,7 +32,8 @@ body {
 .Acontainer .Atop-header,
 .Acontainer .Ainner-body {
   display: flex;
-  gap: 2%;
+  gap: 1%;
+  justify-content: space-evenly;
 }
 
 .Ainner-body {
@@ -52,6 +53,7 @@ body {
 
 .Ainner-body .Ascheduled-posts {
   width: 30%;
+  border-radius: 10px;
 }
 
 .Atop-header .Aaccount-data {

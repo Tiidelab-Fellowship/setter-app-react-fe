@@ -50,9 +50,10 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                    });               
+                    });  
+                    setModal(!modal)             
                   } catch (error) {
-                    toast.warning('Registration Unsuccessful', {
+                    toast.error('Registration Unsuccessful', {
                       position: "top-center",
                       autoClose: 4000,
                       hideProgressBar: false,
@@ -181,8 +182,9 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
                     progress: undefined,
                     theme: "light",
                     });
+                    setModal2(!modal2)
                 } catch (error) {
-                  toast.warning('Profile update unsuccessful', {
+                  toast.error('Profile update unsuccessful', {
                     position: "top-center",
                     autoClose: 4000,
                     hideProgressBar: false,

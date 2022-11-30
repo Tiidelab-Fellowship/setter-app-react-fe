@@ -40,13 +40,14 @@ html,body{
 .dashboard-insights{
     /* width:18.5%; */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-right: 3%;
+    margin-left: .8%;
+    gap: 1%;
     /* margin-left: 18%; */
 }
 
-.box{
+.dashboard-insights .box{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -71,7 +72,7 @@ html,body{
 
 .social-dashboard-prof{
     background-color: #ffffff;
-    width: 27%;
+    width:fit-content;
     /* height: 598px; */
     margin: 2%; 
     text-align: center;
@@ -93,12 +94,13 @@ html,body{
 
 .social-dashboard-info{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 3%;
     background-color: #F7F7FC;
-    width: 80%;
+    width: fit-content;
     margin: 1.5rem;
-    padding: 10px 16px;
+    padding: 10px 15px;
     border-radius: 10px;
 }
 
@@ -130,6 +132,7 @@ html,body{
 .social-dashboard-text{
     width: 260px;
     margin:0.8rem;
+    font-size: 12px;
 }
 
 .social-dashboard-text p{
@@ -178,19 +181,20 @@ html,body{
   .dashboard-analysis{
     /* width: 66%; */
     display: flex;
-    justify-content: space-between;
-    /* margin-left: 18%; */
+    justify-content: flex-start;
+    gap: 1%;
+    margin-left: 1%;
 }  
 
-.dashboard-card{
+ .dashboard-analysis .dashboard-card{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: space-evenly;
     background: #ffffff;
     width: 22%;
     height: 14%;
-    margin: 1rem;
-    padding: 0.5rem;
+    padding: 5px;
     border-radius: 10px;
 }
 
@@ -208,7 +212,7 @@ margin-left: 5%;
 }
 
 .dashboard-card-item > h6{
-    font-size: 1.375rem;
+    font-size: 1rem;
 }
 
 .dashboard-card-item span{
