@@ -61,16 +61,16 @@
 
 .CurrentPage{
   background-color: #323335;
-  padding: 4% 3%;
+  padding: 4% 20% 4% 4%;
   border-radius: 5px;
-  margin-right: 10%;
+  color: #FFFFFF !important;
 }
 .eachPage > a{
   color: #858688;
 }
 
 .CurrentPage > a{
-  color: #FFFFFF;
+  color: #FFFFFF ;
 }
 
 .bottomSideFooter > a{
