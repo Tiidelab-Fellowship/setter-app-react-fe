@@ -10,9 +10,7 @@ import { SignupSchema } from "../Utils/Validation/validationSchema";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
  export const SignUpBody = () => {
-
 
   const text1 = "Create Your Account"
   const text2 =" Or register with email"
