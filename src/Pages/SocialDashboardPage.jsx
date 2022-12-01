@@ -18,7 +18,7 @@ const SocialDashboard = () => {
   return (
     <>
       <DBheader
-        headline={`Welcome, ${firstName}🎉`}
+        headline={`Welcome, ${firstName}`}
         headlineDetails="Here is an overview of your Social Media Accounts."
         hideButton
         smallName= {firstName}

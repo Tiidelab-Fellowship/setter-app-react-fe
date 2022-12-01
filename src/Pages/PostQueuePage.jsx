@@ -47,11 +47,11 @@ const PostQueue = () => {
   return (
     <>
       <DBheader
-        headline="Posts Queue 📬"
+        headline="Posts Queue"
         headlineDetails="See what post goes out next and do well to re-schedule if you want to."
         hidePickSocials
         smallName={firstName}
-        occupation="Web Developer"
+        occupation=""
         modal={modal}
         setModal={setModal}
       />
