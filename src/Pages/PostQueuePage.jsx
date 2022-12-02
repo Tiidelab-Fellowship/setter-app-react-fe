@@ -1,23 +1,21 @@
 import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
-import { Queue, TopPost } from "../Components/Posts/PostPages";
+import { Queue } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
-import  { DemoAppTwo } from "../Components/FullCalendar/FullCalendarComponent";
 import { PostModal } from "../Components/Modals/PostModal";
 import React, {useEffect, useState} from "react";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
-export const PostQueueContent = ({modal,setModal}) => {
+export const PostQueueContent = ({modal,setModal, post}) => {
   return (
     <React.Fragment>
     <PostModal modal={modal}
         setModal={setModal}/>
     <section className="PSPQDashboardContainer">
       <main className="bigestSide">
-        <Queue />
-        <Queue />
+        <Queue post={post}/>
       </main>
-      <aside className="besideBigestSide">
+      {/* <aside className="besideBigestSide">
         <div className="asideTopP">
           <div>
             <DemoAppTwo />
@@ -28,7 +26,7 @@ export const PostQueueContent = ({modal,setModal}) => {
           <TopPost />
           <TopPost />
         </div>
-      </aside>
+      </aside> */}
     </section>
     </React.Fragment>
   );
@@ -36,10 +34,13 @@ export const PostQueueContent = ({modal,setModal}) => {
 const PostQueue = () => {
   const [modal, setModal] = useState(false);
   const [user, setUser] = useState({})
+  const [post, setpost] = useState([])
+
   useEffect(() => {
     const id = JSON.parse(localStorage.getItem("userId"));
     axiosInstance.get(`/users/${id}`).then((response)=>{
       setUser(response.data)
+      setpost(response.data.posts)
     });
   }, []);
   
@@ -56,7 +57,7 @@ const PostQueue = () => {
         setModal={setModal}
       />
       <PostQueueContent modal={modal}
-        setModal={setModal}/>
+        setModal={setModal} post={post}/>
       <SideBarTwo />
     </>
   );
