@@ -8,7 +8,8 @@ import { PostModal } from "../Components/Modals/PostModal";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
 
-export const PostScheduleContent = ({modal, setModal}) => {
+
+export const PostScheduleContent = ({modal, setModal, post}) => {
  
   return (
     <>
@@ -16,7 +17,7 @@ export const PostScheduleContent = ({modal, setModal}) => {
     <section className="PSPQDashboardContainer">
       <main className="bigestSideP">
         <div>
-        <DemoApp/>
+        <DemoApp post={post}/>
         </div>
       </main>
       <aside className="besideBigestSide">
@@ -37,12 +38,12 @@ export const PostScheduleContent = ({modal, setModal}) => {
 
 const PostSchedule = () => {
   const [user, setUser] = useState({})
-  // const [post, setPost] = useState([])
+  const [post, setPost] = useState([])
   useEffect(() => {
     const id = JSON.parse(localStorage.getItem("userId"));
     axiosInstance.get(`/users/${id}`).then((response)=>{
       setUser(response.data)
-      // setPost(response.data)
+      setPost(response.data.posts)
     });
   }, []);
   
@@ -51,15 +52,15 @@ const PostSchedule = () => {
   return (
     <>
       <DBheader
-        headline="Post Schedule 😘"
+        headline="Post Schedule"
         headlineDetails="Schedule your post here and go to rest, We will do the rest."
         hidePickSocials
         smallName={firstName}
-        occupation="Web Developer"
+        occupation=""
         modal={modal}
         setModal={setModal}
       />
-      <PostScheduleContent modal={modal}
+      <PostScheduleContent modal={modal} post={post}
         setModal={setModal}/>
       <SideBarTwo />
     </>

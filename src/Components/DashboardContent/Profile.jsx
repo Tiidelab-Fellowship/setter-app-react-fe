@@ -9,7 +9,8 @@ import {
 
 export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => {
   console.log(user)
-  const { firstName, lastName, phoneNumber, email, userName } = user
+  const { firstName, lastName, phoneNumber, email, userName, businessInfo
+  } = user
   const handleEditModal = () => {
     setModal(!modal);
   };

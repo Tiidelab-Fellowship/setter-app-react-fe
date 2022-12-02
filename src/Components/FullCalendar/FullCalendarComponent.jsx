@@ -6,8 +6,9 @@ import interactionPlugin from '@fullcalendar/interaction'
 import "../../Stylesheets/fullCalendar.css"
 // import { INITIAL_EVENTS, createEventId } from './event-utils'
 
-export const DemoApp = () => {
+export const DemoApp = (post) => {
   function renderEventContent(eventInfo) {
+    console.log(post)
     return (
       <>
         <b>{eventInfo.timeText}</b>
