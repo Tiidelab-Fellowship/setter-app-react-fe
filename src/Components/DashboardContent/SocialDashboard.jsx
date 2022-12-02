@@ -33,28 +33,28 @@ export const SocialDashboardContent = () => {
     <div className="box">
       <div className="fIcons"> <FaTwitter/> </div>
       <div>
-        <h3>Counting</h3>
+        <h3>Coming soon...</h3>
         <h6><span className="green">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
       <div className="fIcons"> <FaFacebookF /> </div>
       <div>
-        <h3>Counting</h3>
+        <h3>Coming soon...</h3>
         <h6><span className="red">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
       <div className="fIcons"> <FaLinkedinIn /> </div>
       <div>
-        <h3>Counting</h3>
+        <h3>Coming soon...</h3>
         <h6><span className="green">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
       <div className="fIcons"> <FaInstagram /> </div>
       <div>
-        <h3>Counting</h3>
+        <h3>Coming soon...</h3>
         <h6><span className="red">0%</span>This week</h6>
       </div>
     </div>
@@ -74,7 +74,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Followers</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>Counting</h6><span className="green">+0%</span>
+            <h6>Coming soon...</h6><span className="green">+0%</span>
           </div>
         </div>
         <div className="dashboard-card">
@@ -83,7 +83,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Likes</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>Counting</h6><span className="red">-0%</span>
+            <h6>Coming soon...</h6><span className="red">-0%</span>
           </div>
         </div>
         <div className="dashboard-card">
@@ -92,7 +92,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Comment</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>Counting</h6><span className="green">+0%</span>
+            <h6>Coming soon...</h6><span className="green">+0%</span>
           </div>
         </div>
         <div className="dashboard-card">
@@ -101,7 +101,7 @@ export const SocialDashboardContent = () => {
             <h3 className="social-dashboard-text">Share</h3>
           </div>
           <div className="dashboard-card-item">
-            <h6>Counting</h6><span className="red">-0%</span>
+            <h6>Coming soon...</h6><span className="red">-0%</span>
           </div>
         </div>
       </div>
@@ -114,15 +114,15 @@ export const SocialDashboardContent = () => {
       <p className="dashboard-light-text">Realtor</p> */}
       <div className="social-dashboard-info">
         <div>
-          <h3>Counting</h3>
+          <h3>Coming soon...</h3>
           <p className="dashboard-light-text">Post</p>
         </div>
         <div>
-          <h3>Counting</h3>
+          <h3>Coming soon...</h3>
           <p className="dashboard-light-text">Followers</p>
         </div>
         <div>
-          <h3>Counting</h3>
+          <h3>Coming soon...</h3>
           <p className="dashboard-light-text">Following</p>
         </div>
       </div>

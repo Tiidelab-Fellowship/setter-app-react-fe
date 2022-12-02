@@ -1,14 +1,15 @@
 import React from "react";
 import { FaClock, FaComment, FaEye, FaHeart } from "react-icons/fa";
-import TIIDELab from "../../SetterApp-Assets/TiidelaB-meetUp.png";
+import avatar from "../../SetterApp-Assets/avatar.png";
 import "../../Stylesheets/PostPages.css"
 
-export const Queue = () => {
+export const Queue = (post) => {
+  console.log(post)
   return (
     <div className="postQueueContent">
       <div className="PQeachPost">
         <div className="EPleft">
-          <img src={TIIDELab} alt="TiidelabMeetUp" />
+          <img src={avatar} alt="TiidelabMeetUp" />
         </div>
         <div className="EPright">
           <h2 className="postMainHeader">Tech Life with Mr Shams</h2>
@@ -37,19 +38,19 @@ export const TopPost = () => {
   return (
     <div className="bottomPostContent">
       <div className="BPCImage">
-        <img src={TIIDELab} alt="TiidelabMeetUp" />
+        <img src={avatar} alt="TiidelabMeetUp" />
       </div>
       <div className="BPCR">
         <h1 className="HBPCR">Tech Life with Mr Shams</h1>
         <div className="BBPCR">
           <div className="textIconForLikeViewAndComment">
-            <FaHeart /> <span className="LVC">40</span>
+            <FaHeart /> <span className="LVC">0</span>
           </div>
           <div className="textIconForLikeViewAndComment">
-            <FaEye /> <span className="LVC">25</span>
+            <FaEye /> <span className="LVC">0</span>
           </div>
           <div className="textIconForLikeViewAndComment">
-            <FaComment /> <span className="LVC">30</span>
+            <FaComment /> <span className="LVC">0</span>
           </div>
         </div>
       </div>

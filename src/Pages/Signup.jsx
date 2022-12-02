@@ -5,10 +5,10 @@ import { FormTextHeader, BigInput, FormFooter, PictureText } from "../Components
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik } from "formik";
-import axios from "axios";
 import { SignupSchema } from "../Utils/Validation/validationSchema";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
  export const SignUpBody = () => {
 
@@ -43,8 +43,8 @@ import 'react-toastify/dist/ReactToastify.css';
           setSubmitting(true);
           // console.log(values);
           try {
-          let response = await axios.post(
-            "https://setter-app-cohort4.herokuapp.com/v1/auth/register",
+          let response = await axiosInstance.post(
+            "/auth/register",
             {
               firstName,
               lastName,
