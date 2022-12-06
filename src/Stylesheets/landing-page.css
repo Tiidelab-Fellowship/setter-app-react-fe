@@ -35,10 +35,10 @@ button a {
 font-size: 16px;
 text-decoration: none;
 }
-h2{
+.container h2{
     font-size: 64px;
     text-align: center;
-    color: #000;
+    color: #1B1B1B;
     line-height: 1em;
 }
 /*header*/
