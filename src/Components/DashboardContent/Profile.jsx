@@ -7,9 +7,18 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => {
-  console.log(user)
-  const { firstName, lastName, phoneNumber, email, userName } = user
+export const ProfileContent = ({
+  modal,
+  setModal,
+  modal2,
+  setModal2,
+  user,
+  businessInfo,
+}) => {
+  console.log(user);
+  const { firstName, lastName, phoneNumber, email, userName } = user;
+  const { name, size, businessCategoryName } = businessInfo;
+  console.log(businessInfo);
   const handleEditModal = () => {
     setModal(!modal);
   };
@@ -28,7 +37,7 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
           <h1>{firstName + " " + lastName}</h1>
           <p>Username: {userName}</p>
           <p>Email: {email}</p>
-          <p> Phone Number: { phoneNumber }</p>
+          <p> Phone Number: {phoneNumber}</p>
           <div className="profile-button">
             <button className="profile-edit-btn" onClick={handleEditModal2}>
               Update Profile
@@ -39,19 +48,22 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
           </div>
         </div>
       </div>
-      <div className="dashboard-bus-details">
-        <h2>Business Information</h2>
-        <div className="bus-details">
-        <p>Business Name:</p>
-        <p>Business Size:</p>
-        <p>Business Type:</p>
+      {businessInfo === {name:"", size:"", businessCategoryName: ""} ? (
+        <h1>Register Your Business</h1>
+      ) : ( 
+        <div className="dashboard-bus-details">
+          <h2>Business Information</h2>
+          <div className="bus-details">
+            <p>Business Name: {name}</p>
+            <p>Business Size: {size}</p>
+            <p>Business Type: {businessCategoryName}</p>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="dashboard-socials">
         <p>Social Accounts</p>
         <div className="profile-socials">
-          
           <div className="profile-box">
             <div className="profile-social-icon profile-facebook">
               <FaFacebookSquare />
@@ -59,16 +71,14 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
             <span className="profile-social-icon-text">Facebook</span>
             <button className="profile-connect">Connect</button>
           </div>
-          
+
           <span className="profile-line" />
           <div className="profile-box">
             <div className="profile-social-icon profile-instagram ">
               <FaInstagramSquare />
             </div>
             <span className="profile-social-icon-text">Instagram</span>
-            <button className="profile-connect">
-              Connect
-            </button>
+            <button className="profile-connect">Connect</button>
           </div>
           <span className="profile-line" />
           <div className="profile-box">
@@ -76,9 +86,7 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
               <FaTwitter />
             </div>
             <span className="profile-social-icon-text">Twitter</span>
-            <button className="profile-connect">
-              Connect
-            </button>
+            <button className="profile-connect">Connect</button>
           </div>
           <span className="profile-line" />
           <div className="profile-box">
@@ -86,9 +94,7 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
               <FaLinkedin />
             </div>
             <span className="profile-social-icon-text">Linkedin</span>
-           <button className="profile-connect">
-              Connect
-            </button>
+            <button className="profile-connect">Connect</button>
           </div>
         </div>
       </div>

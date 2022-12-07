@@ -11,6 +11,8 @@ import PostQueue from "./Pages/PostQueuePage";
 import PostSchedule from "./Pages/PostSchedule";  
 import ProfilePage from "./Pages/ProfilePage";
 import FAQpage from "./Pages/FAQ";
+import PrivacyPolicyPage from "./Pages/PrivacyPolicy";
+import TandCPage from "./Pages/Terms&Condition";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Route path="/ForgotPassword" element={<ForgotPasswordPage />} />
       <Route path="/CreateNewPassword" element={<CreateNewPasswordPage />} />
       <Route path="/FAQ" element={<FAQpage />} />
+      <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />} />
+      <Route path="/T&Cs" element={<TandCPage />} />
     </Routes>
 
   );
