@@ -37,16 +37,10 @@ export const Header = () => {
       <nav>
         <ul>
           <li>
-            <p >Home</p>
+            <p > <a href="#about">About</a></p>
           </li>
           <li>
-            <p >About</p>
-          </li>
-          <li>
-            <p >Dashboard</p>
-          </li>
-          <li>
-            <p >Pricing</p>
+            <p> <a href="#pricing">Pricing</a></p>
           </li>
           <li>
           <Link to = "/FAQ">
@@ -210,7 +204,7 @@ export const Features = () => {
 export const Product = () => {
   return (
     <section id="product-section">
-      <div className="container">
+      <div id="about" className="container">
         <div className="left-container">
           <img src={woman} alt="MainWoman" />
           <div />
@@ -256,7 +250,7 @@ export const Product = () => {
 export const Pricing = () => {
   return (
     <section id="pricing-section">
-      <div className="container">
+      <div className="container" id="pricing">
         <button className="small-titled-box">Pricing</button>
         <h2>
           It have never been easier to <br /> manage more, for less
@@ -402,8 +396,8 @@ export const Customer = () => {
           <div className="customer-box">
             <img src={Review} alt="Review" />
             <p>
-              SetterApp has made sharing my story and building my brand on
-              social media so much easier.
+              As a social media manager at my company, I use setterApp to manage
+              all my company social accounts seamlessly.
             </p>
             <div className="customer">
               <img src={udeme} alt="CurrentProfile" />
@@ -416,8 +410,8 @@ export const Customer = () => {
           <div className="customer-box">
             <img src={Review} alt="Review" />
             <p>
-              SetterApp has made sharing my story and building my brand on
-              social media so much easier.
+              As a food business owner, the processes of managing the social accounts of
+              my business is now very structured and effective.
             </p>
             <div className="customer">
               <img src={maymouna} alt="CurrentProfile" />
