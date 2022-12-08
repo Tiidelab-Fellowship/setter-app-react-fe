@@ -231,7 +231,7 @@ export const PPPContent = () => {
           target="_blank"
         >
           Free Privacy Policy website
-        </a>{" "}
+        </a>
         article.
       </p>
       <p className="pppParagraph">

@@ -15,7 +15,6 @@ export const ProfileContent = ({
   user,
   businessInfo,
 }) => {
-  console.log(user);
   const { firstName, lastName, phoneNumber, email, userName } = user;
   const { name, size, businessCategoryName } = businessInfo;
   console.log(businessInfo);
