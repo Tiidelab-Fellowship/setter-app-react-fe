@@ -1,5 +1,3 @@
-import profile from "../../SetterApp-Assets/profilePagePicture.jpg"
-import TIIDELab from "../../SetterApp-Assets/TiidelaB-meetUp.png";
 import "../../Stylesheets/socialDashboard.css"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaUser, FaThumbsUp, FaComment,FaShare } from "react-icons/fa"
 import { BarChart } from "../Chart/BarChart";

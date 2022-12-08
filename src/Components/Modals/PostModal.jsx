@@ -27,7 +27,7 @@ export const PostModal = ({ modal, setModal }) => {
                 const { title, body, scheduledDate } = values;
                 setSubmitting(true);
                 try {
-                    await axiosInstance.post("/posts", {
+                  await axiosInstance.post("/posts", {
                     title,
                     body,
                     scheduledDate,

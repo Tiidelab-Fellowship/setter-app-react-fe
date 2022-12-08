@@ -22,8 +22,6 @@ export const PostScheduleContent = ({modal, setModal, post}) => {
       </main>
       <aside className="besideBigestSide">
         <div className="asideTop">
-          <Queue />
-          <Queue />
         </div>
         <div className="asideBottom">
         <h2 className="TopPost">Top Post</h2>

@@ -4,6 +4,7 @@ import "../../Stylesheets/ProfileModal.css";
 import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { category, businessSize } from "./Business-options";
 
 export const ProfileModalBusiness = ({ modal, setModal }) => {
   const toggleModal = () => {
@@ -90,30 +91,36 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
                   <br />
                   <label className="profileLabelModal">Business Size</label>
                   <br />
-                  <input
+
+                  <select name="size" className="profileModalInput" value={values.size} onChange={handleChange}>
+                    {businessSize.map((opt) => (
+                      <option>{opt}</option>
+                    ))}
+                  </select>
+                  {/* <input
                     name="size"
                     className="profileModalInput"
                     type="text"
                     placeholder="Small, medium or Large-scale"
                     value={values.size}
                     onChange={handleChange}
-                  />
+                  /> */}
 
                   <br />
                   <label className="profileLabelModal">Business Category</label>
                   <br />
-                  {/* <select name="businessCategory" className="profileModalInput" value={values.businessCategoryName}>
+                  <select name="businessCategoryName" className="profileModalInput" value={values.businessCategoryName} onChange={handleChange}>
                     {category.map((opt) => (
                       <option>{opt}</option>
                     ))}
-                  </select> */}
-                   <input
+                  </select>
+                   {/* <input
                     name="businessCategoryName"
                     className="profileModalInput"
                     type="text"
                     value={values.businessCategoryName}
                     onChange={handleChange}
-                  />
+                  /> */}
 
                   <br />
                   <button id="close" onClick={toggleModal}>

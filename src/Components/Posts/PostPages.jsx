@@ -3,8 +3,9 @@ import { FaClock, FaComment, FaEye, FaHeart } from "react-icons/fa";
 import avatar from "../../SetterApp-Assets/avatar.png";
 import "../../Stylesheets/PostPages.css"
 
-export const Queue = (post) => {
-  console.log(post)
+export const Queue = (post, posts) => {
+  console.log(posts)
+  const [title, body, scheduledDate] = posts
   return (
     <div className="postQueueContent">
       <div className="PQeachPost">
@@ -12,16 +13,14 @@ export const Queue = (post) => {
           <img src={avatar} alt="TiidelabMeetUp" />
         </div>
         <div className="EPright">
-          <h2 className="postMainHeader">Tech Life with Mr Shams</h2>
+          <h2 className="postMainHeader">{title}</h2>
           <p className="postParagraph">
-            Oya Clear Road for Mr Shams! The Big Brother of TIIDELab is getting
-            a mansion in Lagos. Our real estate agents are dedicated to helping
-            him find houses, apartments, condos and commercial properties.
+            {body}
           </p>
           <div className="bottomEachPost">
             <div className="leftBottomEachPost">
               <p className="TLBEP">Scheduled For:</p>
-              <p className="BLBEP"><FaClock /> 10:12, Today</p>
+              <p className="BLBEP"><FaClock />{scheduledDate} </p>
             </div>
             <div className="BRBEP">
               <button className="PQbuttonEdit">Edit</button>

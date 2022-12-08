@@ -63,7 +63,7 @@ export const LoginBody = () => {
                   navigate("/SocialDashboard");
                 }
               } catch (error) {
-                toast.error('Registration Unsuccessful', {
+                toast.error('Invalid Credentials', {
                   position: "top-center",
                   autoClose: 4000,
                   hideProgressBar: false,
