@@ -31,7 +31,7 @@ const ProfilePage = () =>{
         hideButton
         hidePickSocials
         smallName={firstName}
-        occupation="Web Developer"
+        occupation=""
       />
       <ProfileModalName modal2={modal2} setModal2={setModal2} />
       <ProfileModalBusiness  modal={modal} setModal={setModal} />

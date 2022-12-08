@@ -19,6 +19,7 @@ export const ProfileContent = ({
   const { firstName, lastName, phoneNumber, email, userName } = user;
   const { name, size, businessCategoryName } = businessInfo;
   console.log(businessInfo);
+
   const handleEditModal = () => {
     setModal(!modal);
   };
