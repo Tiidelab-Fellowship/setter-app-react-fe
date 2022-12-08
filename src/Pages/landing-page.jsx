@@ -21,7 +21,6 @@ import topIn from "../SetterApp-Assets/top-insta.png";
 import topLi from "../SetterApp-Assets/top-linkedin.png";
 import topTw from "../SetterApp-Assets/top-twitter.png";
 
-
 import { Footer } from "../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 
@@ -30,30 +29,41 @@ export const Header = () => {
     <header>
       <div className="logo-container">
         <img src={logo} alt="SetterAppLogo" />
-        <h1>
-          SetterApp
-        </h1>
+        <h1>SetterApp</h1>
       </div>
       <nav>
         <ul>
           <li>
-            <p > <a href="#about">About</a></p>
+            <Link to="/">
+              <p>Home</p>
+            </Link>
           </li>
           <li>
-            <p> <a href="#pricing">Pricing</a></p>
+            <p>
+              {" "}
+              <a href="#pricing">Pricing</a>
+            </p>
           </li>
           <li>
-          <Link to = "/FAQ">
-            <p >FAQs</p>
-          </Link>
+            <Link to="/FAQ">
+              <p>FAQs</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/PrivacyPolicy">
+              <p>Privacy Policy</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/T&Cs">
+              <p>Terms & Conditions</p>
+            </Link>
           </li>
         </ul>
       </nav>
       <div id="auth">
-        <Link to = "/LoginPage">
-        <p id="login">
-          Login
-        </p>
+        <Link to="/LoginPage">
+          <p id="login">Login</p>
         </Link>
         <button>
           <Link to="/SignUp" id="signup">
@@ -81,20 +91,15 @@ export const Hero = () => {
         </div>
         <div className="cta-container">
           <button className="black-button">
-            <Link to ='/SignUp'>
-            <p  style={{ color: "#fff" }}>
-              Get started
-            </p>
+            <Link to="/SignUp">
+              <p style={{ color: "#fff" }}>Get started</p>
             </Link>
-            
           </button>
           <button className="white-button">
-            <p  style={{ color: "#090909" }}>
-              Learn more
-            </p>
+            <p style={{ color: "#090909" }}>Learn more</p>
           </button>
         </div>
-         
+
         <img src={heroImage} alt="heroImage" />
         <div id="trusted">
           <h3>Trusted By</h3>
@@ -131,24 +136,24 @@ export const Features = () => {
               <img src={webApp} alt="webApp" />
               <h4>Web app</h4>
               <p>
-                Don’t worry about any installation our web app gives you quick and
-                easy access to your account through any browser.
+                Don’t worry about any installation our web app gives you quick
+                and easy access to your account through any browser.
               </p>
             </div>
             <div className="feature-box">
               <img src={pricing} alt="Pricing" />
               <h4>Affordable pricing</h4>
               <p>
-                Manage all your business social media accounts for a jaw-dropping
-                lead at prices lower than our competitors.
+                Manage all your business social media accounts for a
+                jaw-dropping lead at prices lower than our competitors.
               </p>
             </div>
             <div className="feature-box">
               <img src={secured} alt="Secure" />
               <h4>Secured</h4>
               <p>
-                Your social media accounts are highly secured and protected
-                from cyber-attacks. 
+                Your social media accounts are highly secured and protected from
+                cyber-attacks.
               </p>
             </div>
           </div>
@@ -166,8 +171,8 @@ export const Features = () => {
               <img src={analytics} alt="Analytics" />
               <h4>Accurate Analytics</h4>
               <p>
-                Get a clear understanding of what your customer wants and
-                make the best business decision with our customer focus and 
+                Get a clear understanding of what your customer wants and make
+                the best business decision with our customer focus and
                 well-detailed analytics.
               </p>
             </div>
@@ -183,17 +188,12 @@ export const Features = () => {
         </div>
         <div className="cta-container">
           <button className="black-button">
-            <Link to ="/SignUp">
-            <p  style={{ color: "#fff" }}>
-              Get started
-            </p>
+            <Link to="/SignUp">
+              <p style={{ color: "#fff" }}>Get started</p>
             </Link>
-            
           </button>
           <button className="white-button">
-            <p  style={{ color: "#090909" }}>
-              Browse all features
-            </p>
+            <p style={{ color: "#090909" }}>Browse all features</p>
           </button>
         </div>
       </div>
@@ -211,9 +211,7 @@ export const Product = () => {
         </div>
         <div className="right-container">
           <button className="product-button">
-            <p  style={{ color: "#111" }}>
-              Our Product
-            </p>
+            <p style={{ color: "#111" }}>Our Product</p>
           </button>
           <h3>
             We are the next-gen <br /> Adtech Solution{" "}
@@ -237,9 +235,7 @@ export const Product = () => {
             experiences.
           </p>
           <button className="white-button">
-            <p  style={{ color: "#090909" }}>
-              Get started
-            </p>
+            <p style={{ color: "#090909" }}>Get started</p>
           </button>
         </div>
       </div>
@@ -324,15 +320,13 @@ export const GetStarted = () => {
           Be ominipresent present on all your social media accounts and enjoy
           the best social media management from one platform.
         </p>
-        <form >
+        <form>
           <input type="email" placeholder="Enter your email" />
           <button type="submit">Sign Up</button>
         </form>
         <p className="terms-conditions-paragraph">
           By clicking Sign Up you're confirming that you agree with our{" "}
-          <span  className="terms">
-            Terms and Conditions.
-          </span>
+          <span className="terms">Terms and Conditions.</span>
         </p>
       </div>
     </section>
@@ -410,8 +404,8 @@ export const Customer = () => {
           <div className="customer-box">
             <img src={Review} alt="Review" />
             <p>
-              As a food business owner, the processes of managing the social accounts of
-              my business is now very structured and effective.
+              As a food business owner, the processes of managing the social
+              accounts of my business is now very structured and effective.
             </p>
             <div className="customer">
               <img src={maymouna} alt="CurrentProfile" />
@@ -425,11 +419,11 @@ export const Customer = () => {
       </div>
       <div className="supportedSocials">
         <p>Supported Socials:</p>
-            <img src={topFb} className="supportedIcon" alt="facebook" />
-            <img src={topIn} className="supportedIcon" alt="instagram" />
-            <img src={topTw} className="supportedIcon" alt="twitter" />
-            <img src={topLi} className="supportedIcon" alt="linkedin" />
-          </div>
+        <img src={topFb} className="supportedIcon" alt="facebook" />
+        <img src={topIn} className="supportedIcon" alt="instagram" />
+        <img src={topTw} className="supportedIcon" alt="twitter" />
+        <img src={topLi} className="supportedIcon" alt="linkedin" />
+      </div>
     </section>
   );
 };
@@ -440,7 +434,9 @@ export const GetStartedFooter = () => {
       <h2>
         We are here to help <br /> you grow your business
       </h2>
-      <Link to="/SignUp"><button className="small-titled-box">Get Started Now </button></Link>
+      <Link to="/SignUp">
+        <button className="small-titled-box">Get Started Now </button>
+      </Link>
     </section>
   );
 };
