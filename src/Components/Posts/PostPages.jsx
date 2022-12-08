@@ -1,34 +1,37 @@
 import React from "react";
 import { FaClock, FaComment, FaEye, FaHeart } from "react-icons/fa";
 import avatar from "../../SetterApp-Assets/avatar.png";
-import "../../Stylesheets/PostPages.css"
+import "../../Stylesheets/PostPages.css";
 
-export const Queue = (post, posts) => {
-  console.log(posts)
-  const [title, body, scheduledDate] = posts
+export const Queue = (post) => {
+  const posts = post.post;
   return (
     <div className="postQueueContent">
-      <div className="PQeachPost">
-        <div className="EPleft">
-          <img src={avatar} alt="TiidelabMeetUp" />
-        </div>
-        <div className="EPright">
-          <h2 className="postMainHeader">{title}</h2>
-          <p className="postParagraph">
-            {body}
-          </p>
-          <div className="bottomEachPost">
-            <div className="leftBottomEachPost">
-              <p className="TLBEP">Scheduled For:</p>
-              <p className="BLBEP"><FaClock />{scheduledDate} </p>
+      {posts.map((eachPost) => {
+        return (
+          <div className="PQeachPost">
+            <div className="EPleft">
+              <img src={avatar} alt="TiidelabMeetUp" />
             </div>
-            <div className="BRBEP">
-              <button className="PQbuttonEdit">Edit</button>
-              <button className="PQbuttonShare">Share Now</button>
+            <div className="EPright">
+              <h2 className="postMainHeader">{eachPost.title}</h2>
+              <p className="postParagraph">{eachPost.body}</p>
+              <div className="bottomEachPost">
+                <div className="leftBottomEachPost">
+                  <p className="TLBEP">Scheduled For: {eachPost.scheduledDate}</p>
+                  <p className="BLBEP">
+                    <FaClock />{" "}
+                  </p>
+                </div>
+                <div className="BRBEP">
+                  <button className="PQbuttonEdit">Edit</button>
+                  <button className="PQbuttonShare">Share Now</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };
