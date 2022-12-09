@@ -614,7 +614,7 @@ footer h2{
   @media only screen and (min-width: 280px) {
     /* For Mobile: */
 
-    header{
+    /* header{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -629,7 +629,7 @@ footer h2{
         margin: auto;
         align-items: center;
         gap: 5px;
-    }
+    } */
 
     #trusted{
         display: grid;
