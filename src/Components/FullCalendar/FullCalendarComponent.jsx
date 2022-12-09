@@ -36,11 +36,11 @@ export const DemoApp = (post) => {
             
             events={[{
               title: "sogo",
-              start: '2022-11-11T12:30:00'
+              start: '2022-12-11T12:30:00'
             },
             {
               title: "sogo",
-              start: '2022-11-21T12:30:00'
+              start: '2022-12-21T12:30:00'
             }]}
           />
     )
