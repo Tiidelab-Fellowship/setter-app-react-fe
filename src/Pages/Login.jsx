@@ -14,7 +14,7 @@ export const LoginBody = () => {
   const text1 = "Login to Your Account"
   const text2 =" Or Login with Mail"
   const smallText = "Enjoy the best of social media management"
-  const textarea = "You don't need to stress your self when trying to put yourself out there we are here for you to optimize the use of your social media"
+  const textarea = "You don't need to stress your self when trying to put yourself out there. We are here to help you optimize the use of your social media"
   const navigate = useNavigate();
   const [token, setToken] = useState(false)
   const userToken = JSON.parse(localStorage.getItem("EachUser"));

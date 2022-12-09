@@ -18,8 +18,8 @@ export const FormHeaderWithHeader = () => {
         
         <h1 className="register"><Link to="/SignUp">REGISTER</Link></h1>
       </div>
-      <div className="vl">|</div>
-      <FaWrench /> 
+      {/* <div className="vl">|</div> */}
+      {/* <FaWrench />  */}
     </div>
   </header>
 
