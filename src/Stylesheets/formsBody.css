@@ -226,6 +226,38 @@ text-align: center;
 
 
 @media(max-width: 576px){
+
+   .totalContainer{
+    margin: 1%;
+   }
+
+   header a{
+    font-size: 12px;
+   }
+
+   .register{
+    padding: 3% 15%
+   }
+
+   .register > a{
+    font-size: 8px;
+  }
+
+   /* .formSide{
+    margin-top: 5%;
+   } */
+  .formHeader {
+    font-size: 16px;
+  }
+
+  .regMail > p{
+    font-size: 12px;
+  }
+
+  .LogIn-Button{
+    padding: 5px;
+    font-size: 14px;
+  }
   .pictureSide{
     display: none;
   }
@@ -233,5 +265,16 @@ text-align: center;
   .leftHeader > span{
     font-size: 1rem;
 
+  }
+}
+
+@media(max-width: 768px){
+  .pictureSide{
+    display: none;
+  }
+
+  .formSide{
+    margin: 6%;
+    width: 90%
   }
 }
