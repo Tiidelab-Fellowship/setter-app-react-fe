@@ -7,6 +7,11 @@ import { useState } from "react";
 import { LikesData } from "../Chart/Data/LikesData"
 import { Chart as ChartJS } from "chart.js/auto"
 import avatar from "../../SetterApp-Assets/avatar.png";
+import fb from "../../SetterApp-Assets/fb.png";
+import insta from "../../SetterApp-Assets/insta.png";
+import linkedin from "../../SetterApp-Assets/li.png";
+import twitter from "../../SetterApp-Assets/tw.png";
+
 
 
 export const SocialDashboardContent = () => {
@@ -31,37 +36,34 @@ export const SocialDashboardContent = () => {
     <main className="social-dashboard-wrapper">
   <div className="dashboard-insights">
     <div className="box">
-      <div className="fIcons"> <FaTwitter/> </div>
+      <div className="fIcons"> <img src={fb} alt="facebook" /> </div>
       <div>
 
-        <h3>Coming soon...</h3>
+        <h3>Number of Likes</h3>
 
         <h6><span className="green">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
-      <div className="fIcons"> <FaFacebookF /> </div>
+      <div className="fIcons"> <img src={twitter} alt="twitter" /> </div>
       <div>
-
-        <h3>Coming soon...</h3>
-
+        <h3>Number of Likes</h3>
         <h6><span className="red">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
-      <div className="fIcons"> <FaLinkedinIn /> </div>
+      <div className="fIcons"> <img src={insta} alt="instagram" /> </div>
       <div>
-
-        <h3>Coming soon...</h3>
+        <h3>Number of Likes</h3>
 
         <h6><span className="green">0%</span>This week</h6>
       </div>
     </div>
     <div className="box">
-      <div className="fIcons"> <FaInstagram /> </div>
+      <div className="fIcons"> <img src={linkedin} alt="linkedin" /> </div>
       <div>
 
-        <h3>Coming soon...</h3>
+        <h3>Number of Likes</h3>
 
         <h6><span className="red">0%</span>This week</h6>
       </div>
@@ -83,7 +85,7 @@ export const SocialDashboardContent = () => {
           </div>
           <div className="dashboard-card-item">
 
-            <h6>Coming soon...</h6><span className="green">+0%</span>
+            <h6></h6><span className="green">+0%</span>
 
           </div>
         </div>
@@ -94,7 +96,7 @@ export const SocialDashboardContent = () => {
           </div>
           <div className="dashboard-card-item">
 
-            <h6>Coming soon...</h6><span className="red">-0%</span>
+            <h6></h6><span className="red">-0%</span>
 
           </div>
         </div>
@@ -105,7 +107,7 @@ export const SocialDashboardContent = () => {
           </div>
           <div className="dashboard-card-item">
 
-            <h6>Coming soon...</h6><span className="green">+0%</span>
+            <h6></h6><span className="green">+0%</span>
 
           </div>
         </div>
@@ -116,7 +118,7 @@ export const SocialDashboardContent = () => {
           </div>
           <div className="dashboard-card-item">
 
-            <h6>Coming soon...</h6><span className="red">-0%</span>
+            <h6></h6><span className="red">-0%</span>
 
           </div>
         </div>
@@ -131,15 +133,15 @@ export const SocialDashboardContent = () => {
       <div className="social-dashboard-info">
         <div>
 
-          <h3>Coming soon...</h3>
+          <h3>0</h3>
           <p className="dashboard-light-text">Post</p>
         </div>
         <div>
-          <h3>Coming soon...</h3>
+          <h3>0</h3>
           <p className="dashboard-light-text">Followers</p>
         </div>
         <div>
-          <h3>Coming soon...</h3>
+          <h3>0</h3>
 
           <p className="dashboard-light-text">Following</p>
         </div>
@@ -161,7 +163,7 @@ export const SocialDashboardContent = () => {
               “Look deep into nature, and then you will understand everything better.”
             </p>
           </div> */}
-            <p>Coming Soon...
+            <p>No post yet
             </p>
         </div>
       </div>

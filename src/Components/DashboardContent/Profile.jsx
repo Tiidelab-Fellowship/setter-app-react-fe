@@ -34,9 +34,6 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
             <button className="profile-edit-btn" onClick={handleEditModal2}>
               Update Profile
             </button>
-            <button className="profile-password-btn" onClick={handleEditModal}>
-              Register Business
-            </button>
           </div>
         </div>
       </div>
@@ -45,7 +42,10 @@ export const ProfileContent = ({ modal, setModal, modal2, setModal2, user }) => 
         <div className="bus-details">
         <p>Business Name:</p>
         <p>Business Size:</p>
-        <p>Business Type:</p>
+          <p>Business Type:</p>
+          <button className="profile-password-btn" onClick={handleEditModal}>
+              Register Business
+            </button>
         </div>
       </div>
 

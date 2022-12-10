@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 
+
 .headerDashContainer{
   width: 84%;
   position: absolute;
@@ -39,6 +40,7 @@
   justify-content: space-between;
   align-items: center;
   /* padding-left: 38%;  */
+  position: relative;
 }
 
 .pickSocials > select{
@@ -87,16 +89,29 @@
 
 .smallProfile{
   display: flex;
-  margin-left: 10%;
-  width: 40%;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 40px;
+  top: 0;
+  /* width: 40%; */
 }
 
 .smallProfile > img{
   border-radius: 50%;
   align-self: center;
   width: 40px;
+  /* margin-left: auto;
+  position: absolute;
+  right:50px;
+  top: 0; */
 }
 
+.smallProfile> #black-check {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 .smallName > h3{
   font-family: 'Inter';
