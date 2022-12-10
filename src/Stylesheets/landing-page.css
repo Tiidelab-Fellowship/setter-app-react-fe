@@ -207,9 +207,9 @@ header h1{
 .features-row{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center; 
 }
+
 .feature-box{
     width: 30%;
     display: flex;
@@ -612,22 +612,20 @@ footer h2{
     color: #ffffff;
 }
 
-  @media only screen and (min-width: 280px) {
+  @media (min-width: 320px)  and (max-width: 480px){
     /* For Mobile: */
-
+    
     header{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
         max-width: 85%;
-        margin: 10px auto;
+        margin: 0 auto;
+        padding: 10px 0;
     }
     
     .logo-container{
         display: flex;
-        margin: auto;
+        margin-right: auto;
         align-items: center;
         gap: 5px;
     }
@@ -652,11 +650,8 @@ footer h2{
         gap: 20px;
     }
    
-    h2{
-        font-size: 34px;
-        text-align: center;
-        color: #000;
-        line-height: 1em;
+    .Ltitle, .Lfeature, .Lpricing{
+        font-size: 30px !important;
     }
 
     header #auth{
@@ -665,7 +660,33 @@ footer h2{
         align-items: center;
         gap: 10px;
     }
+
+    nav ul{
+        flex-wrap: wrap;
+    }
     
+    .features-row{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .feature-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .feature-box p{
+       text-align: center;
+       font-size: 1em;
+    }
+
+    .feature-box img{
+        margin-bottom: 5px;
+        margin-top: 20px;
+     }
+
     .container .right-container{
        width: 100%;
         display: flex;
@@ -782,7 +803,7 @@ footer h2{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 400px;
+        height: 500px;
     }
     #get-started-section form{
         margin-top: 50px;
@@ -868,209 +889,4 @@ footer h2{
 
   }
   
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    
-    #trusted{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px auto;
-    }
-    #trusted h3{
-        color: #EE4346;
-        font-weight: 500;
-        font-size: 36px;
-    }
-    #users{
-        display: flex;
-        flex-direction: row;
-        align-content: space-between;
-        align-items: center;
-        margin: 30px auto;
-        font-weight: bolder;
-        font-size: 24px;
-    }
-    
-    h2{
-        font-size: 50px;
-        text-align: center;
-        color: #000;
-        line-height: 1em;
-    }
-
-    #product-section .container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .container .right-container{
-       width: 45%;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
-        
-    }
-    .container .left-container{
-        width: 50%;
-        display: flex;
-     }
-    
-     #product-section .left-container img{
-        width: 310px;
-        border-radius: 5px 200px 5px 5px;
-     }
-    
-     .right-container .product-button{
-        background-color: #F4B52B;
-        font-weight: 500;
-     }
-     .right-container h3{
-        font-size:30px;
-        font-weight: bold;
-        line-height: 1.2em;
-     }
-     .right-container p{
-        font-weight: normal;
-        font-size: 16px;
-    }
-
-    #prices-container{
-        margin-top: 50px;
-        margin-bottom: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3%;
-        width: 100%;
-    }
-    .price-box{
-        max-width: 250px;
-        max-height: 520px;
-        padding: 20px 40px;
-        border: 1px solid #DBDBDB;
-        box-shadow: 0px 4px 5px 1px rgba(193, 193, 193, 0.35);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        background-color: #fff;
-    }
   
-    .current-price{
-        background-color: #2C3140;
-        color: #fff;
-    }
-
-    #get-started-section h2{
-        color: #fff;
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-   
-    #get-started-section .terms-conditions-paragraph{
-        font-size: 16px;
-        font: normal;
-    }
-
-    #customer-stories-section .container{
-        margin-top: 50px;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-    #stories-box{
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5%;
-        
-    }
-    
-    .customer-box{
-        width: 250px;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.07);
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-        box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.07);
-    }
-
-    #process-box{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .process img{
-        width: 270px;
-    }
-    .process p {
-        text-align: center;
-        font-size: 20px;
-        width: 75%;
-    }
-
-    #discover-section  p {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 30px;
-        font-size: 16px;
-
-    }
-
-    footer .container{
-        padding-top: 30px;
-        padding-bottom: 30px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 5%;
-    
-    }
-    footer .logo{
-        display: flex;
-        gap: 10px;
-    }
-    footer #details{
-        display: flex;
-        gap: 30px;
-        flex-direction: column;
-        margin-right: auto;
-    }
-    footer .social-icons{
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    footer h2{
-        font-size: 18px;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 20px;
-        text-align: center;
-    }   
-    }
-
-    @media only screen and (min-width: 780px) {
-        /* For tablets: */
-        h2{
-            font-size: 64px;
-            text-align: center;
-            color: #000;
-            line-height: 1em;
-        }
-    }
