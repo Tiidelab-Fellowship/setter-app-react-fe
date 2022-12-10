@@ -22,7 +22,7 @@ const ProfilePage = () =>{
     });
   }, []);
   
-  const { firstName } = user
+  const { firstName, profilePicture } = user
   return (
     <>
       <DBheader
@@ -32,6 +32,7 @@ const ProfilePage = () =>{
         hidePickSocials
         smallName={firstName}
         occupation=""
+        avatar={profilePicture}
       />
       <ProfileModalName modal2={modal2} setModal2={setModal2} />
       <ProfileModalBusiness  modal={modal} setModal={setModal} />

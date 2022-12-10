@@ -35,7 +35,7 @@ const PostQueue = () => {
     });
   }, []);
   console.log(post)
-  const { firstName } = user
+  const { firstName, profilePicture } = user
   return (
     <>
       <DBheader
@@ -44,6 +44,7 @@ const PostQueue = () => {
         hidePickSocials
         smallName={firstName}
         occupation=""
+        avatar={profilePicture}
         modal={modal}
         setModal={setModal}
       />

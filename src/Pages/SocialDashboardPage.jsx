@@ -14,7 +14,7 @@ const SocialDashboard = () => {
     });
   }, []);
   
-  const { firstName } = user
+  const { firstName, profilePicture } = user
   return (
     <>
       <DBheader
@@ -22,6 +22,8 @@ const SocialDashboard = () => {
         headlineDetails="Here is an overview of your Social Media Accounts."
         hideButton
         smallName= {firstName}
+        avatar={profilePicture}
+
         // occupation="Web Developer"
       />
       <SocialDashboardContent />
