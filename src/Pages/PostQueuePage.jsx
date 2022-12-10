@@ -14,9 +14,7 @@ export const PostQueueContent = ({modal,setModal, post}) => {
         setModal={setModal}/>
     <section className="PSPQDashboardContainer">
       <main className="bigestSide">
-       {post.map((posts)=>{
-        return <Queue key={posts.id} post={post}/>
-       })} 
+       <Queue post={post}/>
       </main>
     </section>
     </React.Fragment>

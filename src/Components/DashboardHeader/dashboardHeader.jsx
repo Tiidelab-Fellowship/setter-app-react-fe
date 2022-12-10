@@ -47,7 +47,6 @@ export const DBheader = ({
             <h3>
               {smallName} <FaCheckCircle />
             </h3>
-            <p>{occupation}</p>
             <div className="view-profile">
               <h3 className="profile-boy">
                 <Link to="/ProfilePage">

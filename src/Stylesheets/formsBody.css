@@ -9,17 +9,21 @@
   text-decoration: none;
 } 
 
-
-
+/* 
+.totalContainerWrapper{
+  height: 100vh;
+  background: #F7F7FC;
+} */
 .totalContainer{
   margin: 3% 10%;
   display: flex;
   justify-content: space-evenly;
+
 }
 
 .formSide{
   width: 80%;
-  margin: 0 3%;
+  margin: 0 3% 12% 3%;
   color: #dddddd;
   background: #000000;
   border: 1px solid #000000;
