@@ -13,8 +13,8 @@ const AnalyticsPage = () =>{
       setUser(response.data)
     });
   }, []);
-  
-  const { firstName } = user
+  console.log(user)
+  const { firstName, profilePicture } = user
   return (
     <>
     <DBheader
@@ -23,6 +23,7 @@ const AnalyticsPage = () =>{
         hideButton
         smallName={firstName}
         occupation=""
+        avatar={profilePicture}
       />
       <AnalyticsContent />
      <SideBarTwo />

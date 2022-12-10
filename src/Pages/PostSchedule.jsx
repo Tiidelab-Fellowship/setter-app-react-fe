@@ -10,7 +10,6 @@ import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
 
 export const PostScheduleContent = ({modal, setModal, post}) => {
- 
   return (
     <>
     <PostModal modal={modal} setModal={setModal}/>
@@ -45,7 +44,7 @@ const PostSchedule = () => {
     });
   }, []);
   
-  const { firstName } = user
+  const { firstName, profilePicture } = user
   const [modal, setModal] = useState(false);
   return (
     <>
@@ -57,6 +56,7 @@ const PostSchedule = () => {
         occupation=""
         modal={modal}
         setModal={setModal}
+        avatar={profilePicture}
       />
       <PostScheduleContent modal={modal} post={post}
         setModal={setModal}/>
