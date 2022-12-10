@@ -7,14 +7,15 @@ import "../../Stylesheets/fullCalendar.css"
 // import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 export const DemoApp = (post) => {
+  const calendarEvents = post.post
+  console.log(calendarEvents)
   function renderEventContent(eventInfo) {
-    console.log(post)
-    return (
+    
       <>
         <b>{eventInfo.timeText}</b>
         <i>{eventInfo.event.title}</i>
       </>
-    )
+    
   }
     return (
       
@@ -34,14 +35,7 @@ export const DemoApp = (post) => {
           
             eventContent={renderEventContent} // custom render function
             
-            events={[{
-              title: "sogo",
-              start: '2022-11-11T12:30:00'
-            },
-            {
-              title: "sogo",
-              start: '2022-11-21T12:30:00'
-            }]}
+            events={calendarEvents}
           />
     )
   

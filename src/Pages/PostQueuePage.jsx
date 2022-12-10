@@ -7,26 +7,15 @@ import React, {useEffect, useState} from "react";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 
 export const PostQueueContent = ({modal,setModal, post}) => {
+  console.log(post)
   return (
     <React.Fragment>
     <PostModal modal={modal}
         setModal={setModal}/>
     <section className="PSPQDashboardContainer">
       <main className="bigestSide">
-        <Queue post={post}/>
+       <Queue post={post}/>
       </main>
-      {/* <aside className="besideBigestSide">
-        <div className="asideTopP">
-          <div>
-            <DemoAppTwo />
-          </div>
-        </div>
-        <div className="asideBottom">
-          <h2 className="TopPost">Top Post</h2>
-          <TopPost />
-          <TopPost />
-        </div>
-      </aside> */}
     </section>
     </React.Fragment>
   );
@@ -43,8 +32,8 @@ const PostQueue = () => {
       setpost(response.data.posts)
     });
   }, []);
-  
-  const { firstName } = user
+  console.log(post)
+  const { firstName, profilePicture } = user
   return (
     <>
       <DBheader
@@ -53,6 +42,7 @@ const PostQueue = () => {
         hidePickSocials
         smallName={firstName}
         occupation=""
+        avatar={profilePicture}
         modal={modal}
         setModal={setModal}
       />

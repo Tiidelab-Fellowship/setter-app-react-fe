@@ -22,15 +22,15 @@ export const PostModal = ({ modal, setModal }) => {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="Pmodal-content">
             <Formik
-              initialValues={{ title: "", body: "", scheduledDate: "" }}
+              initialValues={{ title: "", body: "", start: "" }}
               onSubmit={async (values, { setSubmitting }) => {
-                const { title, body, scheduledDate } = values;
+                const { title, body, start } = values;
                 setSubmitting(true);
                 try {
-                    await axiosInstance.post("/posts", {
+                  await axiosInstance.post("/posts", {
                     title,
                     body,
-                    scheduledDate,
+                    start,
                   });
                   toast.success('Post Scheduled', {
                     position: "top-center",
@@ -102,10 +102,10 @@ export const PostModal = ({ modal, setModal }) => {
                             <input
                               onChange={handleChange}
                               type="datetime-local"
-                              name="scheduledDate"
+                              name="start"
                               id="postDate"
                               placeholder="Post schedule date"
-                              value={values.scheduledDate}
+                              value={values.start}
                             />
                           </div>
                         </div>
