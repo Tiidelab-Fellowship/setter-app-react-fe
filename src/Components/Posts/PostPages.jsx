@@ -5,22 +5,24 @@ import "../../Stylesheets/PostPages.css";
 
 export const Queue = (post) => {
   const posts = post.post;
+  
   return (
     <div className="postQueueContent">
       {posts.map((eachPost) => {
+        const {id, title, body, start} = eachPost
         return (
-          <div className="PQeachPost">
+          <div className="PQeachPost" key={id}>
             <div className="EPleft">
-              <img src={avatar} alt="TiidelabMeetUp" />
+              <img className="postImage" src={avatar} alt="TiidelabMeetUp" />
             </div>
             <div className="EPright">
-              <h2 className="postMainHeader">{eachPost.title}</h2>
-              <p className="postParagraph">{eachPost.body}</p>
+              <h2 className="postMainHeader">{title}</h2>
+              <p className="postParagraph">{body}</p>
               <div className="bottomEachPost">
                 <div className="leftBottomEachPost">
-                  <p className="TLBEP">Scheduled For: {eachPost.scheduledDate}</p>
+                  <p className="TLBEP">Scheduled For: </p>
                   <p className="BLBEP">
-                    <FaClock />{" "}
+                    <FaClock /> {start}
                   </p>
                 </div>
                 <div className="BRBEP">
