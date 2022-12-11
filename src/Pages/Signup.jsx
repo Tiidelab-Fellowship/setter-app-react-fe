@@ -52,7 +52,9 @@ import axiosInstance from "../helpers/axiosConfig/axiosConfig";
               email,
             }
           );
-          
+          const userId = response.data.user.id
+          localStorage.setItem("userId", JSON.stringify(userId))
+          console.log(userId)
             const { access, refresh } = response.data.tokens;
             const tokens = [];
             tokens.push({
@@ -77,6 +79,7 @@ import axiosInstance from "../helpers/axiosConfig/axiosConfig";
               navigate("/SocialDashboard");
             }
           }catch (error) {
+            console.log(error)
             toast.error('Registration Unsuccessful', {
               position: "top-center",
               autoClose: 4000,
@@ -87,6 +90,7 @@ import axiosInstance from "../helpers/axiosConfig/axiosConfig";
               progress: undefined,
               theme: "light",
               });
+              
           }
         }}
       >

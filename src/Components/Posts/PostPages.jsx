@@ -1,35 +1,39 @@
 import React from "react";
 import { FaClock, FaComment, FaEye, FaHeart } from "react-icons/fa";
 import avatar from "../../SetterApp-Assets/avatar.png";
-import "../../Stylesheets/PostPages.css"
+import "../../Stylesheets/PostPages.css";
 
 export const Queue = (post) => {
-  console.log(post)
+  const posts = post.post;
+  
   return (
     <div className="postQueueContent">
-      <div className="PQeachPost">
-        <div className="EPleft">
-          <img src={avatar} alt="TiidelabMeetUp" />
-        </div>
-        <div className="EPright">
-          <h2 className="postMainHeader">Tech Life with Mr Shams</h2>
-          <p className="postParagraph">
-            Oya Clear Road for Mr Shams! The Big Brother of TIIDELab is getting
-            a mansion in Lagos. Our real estate agents are dedicated to helping
-            him find houses, apartments, condos and commercial properties.
-          </p>
-          <div className="bottomEachPost">
-            <div className="leftBottomEachPost">
-              <p className="TLBEP">Scheduled For:</p>
-              <p className="BLBEP"><FaClock /> 10:12, Today</p>
+      {posts.map((eachPost) => {
+        const {id, title, body, start} = eachPost
+        return (
+          <div className="PQeachPost" key={id}>
+            <div className="EPleft">
+              <img className="postImage" src={avatar} alt="TiidelabMeetUp" />
             </div>
-            <div className="BRBEP">
-              <button className="PQbuttonEdit">Edit</button>
-              <button className="PQbuttonShare">Share Now</button>
+            <div className="EPright">
+              <h2 className="postMainHeader">{title}</h2>
+              <p className="postParagraph">{body}</p>
+              <div className="bottomEachPost">
+                <div className="leftBottomEachPost">
+                  <p className="TLBEP">Scheduled For: </p>
+                  <p className="BLBEP">
+                    <FaClock /> {start}
+                  </p>
+                </div>
+                <div className="BRBEP">
+                  <button className="PQbuttonEdit">Edit</button>
+                  <button className="PQbuttonShare">Share Now</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

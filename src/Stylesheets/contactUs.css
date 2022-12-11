@@ -107,3 +107,31 @@
   height: 150px;
 }
 
+@media(max-width: 576px){
+  .ContactHeader{
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .smallLine{
+    width:10%;
+  }
+
+  .belowContactUs{
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .smallInputContact{
+    font-size: 8px;
+  }
+
+  .inputMessage{
+    margin-top: 5%;
+    font-size: 12px;
+  }
+
+  .inputButtonContact{
+    margin-bottom: 6%;
+  }
+}

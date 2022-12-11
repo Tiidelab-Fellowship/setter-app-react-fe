@@ -35,17 +35,18 @@ button a {
 font-size: 16px;
 text-decoration: none;
 }
-h2{
+.container h2{
     font-size: 64px;
     text-align: center;
-    color: #000;
+    color: #1B1B1B;
     line-height: 1em;
 }
 /*header*/
 header{
     display: flex;
     max-width: 85%;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding: 10px 0;
 }
 
 .logo-container{
@@ -614,15 +615,32 @@ footer h2{
   @media only screen and (min-width: 280px) {
     /* For Mobile: */
 
-    #trusted{
+    header{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        max-width: 85%;
+        margin: 10px auto;
+    }
+    
+    .logo-container{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #trusted{
+        display: grid;
+        grid-template-rows: auto;
+        margin: 40px auto;
     }
     #trusted h3{
         color: #EE4346;
         font-weight: 500;
-        font-size: 30px;
+        font-size: 36px;
     }
     #users{
         display: flex;
@@ -635,7 +653,7 @@ footer h2{
     }
    
     h2{
-        font-size: 24px;
+        font-size: 34px;
         text-align: center;
         color: #000;
         line-height: 1em;
@@ -850,7 +868,7 @@ footer h2{
 
   }
   
-  @media only screen and (max-width: 780px) {
+  @media only screen and (min-width: 600px) {
     /* For tablets: */
     
     #trusted{
