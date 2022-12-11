@@ -3,6 +3,7 @@ import { FaBan, FaCreditCard, FaDollarSign, FaEnvelope, FaTag, FaTruck } from "r
 import "../Stylesheets/FAQ.css"
 import { Header } from "./landing-page";
 import { Link } from "react-router-dom";
+import { Footer } from "../Components/Footer/Footer";
 
 export const FAQ =()=>{
   return(
@@ -90,6 +91,7 @@ const FAQpage = () =>{
     <>
       <Header />
       <FAQ />
+      <Footer />
     </>
   );
 }

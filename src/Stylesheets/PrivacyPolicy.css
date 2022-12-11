@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 2rem;
+}
+
+.pppTitle{
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+.privacyPolicyWrapper{
+  margin: 1rem 8rem;
+}
+.pppSuperHeader{
+  text-align: left;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: Roboto;
+}
+
+.ppHeaders{
+  font-size: 1.5rem;
+  text-align: left;
+  line-height: 2rem;
+
+}

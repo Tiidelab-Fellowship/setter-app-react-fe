@@ -45,7 +45,8 @@ text-decoration: none;
 header{
     display: flex;
     max-width: 85%;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding: 10px 0;
 }
 
 .logo-container{

@@ -2,7 +2,6 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import profilePicture from "../../SetterApp-Assets/profilePicture.png";
-import avatar from "../../SetterApp-Assets/avatar.png";
 
 
 export const DBheader = ({
@@ -14,6 +13,7 @@ export const DBheader = ({
   occupation,
   modal,
   setModal,
+  avatar
 }) => {
   return (
     <div className="headerDashContainer">
@@ -47,7 +47,6 @@ export const DBheader = ({
             <h3>
               {smallName} <FaCheckCircle id="black-check" />
             </h3>
-            <p>{occupation}</p>
             <div className="view-profile">
               <h3 className="profile-boy">
                 <Link to="/ProfilePage">

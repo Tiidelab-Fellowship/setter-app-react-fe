@@ -1,13 +1,14 @@
 export const category= [
+  "---Select your business category---",
   "Food", 
   "Fashion",
-  "Real-Estate",
-  "Education",
+  "Digital Markerting",
+  "Influencing",
 ]
 
-export const size = [
-  "Micro",
+export const businessSize = [
+  "---Select your business size---",
   "Small",
-  "medium",
+  "Medium",
   "Large"
 ]
