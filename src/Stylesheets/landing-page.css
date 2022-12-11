@@ -614,32 +614,15 @@ footer h2{
   @media only screen and (min-width: 280px) {
     /* For Mobile: */
 
-    /* header{
+    #trusted{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        max-width: 85%;
-        margin: 10px auto;
-    }
-    
-    .logo-container{
-        display: flex;
-        margin: auto;
-        align-items: center;
-        gap: 5px;
-    } */
-
-    #trusted{
-        display: grid;
-        grid-template-rows: auto;
-        margin: 40px auto;
+        width: 100%;
     }
     #trusted h3{
         color: #EE4346;
         font-weight: 500;
-        font-size: 36px;
+        font-size: 30px;
     }
     #users{
         display: flex;
@@ -652,7 +635,7 @@ footer h2{
     }
    
     h2{
-        font-size: 34px;
+        font-size: 24px;
         text-align: center;
         color: #000;
         line-height: 1em;
@@ -867,7 +850,7 @@ footer h2{
 
   }
   
-  @media only screen and (min-width: 600px) {
+  @media only screen and (max-width: 780px) {
     /* For tablets: */
     
     #trusted{
