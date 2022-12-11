@@ -45,7 +45,7 @@ export const DBheader = ({
           <img src={avatar} alt="profilePicture" />
           <div className="smallName">
             <h3>
-              {smallName} <FaCheckCircle />
+              {smallName} <FaCheckCircle id="black-check" />
             </h3>
             <div className="view-profile">
               <h3 className="profile-boy">

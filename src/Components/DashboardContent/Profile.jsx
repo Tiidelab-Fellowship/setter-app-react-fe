@@ -41,24 +41,20 @@ export const ProfileContent = ({
             <button className="profile-edit-btn" onClick={handleEditModal2}>
               Update Profile
             </button>
-            <button className="profile-password-btn" onClick={handleEditModal}>
-              Register Business
-            </button>
           </div>
         </div>
       </div>
-      {businessInfo === {name:"", size:"", businessCategoryName: ""} ? (
-        <h1>Register Your Business</h1>
-      ) : ( 
-        <div className="dashboard-bus-details">
-          <h2>Business Information</h2>
-          <div className="bus-details">
-            <p>Business Name: {name}</p>
-            <p>Business Size: {size}</p>
-            <p>Business Type: {businessCategoryName}</p>
-          </div>
+      <div className="dashboard-bus-details">
+        <h2>Business Information</h2>
+        <div className="bus-details">
+        <p>Business Name:</p>
+        <p>Business Size:</p>
+          <p>Business Type:</p>
+          <button className="profile-password-btn" onClick={handleEditModal}>
+              Register Business
+            </button>
         </div>
-      )}
+      </div>
 
       <div className="dashboard-socials">
         <p>Social Accounts</p>

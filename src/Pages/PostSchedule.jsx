@@ -20,13 +20,7 @@ export const PostScheduleContent = ({modal, setModal, post}) => {
         </div>
       </main>
       <aside className="besideBigestSide">
-        <div className="asideTop">
-        </div>
-        <div className="asideBottom">
-        <h2 className="TopPost">Top Post</h2>
-          <TopPost />
-          <TopPost />
-        </div>
+        
       </aside>
     </section>
     </>

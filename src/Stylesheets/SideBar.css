@@ -68,7 +68,9 @@
 .eachPage > a{
   color: #858688;
 }
-
+.eachPage> .fontspace {
+  display: none;
+}
 .CurrentPage > a{
   color: #FFFFFF ;
 }
@@ -89,4 +91,21 @@
 }
 .eachPage >a:hover{
   color: #FFFFFF;
+}
+
+/* 
+MEDIA QUERY
+*/
+
+@media (min-width: 320px) and (max-width:480px) {
+  .sidebarContainer {
+    }
+}
+@media (min-width: 481px) and (max-width:768px) {
+  .sidebarContainer {
+
+  }
+    .eachPage  a > #item {
+      
+    }
 }
