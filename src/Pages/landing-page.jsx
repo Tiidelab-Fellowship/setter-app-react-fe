@@ -79,7 +79,7 @@ export const Hero = () => {
   return (
     <section id="hero-section">
       <div className="container">
-        <h2>
+        <h2 className="Ltitle">
           The most efficient &amp; optimized <br /> social experience ever
         </h2>
         <div id="section-details">
@@ -119,7 +119,7 @@ export const Features = () => {
     <section id="features-section">
       <div className="container">
         <button className="small-titled-box">Features</button>
-        <h2>
+        <h2 className="Lfeature">
           The features that make <br />
           our platfrom unique
         </h2>
@@ -248,7 +248,7 @@ export const Pricing = () => {
     <section id="pricing-section">
       <div className="container" id="pricing">
         <button className="small-titled-box">Pricing</button>
-        <h2>
+        <h2 className="Lpricing">
           It have never been easier to <br /> manage more, for less
         </h2>
         <div id="details">
