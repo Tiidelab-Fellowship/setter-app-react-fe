@@ -53,18 +53,20 @@
 }
 
 .createPostBtn{
-  padding: 3%;
+  padding:  2px;
   width: 32%;
-  background: #FFFFFF;
+  background: #09303D;
   border: none;
   border-radius: 8px;
   font-family: Inter;
   font-weight: 600;
+  font-size: 0.8rem;
+  color: #eee;
 }
 
 .createPostBtn:hover{
   color: #FFFFFF;
-  background-color: #858688;
+  background-color: #116773;
   cursor: pointer;
 }
 

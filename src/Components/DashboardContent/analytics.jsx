@@ -9,6 +9,9 @@ import like from '../../SetterApp-Assets/like.png';
 import share from '../../SetterApp-Assets/share.png';
 import growth from '../../SetterApp-Assets/growth.png';
 import moreBottom from '../../SetterApp-Assets/more-bottom.png';
+import followers from '../../SetterApp-Assets/followers.png';
+import likeAnal from '../../SetterApp-Assets/like-analytics.png';
+import saved from '../../SetterApp-Assets/True.png';
 import "../../Stylesheets/analytics.css";
 import { BarChart } from '../AnalyticsChart/line';
 import { useState } from "react";
@@ -60,7 +63,7 @@ const [userLikes, setUserLikes] = useState({
       </div>
       <div className="Aaccount-data">
         <div className="Atop-top">
-          <img src={growth} alt="grow" />
+          <img src={followers} alt="grow" />
           <div className="Atop-title">Followers</div>
         </div>
         <div className="Atop-bottom">
@@ -76,7 +79,7 @@ const [userLikes, setUserLikes] = useState({
       </div>
       <div className="Aaccount-data">
         <div className="Atop-top">
-          <img src={growth} alt="grow" />
+          <img src={likeAnal} alt="grow" />
           <div className="Atop-title">Likes</div>
         </div>
         <div className="Atop-bottom">
@@ -92,7 +95,7 @@ const [userLikes, setUserLikes] = useState({
       </div>
       <div className="Aaccount-data">
         <div className="Atop-top">
-          <img src={growth} alt="grow" />
+          <img src={saved} alt="grow" />
           <div className="Atop-title">Saved</div>
         </div>
         <div className="Atop-bottom">
