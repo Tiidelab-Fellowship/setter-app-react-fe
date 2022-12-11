@@ -5,6 +5,7 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+import { Loader } from "../Loader/Loader";
 
 export const ProfileContent = ({
   modal,
@@ -13,8 +14,10 @@ export const ProfileContent = ({
   setModal2,
   user,
   businessInfo,
+  loading,
 }) => {
-  const { firstName, lastName, phoneNumber, email, userName, profilePicture } = user;
+  const { firstName, lastName, phoneNumber, email, userName, profilePicture } =
+    user;
   const { name, size, businessCategoryName } = businessInfo;
   console.log(businessInfo);
 
@@ -33,10 +36,10 @@ export const ProfileContent = ({
           <img src={profilePicture} alt="profile-pic" className="prof-img" />
         </div>
         <div className="profile-data">
-          <h1>{firstName + " " + lastName}</h1>
-          <p>Username: {userName}</p>
-          <p>Email: {email}</p>
-          <p> Phone Number: {phoneNumber}</p>
+          <h1>{loading ? <Loader /> : firstName + " " + lastName}</h1>
+          <p>Username: {loading ? <Loader /> : userName}</p>
+          <p>Email: {loading ? <Loader /> : email}</p>
+          <p> Phone Number: {loading ? <Loader /> : phoneNumber}</p>
           <div className="profile-button">
             <button className="profile-edit-btn" onClick={handleEditModal2}>
               Update Profile
@@ -46,14 +49,23 @@ export const ProfileContent = ({
       </div>
       <div className="dashboard-bus-details">
         <h2>Business Information</h2>
-        <div className="bus-details">
-        <p>Business Name:</p>
-        <p>Business Size:</p>
-          <p>Business Type:</p>
-          <button className="profile-password-btn" onClick={handleEditModal}>
-              Register Business
-            </button>
-        </div>
+        {businessInfo ===
+        {
+          name: "Not Registered",
+          size: "Not Registered",
+          businessCategoryName: "Not Registered",
+        } ? (
+          <h1>Register a Business</h1>
+        ) : (
+          <div className="bus-details">
+            <p>Business Name: {loading ? <Loader /> : name}</p>
+            <p>Business Size: {loading ? <Loader /> : size}</p>
+            <p>Business Type: {loading ? <Loader /> : businessCategoryName}</p>
+          </div>
+        )}
+        <button className="profile-password-btn" onClick={handleEditModal}>
+          Register Business
+        </button>
       </div>
 
       <div className="dashboard-socials">

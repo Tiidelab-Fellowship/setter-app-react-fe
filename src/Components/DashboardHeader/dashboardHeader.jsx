@@ -10,7 +10,6 @@ export const DBheader = ({
   hideButton,
   hidePickSocials,
   smallName,
-  occupation,
   modal,
   setModal,
   avatar
@@ -45,7 +44,7 @@ export const DBheader = ({
           <img src={avatar} alt="profilePicture" />
           <div className="smallName">
             <h3>
-              {smallName} <FaCheckCircle id="black-check" />
+              {smallName}
             </h3>
             <div className="view-profile">
               <h3 className="profile-boy">

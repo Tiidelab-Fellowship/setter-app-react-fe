@@ -17,7 +17,7 @@ export const SideBar = () => {
   const activeLink = "CurrentPage"
   const normalLink = ""
   return (
-    <div className="sidebarContainer" style={{height : "90vh"}}>
+    <div className="sidebarContainer" style={{height : "auto"}}>
       <div className="logoContainer">
         <Link to = '/'>
         <p className="logoItself">

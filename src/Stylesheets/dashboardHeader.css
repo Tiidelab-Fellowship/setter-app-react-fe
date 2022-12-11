@@ -139,20 +139,23 @@
   background: #FAFAFA;
   border-radius: 10px;
   font-family: Inter;
-  font-size: 12px;
+  font-size: 10px;
+  width: 100px;
 }
 
 .smallProfile:hover .view-profile{
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 100%;
     z-index: 1000;
-    left: 87%;
+    left: 1%;
     cursor: pointer;
+    margin-top: -30px;
 }
 .profile-boy{
-  padding: .5rem 1rem;
+  padding: .5rem .5rem;
+  width: 600px;
 }
 
 .profile-color{
