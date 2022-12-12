@@ -48,7 +48,7 @@ const [userLikes, setUserLikes] = useState({
           <div className="Atop-title">Account Reached</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">Counting</div>
+          <div className="Atop-followers">0</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
@@ -61,10 +61,10 @@ const [userLikes, setUserLikes] = useState({
       <div className="Aaccount-data">
         <div className="Atop-top">
           <img src={growth} alt="grow" />
-          <div className="Atop-title">Account Reached</div>
+          <div className="Atop-title">Followers</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">Counting</div>
+          <div className="Atop-followers">0</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
@@ -77,10 +77,10 @@ const [userLikes, setUserLikes] = useState({
       <div className="Aaccount-data">
         <div className="Atop-top">
           <img src={growth} alt="grow" />
-          <div className="Atop-title">Account Reached</div>
+          <div className="Atop-title">Likes</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">Counting</div>
+          <div className="Atop-followers">0</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
@@ -93,10 +93,10 @@ const [userLikes, setUserLikes] = useState({
       <div className="Aaccount-data">
         <div className="Atop-top">
           <img src={growth} alt="grow" />
-          <div className="Atop-title">Account Reached</div>
+          <div className="Atop-title">Saved</div>
         </div>
         <div className="Atop-bottom">
-          <div className="Atop-followers">Coming</div>
+          <div className="Atop-followers">0</div>
           <div>
             <div className="Abottom-data">
               <img src={arrowUp} alt="arrow up" />
@@ -114,97 +114,7 @@ const [userLikes, setUserLikes] = useState({
         </div>
         <div className="Auser-country" />
       </div>
-      <div className="Ascheduled-posts">
-        <div className="Aschedule-header">
-          <div className="Aschedule-title">Schedule Post</div>
-          <div className="Aadd-post"><a href="./" >Add Post</a></div>
-        </div>
-
-        <div className="Apost-container">
-          <img src={cat} alt="" />
-          <div className="Apost-info">
-            <div className="Apost-heading">For Fox Sake</div>
-            <div className="Apost-details">
-
-              <p>
-                <span>Posted on</span><br />
-                Instagram
-              </p>
-              <p>
-                <span>Posting Date</span><br />
-                13 March, 2020
-              </p>
-            </div>
-          </div>
-          <img src={more} alt="" />
-        </div>
-
-        <div className="Apost-container">
-          <img src={cat} alt="" />
-          <div className="Apost-info">
-            <div className="Apost-heading">For Fox Sake</div>
-            <div className="Apost-details">
-              <p>
-                <span>Posted on</span><br />
-                Instagram
-              </p>
-              <p>
-                <span>Posting Date</span><br />
-                13 March, 2020
-              </p>
-            </div>
-          </div>
-          <img src={more} alt=""/>
-        </div>
-      <div className="action">Commented on your photo</div>
-        <div className="Aactivities">
-          <div className="Aactivity-title">Activities</div>
-          <div className="Aactivity-box">
-            <div className="Aactivity-person">
-              <img src={man} alt="" />
-              <div className="Aperson-action">
-                <div className="Aname">Banwo Olorun</div>
-                <div className="Aaction">Commented on your photo</div>
-              </div>
-            </div>
-            <div className="Aactivity-content">
-              <div className="Acontent">
-                Great work deserves appreciations. This is so amazing! 😍🎉
-              </div>
-              <img src={abstract} alt="" />
-            </div>
-
-            <div className="Aending">
-              <div className="Atime">1 h ago</div>
-              <img src={like} alt="" />
-              <img src={share} alt="" />
-              <img src={moreBottom} alt="" />
-            </div>
-          </div>
-          <div className="Aactivity-box">
-            <div className="Aactivity-person">
-              <img src="./images/man.png" alt="" />
-              <div className="Aperson-action">
-                <div className="Aname">Banwo Olorun</div>
-                <div className="Aaction">Commented on your photo</div>
-              </div>
-            </div>
-            <div className="Aactivity-content">
-              <div className="Acontent">
-                Great work deserves appreciations. This is so amazing! 😍🎉
-              </div>
-              <img src={abstract} alt="" />
-            </div>
-
-            <div className="Aending">
-              <div className="Atime">1 h ago</div>
-              <img src={like} alt="" />
-              <img src={share} alt="" />
-              <img src={moreBottom} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </React.Fragment>

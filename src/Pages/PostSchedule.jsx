@@ -19,9 +19,6 @@ export const PostScheduleContent = ({modal, setModal, post}) => {
         <DemoApp post={post}/>
         </div>
       </main>
-      <aside className="besideBigestSide">
-        
-      </aside>
     </section>
     </>
   );
