@@ -6,6 +6,7 @@ import {DemoApp} from "../Components/FullCalendar/FullCalendarComponent";
 import { useEffect, useState } from "react";
 import { PostModal } from "../Components/Modals/PostModal";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
+import { Loader } from "../Components/Loader/Loader";
 
 
 
@@ -24,8 +25,7 @@ export const PostScheduleContent = ({modal, setModal, post}) => {
         </div>
         <div className="asideBottom">
         <h2 className="TopPost">Top Post</h2>
-          <TopPost />
-          <TopPost />
+          <h1>No post yet</h1>
         </div>
       </aside>
     </section>
@@ -36,11 +36,13 @@ export const PostScheduleContent = ({modal, setModal, post}) => {
 const PostSchedule = () => {
   const [user, setUser] = useState({})
   const [post, setPost] = useState([])
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     const id = JSON.parse(localStorage.getItem("userId"));
     axiosInstance.get(`/users/${id}`).then((response)=>{
       setUser(response.data)
       setPost(response.data.posts)
+      setLoading(false)
     });
   }, []);
   
@@ -52,8 +54,8 @@ const PostSchedule = () => {
         headline="Post Schedule"
         headlineDetails="Schedule your post here and go to rest, We will do the rest."
         hidePickSocials
-        smallName={firstName}
-        occupation=""
+        smallName={loading ? <Loader /> :firstName}
+       
         modal={modal}
         setModal={setModal}
         avatar={profilePicture}

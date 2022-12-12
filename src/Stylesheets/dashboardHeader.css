@@ -131,7 +131,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 15%;
     z-index: 1000;
     left: 87%;
     cursor: pointer;
