@@ -46,6 +46,7 @@ export const ProfileContent = ({
           </div>
         </div>
       </div>
+
       {businessInfo === {name:"", size:"", businessCategoryName: ""} ? (
         <h1>Register Your Business</h1>
       ) : ( 
@@ -59,8 +60,9 @@ export const ProfileContent = ({
               Register Business
             </button>
           </div>
+
         </div>
-      )}
+      </div>
 
       <div className="dashboard-socials">
         <p>Social Accounts</p>

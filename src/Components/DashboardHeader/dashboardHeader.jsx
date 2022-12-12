@@ -44,7 +44,9 @@ export const DBheader = ({
           <img src={avatar} alt="profilePicture" />
           <div className="smallName">
             <h3>
+
               {smallName}
+
             </h3>
             <div className="view-profile">
               <h3 className="profile-boy">
