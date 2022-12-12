@@ -1,6 +1,5 @@
 import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import { DBheader } from "../Components/DashboardHeader/dashboardHeader";
-import { Queue, TopPost } from "../Components/Posts/PostPages";
 import "../Stylesheets/PostPages.css"
 import {DemoApp} from "../Components/FullCalendar/FullCalendarComponent";
 import { useEffect, useState } from "react";
