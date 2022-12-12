@@ -4,7 +4,7 @@ import axiosInstance from "../../helpers/axiosConfig/axiosConfig";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const PostModal = ({ modal, setModal }) => {
+export const PostModal = ({ modal, setModal, setPost }) => {
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -27,11 +27,12 @@ export const PostModal = ({ modal, setModal }) => {
                 const { title, body, start } = values;
                 setSubmitting(true);
                 try {
-                  await axiosInstance.post("/posts", {
+                 const response = await axiosInstance.post("/posts", {
                     title,
                     body,
                     start,
                   });
+                  setPost(post=> [...post ,response.data])
                   toast.success('Post Scheduled', {
                     position: "top-center",
                     autoClose: 4000,

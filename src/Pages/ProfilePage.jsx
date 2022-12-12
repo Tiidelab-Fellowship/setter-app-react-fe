@@ -39,8 +39,8 @@ const ProfilePage = () =>{
         smallName={loading ? <Loader/> : firstName}
         avatar={profilePicture}
       />
-      <ProfileModalName modal2={modal2} setModal2={setModal2} />
-      <ProfileModalBusiness  modal={modal} setModal={setModal} />
+      <ProfileModalName modal2={modal2} setModal2={setModal2} setUser={setUser} />
+      <ProfileModalBusiness  modal={modal} setModal={setModal} setBussinessInfo={setBussinessInfo} />
       <ProfileContent setModal={setModal} setModal2={setModal2} user={user} businessInfo={businessInfo} loading={loading}/>
      <SideBarTwo />
     </>

@@ -5,7 +5,7 @@ body.active-modal {
 .btn-modal {
   padding: 10px 20px;
   display: block;
-  margin: 100px auto 0;
+  margin: auto;
   font-size: 18px;
 }
 
@@ -33,7 +33,7 @@ body.active-modal {
   padding: 14px 28px;
   border-radius: 3px;
   width: 40vw;
-  height: 53vh;
+  height: 70vh;
   z-index: 2;
 }
 

@@ -9,14 +9,14 @@ import { Loader } from "../Components/Loader/Loader";
 
 
 
-export const PostScheduleContent = ({modal, setModal, post}) => {
+export const PostScheduleContent = ({modal, setModal, post, setPost}) => {
   return (
     <>
-    <PostModal modal={modal} setModal={setModal}/>
+    <PostModal modal={modal} setModal={setModal} setPost={setPost}/>
     <section className="PSPQDashboardContainer">
       <main className="bigestSideP">
         <div>
-        <DemoApp post={post}/>
+        <DemoApp post={post} setPost={setPost}/>
         </div>
       </main>
       <aside className="besideBigestSide">
@@ -35,6 +35,7 @@ const PostSchedule = () => {
     const id = JSON.parse(localStorage.getItem("userId"));
     axiosInstance.get(`/users/${id}`).then((response)=>{
       setUser(response.data)
+
       setPost(response.data.posts)
       setLoading(false)
     });
@@ -54,7 +55,7 @@ const PostSchedule = () => {
         setModal={setModal}
         avatar={profilePicture}
       />
-      <PostScheduleContent modal={modal} post={post}
+      <PostScheduleContent modal={modal} post={post} setPost={setPost}
         setModal={setModal}/>
       <SideBarTwo />
     </>

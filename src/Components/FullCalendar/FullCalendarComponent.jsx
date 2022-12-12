@@ -6,8 +6,8 @@ import interactionPlugin from '@fullcalendar/interaction'
 import "../../Stylesheets/fullCalendar.css"
 // import { INITIAL_EVENTS, createEventId } from './event-utils'
 
-export const DemoApp = (post) => {
-  const calendarEvents = post.post
+export const DemoApp = ({post}) => {
+  const calendarEvents = post
   console.log(calendarEvents)
   function renderEventContent(eventInfo) {
     

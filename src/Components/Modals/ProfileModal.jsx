@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { category, businessSize } from "./Business-options";
 
-export const ProfileModalBusiness = ({ modal, setModal }) => {
+export const ProfileModalBusiness = ({ modal, setModal, setUser }) => {
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -144,7 +144,7 @@ export const ProfileModalBusiness = ({ modal, setModal }) => {
   );
 };
 
-export const ProfileModalName = ({ modal2, setModal2 }) => {
+export const ProfileModalName = ({ modal2, setModal2, setUser }) => {
   const toggleModal = () => {
     setModal2(!modal2);
   };
@@ -177,7 +177,7 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
                     userName,
                   });
                   try {
-                    let profileImage = await axiosInstance.post(
+                       await axiosInstance.post(
                       `/upload/${id}`,
                       {file},
                       {
@@ -190,7 +190,7 @@ export const ProfileModalName = ({ modal2, setModal2 }) => {
                     console.log(error);
                   }
 
-                  console.log(response);
+                  console.log(response.data);
                   toast.success("Profile Updated Successfully", {
                     position: "top-center",
                     autoClose: 4000,
