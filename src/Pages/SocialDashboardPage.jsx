@@ -4,12 +4,15 @@ import { SideBarTwo } from "../Components/Sidebar/SideBar";
 import "../Stylesheets/dashboardHeader.css";
 import axiosInstance from "../helpers/axiosConfig/axiosConfig";
 import { useEffect, useState } from "react";
+import { Loader } from "../Components/Loader/Loader";
 
 const SocialDashboard = () => {
   const [user, setUser] = useState({})
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     const id = JSON.parse(localStorage.getItem("userId"));
     axiosInstance.get(`/users/${id}`).then((response)=>{
+      setLoading(false)
       setUser(response.data)
     });
   }, []);
@@ -18,13 +21,11 @@ const SocialDashboard = () => {
   return (
     <>
       <DBheader
-        headline={`Welcome, ${firstName}`}
+        headline={loading ? <Loader /> :`Welcome, ${firstName}`}
         headlineDetails="Here is an overview of your Social Media Accounts."
         hideButton
-        smallName= {firstName}
+        smallName= {loading ? <Loader/> : firstName}
         avatar={profilePicture}
-
-        // occupation="Web Developer"
       />
       <SocialDashboardContent />
       <SideBarTwo />

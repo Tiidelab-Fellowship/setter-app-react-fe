@@ -97,8 +97,7 @@ export const PostModal = ({ modal, setModal }) => {
                             <option value="instagram">Instagram</option>
                             <option value="linkedin">LinkedIn</option>
                           </select>
-                          <div>
-                            <h6>Set Date</h6>
+                          <div  className="setDate">
                             <input
                               onChange={handleChange}
                               type="datetime-local"

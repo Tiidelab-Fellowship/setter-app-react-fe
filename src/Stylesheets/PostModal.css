@@ -39,7 +39,8 @@ body.active-modal {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 5px 7px;
+  background-color: none;
+ 
 }
 
 /* THE MODAL STYLING */
@@ -92,26 +93,25 @@ margin-top: .5rem;
 #inputContainer{
   height: 20rem;
   width: 100%;
-  background: #F2F4F7;
 }
-textarea{
+#input-text{
   width: 100%;
   height: 15rem;
   background: #F2F4F7;
   border: none;
   padding: .5rem;
   font-size: 1.4rem;
+  border-radius: 10px;
 }
 #picture{
-  margin-left: 1rem;
 margin-bottom: .2rem;}
 
 #add-date{
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 0 .5rem;
 }
+
 .add{
   padding: .3rem ;
   border: 3px solid #262930;
@@ -120,11 +120,16 @@ margin-bottom: .2rem;}
   justify-content: space-evenly;
   border-radius: 8px;
 }
+
 #postDate{
   border: 2px solid #262930;
   border-radius: 4px;
-  padding: .2rem 1rem;
+  padding: 0 10px;
   color: #262930;
+  width: 100%;
+}
+#theDate{
+  margin-bottom: 20px;
 }
 
 #socials-account{
@@ -132,7 +137,6 @@ margin-bottom: .2rem;}
   background: #F2F4F7;
   border-radius: 5px;
   color: #262930;
-  padding: .5rem 1rem;
 }
 #post-button{
   background: #262930;
@@ -144,5 +148,8 @@ margin-bottom: .2rem;}
 #select-spacing{
   display: flex;
   justify-content:right;
-  margin: 1rem 0;
+  margin-top: 2rem ;
+}
+.setDate{
+  width: 45%;
 }
