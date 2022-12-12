@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { category, businessSize } from "./Business-options";
 
-export const ProfileModalBusiness = ({ modal, setModal, setUser }) => {
+export const ProfileModalBusiness = ({ modal, setModal, setBussinessInfo }) => {
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -41,7 +41,7 @@ export const ProfileModalBusiness = ({ modal, setModal, setUser }) => {
                       businessCategoryName,
                     }
                   );
-                  console.log(response);
+                  setBussinessInfo(response.data);
                   toast.success("Business registration successful", {
                     position: "top-center",
                     autoClose: 4000,
@@ -172,25 +172,27 @@ export const ProfileModalName = ({ modal2, setModal2, setUser }) => {
                 setSubmitting(true);
                 const id = JSON.parse(localStorage.getItem("userId"));
                 try {
-                  let response = await axiosInstance.patch(`/users/${id}`, {
-                    phoneNumber,
-                    userName,
-                  });
+                  let response =  await axiosInstance.post(
+                    `/upload/${id}`,
+                    {file},
+                    {
+                      headers: {
+                        "Content-Type": "multipart/form-data",
+                      },
+                    }
+                  );
                   try {
-                       await axiosInstance.post(
-                      `/upload/${id}`,
-                      {file},
-                      {
-                        headers: {
-                          "Content-Type": "multipart/form-data",
-                        },
-                      }
-                    );
+                      const response2 =  await axiosInstance.patch(`/users/${id}`, {
+                        phoneNumber,
+                        userName,
+                      });
+                    
+                    setUser(response2.data)
                   } catch (error) {
                     console.log(error);
                   }
 
-                  console.log(response.data);
+                  
                   toast.success("Profile Updated Successfully", {
                     position: "top-center",
                     autoClose: 4000,
