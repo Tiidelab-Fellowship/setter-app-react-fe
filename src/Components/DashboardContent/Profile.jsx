@@ -64,7 +64,7 @@ export const ProfileContent = ({
           </div>
         )}
         <button className="profile-password-btn" onClick={handleEditModal}>
-          Register Business
+         {name === "Not Registered"? "Register Business" : "Update Business Information" } 
         </button>
       </div>
 
