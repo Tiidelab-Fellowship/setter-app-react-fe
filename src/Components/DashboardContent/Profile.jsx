@@ -60,7 +60,7 @@ export const ProfileContent = ({
             </button>
           </div>
         </div>
-      )}
+      </div>
 
       <div className="dashboard-socials">
         <p>Social Accounts</p>

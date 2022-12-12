@@ -102,3 +102,27 @@ hr{
 img{
   margin-right: 2%;
 }
+
+@media only screen and (max-width: 480px){
+  .topFooter{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topRightFooter{
+    display: flex;
+    width: 100%;
+  }
+
+  .topLeftFooter > h2,
+  .topLeftFooter > p,
+  .topLeftFooter > div{
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+  }
+  .topLeftFooter{
+    width: 100%;
+    padding-left: 20px;
+  }
+}

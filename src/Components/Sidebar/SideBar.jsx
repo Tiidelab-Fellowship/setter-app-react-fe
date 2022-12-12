@@ -28,11 +28,12 @@ export const SideBar = () => {
       </div>
       <div className="linkToEachPage">
         <div className="eachPage">
+          <FaChessBoard />
           <NavLink className={({isActive})=>(isActive ? activeLink : normalLink) } to="/SocialDashboard">
             <span className="fontspace ">
               <FaChessBoard />
             </span>{" "}
-            Dashboard
+           <span id="item">Dashboard</span> 
           </NavLink>
         </div>
         <div className="eachPage">

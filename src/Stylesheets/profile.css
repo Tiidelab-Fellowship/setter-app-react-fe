@@ -19,23 +19,22 @@ button:hover{
 }
 
 .dashboard-prof-details{
-  width: 80%;
+  width: 99%;
   margin-top: 100px;
   display: flex;
   background: #F2F8FF;
   border: none;
-  border-radius: 20px;
-  box-shadow:4px 4px 4px 4px #dbdbdb;
+  border-radius: 5px;
 }
 
 .dashboard-bus-details {
-  width: 80%;
+  width: 99%;
   margin-top: 40px;
+  margin-right: 5px;
   background: #F2F8FF;
   padding: 20px;
   border: none;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px 4px #dbdbdb;
+  border-radius: 5px;
 }
 
 .dashboard-bus-details h2 {
@@ -93,19 +92,20 @@ button:hover{
   border-radius: 8px;
   color: #424242;
   margin: 1.2rem;
+  margin-left: 0;
 }
 
 .dashboard-socials{
-  width: 80%;
+  width: 99%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     background: #F2F8FF;
     padding: 20px;
     border: none;
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px 4px #dbdbdb;
+    border-radius: 5px;
   position: relative;
+
 }
 
 .dashboard-socials > p{
@@ -172,4 +172,68 @@ button:hover{
 
 .profile-box p{
   display: inline;
+}
+
+
+/* 
+MEDIA QUERY
+*/
+
+@media (min-width: 320px) and (max-width:480px) {
+  .dashboard-prof-details{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-left: 10%;
+  }
+    .profile-button {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .profile-edit-btn {
+      width: fit-content;
+    }
+  
+    .profile-password-btn {
+      margin-left: 0;
+      width: fit-content;
+    }
+  .profile-box .profile-connect {
+      position: absolute;
+      right: 20px;
+  }
+    .dashboard-bus-details, .dashboard-socials{
+      margin-left: 10%;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width:768px) {
+  .profile-button{
+    display: flex;
+    flex-direction: column;
+  }
+    .profile-edit-btn {
+      width: fit-content;
+    }
+  
+    .profile-password-btn {
+      margin-left: 0;
+      width: fit-content;
+    }
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+  
+}
+
+@media (min-width: 1025px) and (max-width:1200px) {
+  
+}
+
+@media (min-width:1201px) {
+  
+  
 }
